@@ -1,0 +1,113 @@
+#navbar {
+	margin-bottom: 0;
+	border-bottom: 1px solid black;
+	border-radius: 0px;
+	font-family: 'Francois One', sans-serif;
+}
+
+#navbar a {
+	color: white;
+}
+
+#navbar a:hover {
+	color: #fed136;
+	text-decoration: underline;
+}
+
+#ulblack a {
+	color: black;
+}
+
+.jumbotron {
+	margin-top: 0;
+	margin-bottom: 0;
+	border-bottom: 2px solid white;
+	height: 725px;
+
+	background-image: url("http://31.media.tumblr.com/b6ec662f007c851454a69c47328e75b5/tumblr_n5e0hoT4MZ1st5lhmo1_1280.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#chev {
+	position: relative;
+	top: 2px;
+}
+
+#downchevron {
+	position: relative;
+	top: 380px;
+}
+
+#chevdown {
+	font-size: 5em;
+	color: white;
+	position: relative;
+	float: right;
+	right: 100px;
+}
+
+.carousel-inner img {
+	margin: 0;
+	position: relative;
+	width: 100%;
+}
+
+.carousel-control.left, .carousel-control.right{ 
+background: none !important; 
+filter: progid:none !important; 
+}
+
+#valueprop {
+	margin-top: 20px;
+}
+
+#vp1 {
+	background-image: url("http://24.media.tumblr.com/a75978ee3a0901eb3f04731a99721818/tumblr_n5e0flmR0u1st5lhmo1_1280.jpg");
+	background-size: 380px 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	color: white;
+	font-family: "Cabin", sans-serif;
+
+	height: 200px;
+	padding-top: 30px;
+}
+
+#vp2 {
+	background-image: url("http://31.media.tumblr.com/67ce84549aa997de57666c179df8e062/tumblr_n5w6mqIkUB1st5lhmo1_1280.jpg");
+	background-size: 380px 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	color: white;
+	font-family: "Cabin", sans-serif;
+
+	height: 200px;
+	padding-top: 30px;
+}
+
+#vp3 {
+	background-image: url("http://37.media.tumblr.com/a35a6be745f3f60dda5bc4734184ba17/tumblr_n5w6lctTqq1st5lhmo1_1280.jpg");
+	background-size: 380px 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	color: white;
+	font-family: "Cabin", sans-serif;
+
+	height: 200px;
+	padding-top: 30px;
+}
+
+.lineheight {
+	line-height: 15px;
+}
+
+/* default */
+$("#jumbo").jumbotron()
+
+/* with options */
+$("#jumbo").jumbotron({interval: 500})
