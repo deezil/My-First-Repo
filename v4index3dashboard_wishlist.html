@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+
+<title>Dashboard Wishlist</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li><a href="#"><h5>Dashboard</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Gear List</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
+      <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Wishlist</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i></a></li>
+      <li class="top-border"><a href="#"><h5>Edit Profile</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Account</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Log Out</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5><a href="#"><i class="fa fa-envelope-o fa-lg"></i></a></h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
+
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn list-gear-naked" id="listGear"><a href="#"><h5 class="all-cap">List Your Gear</h5></a></button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="bookingModalMed" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END booking large modal -->
+
+<!-- Dashboard Navbar -->
+<div class="dashboard-nav-container visible-md visible-lg">
+  <nav class="navbar profile-header-navbar dashboard-header-navbar" role="navigation">
+    <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
+        <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Inbox</h5></a>
+            <span class="new-msg-counter">
+              <h5>26</h5>
+            </span>
+          </li>
+
+          <li class="cl-effect-4 dropdown">
+            <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Manage</h5></a>
+            <span class="caret"></span>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+              <li><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html#"><h5>Your Gear List</h5></a></li>
+               <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
+              <li class="top-border"><a href="#"><h5>Your Shoots</h5></a></li>
+              <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+            </ul>
+          </li>
+
+          <li class="active">
+            <a href="#"><h5>Wishlist</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Invite Friends</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Edit Profile</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Account</h5></a>
+          </li>
+        </ul>
+    <!-- </div><END container-fluid profile-header-navbar-fluid-->
+  </nav> <!-- END navbar profile-header-navbar -->
+</div> <!--END dashboard-nav -->
+
+<div class="sidenav-trigger-container visible-xs visible-sm">
+  <a href="#sidebar-menu" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
+</div>
+
+<div class="dashboard-header-spacer"></div>
+
+<!-- jPanel sidenav -->
+<nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
+  <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+    <li class="cl-effect-1">
+      <a href="#"><h5>Dashboard</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <h5>Inbox</h5>
+         <span class="new-msg-counter">
+          <h5>26</h5>
+        </span>
+      </a>
+    </li>
+
+    <li class="cl-effect-1 dropdown">
+      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Manage</h5>
+      <span class="caret"></span>
+      </a>
+      
+      <ul class="dropdown-menu" role="menu" aria-labelledby="manageDrop">
+        <li><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a></li>
+        <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
+        <li class="top-border"><a href="#"><h5>Your Shoots</h5></a></li>
+        <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+      </ul>
+    </li>
+
+    <li class="active">
+      <a href="#"><h5>Wishlist</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Invite Friends</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Edit Profile</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Account</h5></a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="content-body">
+  <div class="app-container container">
+    <div class="app-content-main dashboard-content-main wishlist-content-main">
+
+      <div class="widget col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <div class="widget-header dashboard-widget-header">
+           <h4 class="bold all-cap">Wishlist</h4>
+           <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This is where you manage all your current or past projects."></i>
+        </div>
+
+        <div class="widget-content wishlist-content">
+
+          <div class="widget-content iso-container">
+
+          <!-- Filter / Sort Accordion -->
+          <div class="accordion iso-collapse" id="accordion3">
+            <div class="accordion-group">
+
+              <div class="accordion-inner iso-collapse-button-container">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseIso"><h4 class="all-cap">
+                  show filters</h4>
+                </a>
+              </div> <!-- END accordion-inner iso-collapse-button-container -->
+
+              <div id="collapseIso" class="iso-collapse-body accordion-body collapse">
+                <div class="accordion-inner">
+
+                  <div id="filters" class="iso-filters-collapse row">
+                    <h4 class="bold all-cap col-md-2 iso-subheader">Filters</h4>
+                    <ul class="list-unstyled list-bar button-group col-md-8">
+                      <li><button class="btn-naked border-fade active is-checked" data-filter="*">All</button></li> 
+                      <!-- NEED TO REFACTOR CODE TO CHANGE ACTIVE CLASS / BUTTON INSTEAD OF <LI> -->
+                      <li><button class="btn-naked border-fade" data-filter=".camera">Camera</button></li>
+                      <li><button class="btn-naked border-fade" data-filter=".lighting">Lighting</button></li>
+                      <li><button class="btn-naked border-fade" data-filter=".sound">Sound</button></li>
+                      <li><button class="btn-naked border-fade" data-filter=".grip">Grip</button></li>
+                      <li><button class="btn-naked border-fade" data-filter=".art">Art</button></li>
+                      <li><button class="btn-naked border-fade" data-filter=".art">Misc</button></li>
+                    </ul>
+                  </div> <!-- END #filters -->
+
+                  <div id="sorts" class="iso-sorts-collapse row">
+                    <h4 class="bold all-cap col-md-2 iso-subheader">Sort By</h4>
+                    <ul class="list-unstyled list-bar button-group col-md-8">
+                      <li><button class="btn-naked active is-checked" data-sort-by="name">Name</button></li>
+                      <li><button class="btn-naked border-fade" data-sort-by="price">Price</button></li>
+                    </ul>
+                  </div> <!-- END #sorts -->
+
+                </div> <!-- END accordion-inner -->
+              </div> <!-- END iso-collapse-body accordion-body -->
+
+            </div> <!-- END accordion-group -->
+          </div> <!-- END accordion iso-accordion -->
+            
+
+          <div id="filters01" class="iso-filters visible-sm visible-md visible-lg row">
+            <h4 class="bold all-cap col-md-2 iso-subheader">Filters</h4>
+            <ul class="list-unstyled list-bar button-group col-md-8">
+              <li><button class="btn-naked border-fade active is-checked" data-filter="*">All</button></li> 
+              <!-- NEED TO REFACTOR CODE TO CHANGE ACTIVE CLASS / BUTTON INSTEAD OF <LI> -->
+              <li><button class="btn-naked border-fade" data-filter=".camera">Camera</button></li>
+              <li><button class="btn-naked border-fade" data-filter=".lighting">Lighting</button></li>
+              <li><button class="btn-naked border-fade" data-filter=".sound">Sound</button></li>
+              <li><button class="btn-naked border-fade" data-filter=".grip">Grip</button></li>
+              <li><button class="btn-naked border-fade" data-filter=".art">Art</button></li>
+              <li><button class="btn-naked border-fade" data-filter=".art">Misc</button></li>
+            </ul>
+          </div> <!-- END #filters -->
+
+          <div id="sorts01" class="iso-sorts visible-sm visible-md visible-lg row">
+            <h4 class="bold all-cap col-md-2 iso-subheader">Sort By</h4>
+            <ul class="list-unstyled list-bar button-group col-md-8">
+              <li><button class="btn-naked active is-checked" data-sort-by="name">Name</button></li>
+              <li><button class="btn-naked border-fade" data-sort-by="price">Price</button></li>
+
+            </ul>
+          </div> <!-- END #sorts -->
+        </div> <!-- END widget-content iso-container -->
+
+        <div class="isotope">
+
+          <div class="element-item camera " data-category="camera">
+            <div class="element-item-top">
+
+              <div class="element-item-slider" id="slider">
+                <div class="element-item-slider-bounds" id="carousel-bounding-box">
+                  <div class="element-item-carousel carousel slide" id="elementCarousel01">
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                      <div class="active item" data-slide-number="0">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt="listing hero image"/></a>
+                      </div>
+
+                      <div class="item" data-slide-number="1">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="listing hero image"/></a>
+                      </div>
+
+                    </div> <!-- END carousel-inner -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#elementCarousel01" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#elementCarousel01" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-2x"></i>
+                    </a>
+
+                  </div> <!-- END element-item-carousel -->
+                </div> <!-- END element-item-slider-bounds -->
+              </div> <!-- element-item-slider -->
+
+              <!--<div class="element-prev element-control">
+                <i class="icon fa fa-angle-left fa-4x"></i>
+              </div>-->
+              <a class="element-link" href="#"></a>
+              <div class="element-overlay">
+                <sup>$</sup>
+                <h3 class="bold price">2500</h3>
+                <sub>/ day</sub>
+              </div>
+              <!--<div class="element-next element-control">
+                <i class="icon fa fa-angle-right fa-4x"></i>
+              </div>-->
+              <div class="element-wishlist">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart liked fa-3x"></i>
+                  </span>
+                   <!-- Needs some scripting above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> 
+            </div> <!-- END element-item-top -->
+
+            <div class="element-item-bottom">
+              <div class="element-avatar-container">
+                <figure class="profile-avatar-mini">
+                  <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                </figure>
+              </div>
+              <div class="element-listing-details">
+                <a class="element-listing-title" href="#"><h4 class="bold all-cap">red dragon</h4></a>
+                <div class="element-listing-nittygritty">
+                  <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+                </div>
+              </div>
+            </div> <!-- END element-item-bottom -->
+            <!-- <h3 class="name">Mercury</h3> -->
+            <!-- <p class="symbol">Hg</p> -->
+            <!-- <p class="number">80</p> -->
+            <!-- <p class="weight">200.59</p> -->
+          </div> <!-- END element-item -->
+
+          <div class="element-item lighting " data-category="lighting">
+            <div class="element-item-top">
+
+              <div class="element-item-slider" id="slider">
+                <div class="element-item-slider-bounds" id="carousel-bounding-box">
+                  <div class="element-item-carousel carousel slide" id="elementCarousel02">
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                      <div class="active item" data-slide-number="0">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/arri/b_Kazakhstan_2.jpg" class="img-responsive" alt="listing hero image"/></a>
+                      </div>
+
+                      <div class="item" data-slide-number="1">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/arri/banner1.jpg" alt="listing hero image"/></a>
+                      </div>
+
+                    </div> <!-- END carousel-inner -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#elementCarousel02" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#elementCarousel02" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-2x"></i>
+                    </a>
+
+                  </div> <!-- END element-item-carousel -->
+                </div> <!-- END element-item-slider-bounds -->
+              </div> <!-- element-item-slider -->
+
+              <!--<div class="element-prev element-control">
+                <i class="icon fa fa-angle-left fa-4x"></i>
+              </div>-->
+              <a class="element-link" href="#"></a>
+              <div class="element-overlay">
+                <sup>$</sup>
+                <h3 class="bold price">9000</h3>
+                <sub>/ day</sub>
+              </div>
+              <!--<div class="element-next element-control">
+                <i class="icon fa fa-angle-right fa-4x"></i>
+              </div>-->
+              <div class="element-wishlist">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart liked fa-3x"></i>
+                  </span>
+                   <!-- Needs some scripting above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> 
+            </div> <!-- END element-item-top -->
+
+            <div class="element-item-bottom">
+              <div class="element-avatar-container">
+                <figure class="profile-avatar-mini">
+                  <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                </figure>
+              </div>
+              <div class="element-listing-details">
+                <a class="element-listing-title" href="#"><h4 class="bold all-cap">arri 4k</h4></a>
+                <div class="element-listing-nittygritty">
+                  <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+                </div>
+              </div>
+            </div> <!-- END element-item-bottom -->
+            <!-- <h3 class="name">Mercury</h3> -->
+            <!-- <p class="symbol">Hg</p> -->
+            <!-- <p class="number">80</p> -->
+            <!-- <p class="weight">200.59</p> -->
+          </div> <!-- END element-item -->
+
+          <div class="element-item grip " data-category="grip">
+            <div class="element-item-top">
+
+              <div class="element-item-slider" id="slider">
+                <div class="element-item-slider-bounds" id="carousel-bounding-box">
+                  <div class="element-item-carousel carousel slide" id="elementCarousel03">
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                      <div class="active item" data-slide-number="0">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/></a>
+                      </div>
+
+                      <div class="item" data-slide-number="1">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/freefly-systems-movi-01.jpg" alt="listing hero image"/></a>
+                      </div>
+
+                    </div> <!-- END carousel-inner -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#elementCarousel03" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#elementCarousel03" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-2x"></i>
+                    </a>
+
+                  </div> <!-- END element-item-carousel -->
+                </div> <!-- END element-item-slider-bounds -->
+              </div> <!-- element-item-slider -->
+
+              <!--<div class="element-prev element-control">
+                <i class="icon fa fa-angle-left fa-4x"></i>
+              </div>-->
+              <a class="element-link" href="#"></a>
+              <div class="element-overlay">
+                <sup>$</sup>
+                <h3 class="bold price">1100</h3>
+                <sub>/ day</sub>
+              </div>
+              <!--<div class="element-next element-control">
+                <i class="icon fa fa-angle-right fa-4x"></i>
+              </div>-->
+              <div class="element-wishlist">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart liked fa-3x"></i>
+                  </span>
+                   <!-- Needs some scripting above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> 
+            </div> <!-- END element-item-top -->
+
+            <div class="element-item-bottom">
+              <div class="element-avatar-container">
+                <figure class="profile-avatar-mini">
+                  <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                </figure>
+              </div>
+              <div class="element-listing-details">
+                <a class="element-listing-title" href="#"><h4 class="bold all-cap">Freefly movi</h4></a>
+                <div class="element-listing-nittygritty">
+                  <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+                </div>
+              </div>
+            </div> <!-- END element-item-bottom -->
+            <!-- <h3 class="name">Mercury</h3> -->
+            <!-- <p class="symbol">Hg</p> -->
+            <!-- <p class="number">80</p> -->
+            <!-- <p class="weight">200.59</p> -->
+          </div> <!-- END element-item -->
+
+           <div class="element-item grip " data-category="grip">
+            <div class="element-item-top">
+
+              <div class="element-item-slider" id="slider">
+                <div class="element-item-slider-bounds" id="carousel-bounding-box">
+                  <div class="element-item-carousel carousel slide" id="elementCarousel03">
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                      <div class="active item" data-slide-number="0">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/></a>
+                      </div>
+
+                      <div class="item" data-slide-number="1">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/freefly-systems-movi-01.jpg" alt="listing hero image"/></a>
+                      </div>
+
+                    </div> <!-- END carousel-inner -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#elementCarousel03" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#elementCarousel03" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-2x"></i>
+                    </a>
+
+                  </div> <!-- END element-item-carousel -->
+                </div> <!-- END element-item-slider-bounds -->
+              </div> <!-- element-item-slider -->
+
+              <!--<div class="element-prev element-control">
+                <i class="icon fa fa-angle-left fa-4x"></i>
+              </div>-->
+              <a class="element-link" href="#"></a>
+              <div class="element-overlay">
+                <sup>$</sup>
+                <h3 class="bold price">1100</h3>
+                <sub>/ day</sub>
+              </div>
+              <!--<div class="element-next element-control">
+                <i class="icon fa fa-angle-right fa-4x"></i>
+              </div>-->
+              <div class="element-wishlist">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart liked fa-3x"></i>
+                  </span>
+                   <!-- Needs some scripting above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> 
+            </div> <!-- END element-item-top -->
+
+            <div class="element-item-bottom">
+              <div class="element-avatar-container">
+                <figure class="profile-avatar-mini">
+                  <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                </figure>
+              </div>
+              <div class="element-listing-details">
+                <a class="element-listing-title" href="#"><h4 class="bold all-cap">Freefly movi</h4></a>
+                <div class="element-listing-nittygritty">
+                  <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+                </div>
+              </div>
+            </div> <!-- END element-item-bottom -->
+            <!-- <h3 class="name">Mercury</h3> -->
+            <!-- <p class="symbol">Hg</p> -->
+            <!-- <p class="number">80</p> -->
+            <!-- <p class="weight">200.59</p> -->
+          </div> <!-- END element-item -->
+
+           <div class="element-item grip " data-category="grip">
+            <div class="element-item-top">
+
+              <div class="element-item-slider" id="slider">
+                <div class="element-item-slider-bounds" id="carousel-bounding-box">
+                  <div class="element-item-carousel carousel slide" id="elementCarousel03">
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                      <div class="active item" data-slide-number="0">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/></a>
+                      </div>
+
+                      <div class="item" data-slide-number="1">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/freefly-systems-movi-01.jpg" alt="listing hero image"/></a>
+                      </div>
+
+                    </div> <!-- END carousel-inner -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#elementCarousel03" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#elementCarousel03" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-2x"></i>
+                    </a>
+
+                  </div> <!-- END element-item-carousel -->
+                </div> <!-- END element-item-slider-bounds -->
+              </div> <!-- element-item-slider -->
+
+              <!--<div class="element-prev element-control">
+                <i class="icon fa fa-angle-left fa-4x"></i>
+              </div>-->
+              <a class="element-link" href="#"></a>
+              <div class="element-overlay">
+                <sup>$</sup>
+                <h3 class="bold price">1100</h3>
+                <sub>/ day</sub>
+              </div>
+              <!--<div class="element-next element-control">
+                <i class="icon fa fa-angle-right fa-4x"></i>
+              </div>-->
+              <div class="element-wishlist">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart liked fa-3x"></i>
+                  </span>
+                   <!-- Needs some scripting above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> 
+            </div> <!-- END element-item-top -->
+
+            <div class="element-item-bottom">
+              <div class="element-avatar-container">
+                <figure class="profile-avatar-mini">
+                  <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                </figure>
+              </div>
+              <div class="element-listing-details">
+                <a class="element-listing-title" href="#"><h4 class="bold all-cap">Freefly movi</h4></a>
+                <div class="element-listing-nittygritty">
+                  <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+                </div>
+              </div>
+            </div> <!-- END element-item-bottom -->
+            <!-- <h3 class="name">Mercury</h3> -->
+            <!-- <p class="symbol">Hg</p> -->
+            <!-- <p class="number">80</p> -->
+            <!-- <p class="weight">200.59</p> -->
+          </div> <!-- END element-item -->
+
+           <div class="element-item grip " data-category="grip">
+            <div class="element-item-top">
+
+              <div class="element-item-slider" id="slider">
+                <div class="element-item-slider-bounds" id="carousel-bounding-box">
+                  <div class="element-item-carousel carousel slide" id="elementCarousel03">
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                      <div class="active item" data-slide-number="0">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/></a>
+                      </div>
+
+                      <div class="item" data-slide-number="1">
+                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/freefly-systems-movi-01.jpg" alt="listing hero image"/></a>
+                      </div>
+
+                    </div> <!-- END carousel-inner -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#elementCarousel03" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#elementCarousel03" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-2x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-2x"></i>
+                    </a>
+
+                  </div> <!-- END element-item-carousel -->
+                </div> <!-- END element-item-slider-bounds -->
+              </div> <!-- element-item-slider -->
+
+              <!--<div class="element-prev element-control">
+                <i class="icon fa fa-angle-left fa-4x"></i>
+              </div>-->
+              <a class="element-link" href="#"></a>
+              <div class="element-overlay">
+                <sup>$</sup>
+                <h3 class="bold price">1100</h3>
+                <sub>/ day</sub>
+              </div>
+              <!--<div class="element-next element-control">
+                <i class="icon fa fa-angle-right fa-4x"></i>
+              </div>-->
+              <div class="element-wishlist">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart liked fa-3x"></i>
+                  </span>
+                   <!-- Needs some scripting above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> 
+            </div> <!-- END element-item-top -->
+
+            <div class="element-item-bottom">
+              <div class="element-avatar-container">
+                <figure class="profile-avatar-mini">
+                  <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                </figure>
+              </div>
+              <div class="element-listing-details">
+                <a class="element-listing-title" href="#"><h4 class="bold all-cap">Freefly movi</h4></a>
+                <div class="element-listing-nittygritty">
+                  <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+                </div>
+              </div>
+            </div> <!-- END element-item-bottom -->
+            <!-- <h3 class="name">Mercury</h3> -->
+            <!-- <p class="symbol">Hg</p> -->
+            <!-- <p class="number">80</p> -->
+            <!-- <p class="weight">200.59</p> -->
+          </div> <!-- END element-item -->
+          
+        </div> <!-- END isotope -->
+      </div> <!-- END widget-content iso-container -->
+        
+        </div> <!-- END widget-content -->
+
+      </div> <!-- END widget-main -->
+
+    </div> <!-- END app-content-main -->
+  </div> <!-- END app-container container -->
+</div> <!-- END content-body -->
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Sticky Booking Widget -->
+<script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
+
+<!-- Plugin for Responsive Slider (Similar Listings) -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
+
+<!-- Plugin for Isotope -->
+<script src="/testwebsite/my-first-repo/assets/js/isotope.pkgd.js"></script>
+<script src="/testwebsite/my-first-repo/iso.js"></script>
+
+<!-- Plugin for jPanel -->
+<script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
+
+<script> 
+  // CAROUSEL
+    $('#myCarousel').carousel({
+      interval: false
+    });
+
+    // handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+      var id_selector = $(this).attr("id");
+      var id = id_selector.substr(id_selector.length -1);
+      id = parseInt(id);
+      $('#myCarousel').carousel(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    // when the carousel slides, auto update
+    $('#myCarousel').on('slid', function (e) {
+      var id = $('.item.active').data('slide-number');
+      id = parseInt(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $('[id=carousel-selector-'+id+']').addClass('selected');
+    })
+  // END CAROUSEL
+
+  $(document).ready(function(){
+
+    $('[data-toggle=tooltip]').tooltip();
+
+    //jPanel
+    var jPM = $.jPanelMenu({
+      menu: "#sidebar-menu",
+      trigger: '.sidenav-trigger',
+      excludedPanelContent: ['.top-navbar', '.booking-modal'],
+      openPosition: '20rem'
+    });
+
+    jPM.on();
+
+    // Wishlist / Like
+    $('.wishlist-content-main').find('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      $alert = $('#append-alert-wishlist-hero'); 
+      if($button.find('.fa-heart').hasClass('liked')){
+          //$.ajax(); Do Remove from Wishlist
+          $button.find('.fa-heart').removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none');
+          $button.append("<h5 id='append-alert-wishlist-hero'>Removed from Wishlist</h5>");
+          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      } else {
+          // $.ajax(); Do Add to Wishlist
+          $button.find('.fa-heart').addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline');
+          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
+          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      }
+    });
+
+    // Booking Request Button for LG screens only
+    $('.booking-request-btn').mouseenter(function() {
+      $(this).addClass('booking-request-btn-hover');
+    });
+    $('.booking-request-btn').mouseleave(function() {
+      $(this).removeClass('booking-request-btn-hover');
+    });
+
+    // STICKY.JS stuff
+    var width_sticky_break_01 = 991;
+    var width_sticky_break_02 = 767;
+
+    var sticky_wrapper = document.getElementById('undefined-sticky-wrapper');
+    
+    var device_size;
+    device_size = check_viewport($(window).width());
+    init_button(); // 0 1 or 2 determines the size of the current browser. 0
+    // for mobile, 1 tablet, 2 for desktop
+
+    // Creates button class dependent on size of window.
+    function init_button() { 
+      if ($(window).width() > width_sticky_break_01) {
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:50});
+        console.log('init xl button');
+      } 
+      else if ($(window).width() > width_sticky_break_02 && $(window).width() < width_sticky_break_01 ) {
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+          console.log('mid init button');
+      }
+      else if ($(window).width() < width_sticky_break_02) {
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+
+      }
+
+    }
+    
+    // Checks the size of the viewport based on width
+    function check_viewport(width) { 
+      var width = width; 
+      var size = -1;
+      if (width < width_sticky_break_02) {
+        // determines xs
+        size = 0;
+      }else if (width > width_sticky_break_02 && width < width_sticky_break_01) {
+        size = 1 // mid size
+      }else{ 
+        size = 2; // largest 
+      }
+      return size;
+    }
+
+    function stickyBookButtonSm() {
+      if(width_sticky_break_01 > $(window).width() && !$('.booking-request-btn-sm').hasClass('is-sticky')){
+        $('.booking-widget').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky SM added');
+      };
+    }
+
+    function stickyBookButtonXs() {
+      if (width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')) {
+        $('.booking-widget').removeClass('is-sticky');
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        //$('.book-button-container-sm-top').append("<button class='booking-request-button-sm-top'></button>");
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky XS added')
+      }
+    }
+
+    function bookingWidgetSticky() {
+      if (width_sticky_break_01 < $(window).width()) {
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        $('.booking-request-btn-sm-top').removeClass('is-sticky');
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+      }
+    }
+
+    /*
+    function stickyBookButtonXs() {
+      if(width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')){
+    }*/
+
+    //stickyBookButtonSm();
+    
+    $(window).resize(function(){
+      var windows_width = $(window).width();
+      var checked_view = check_viewport(windows_width);
+      console.log(checked_view + " " + device_size);
+
+      if (checked_view != device_size) {
+        console.log('changed');
+       if (width_sticky_break_02 < windows_width && windows_width < width_sticky_break_01) {
+              stickyBookButtonSm();
+              console.log('midsized resized');
+            }
+            else if (width_sticky_break_02 > windows_width) {
+              console.log('break 2 resized');
+              stickyBookButtonXs();
+            }
+            else if (width_sticky_break_01 < windows_width) {
+              bookingWidgetSticky();
+              console.log('break 1 < resized');
+            }
+        device_size = checked_view;
+      }
+
+    });
+    
+    // Init Sticky.js Booking Widget
+    //$(".is-sticky").sticky({topSpacing:50});
+
+    // Init Similar Listings slider
+    $('.responsive').slick({
+      dots: false,
+      infinite: false,
+      speed: 800,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 610,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+
+<title>Dashboard Edit Profile Reviews By You</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li><a href="#"><h5>Dashboard</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Gear List</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
+      <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Wishlist</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i></a></li>
+      <li class="top-border"><a href="#"><h5>Edit Profile</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Account</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Log Out</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5><a href="#"><i class="fa fa-envelope-o fa-lg"></i></a></h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
+
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn list-gear-naked" id="listGear"><a href="#"><h5 class="all-cap">List Your Gear</h5></a></button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Dashboard Navbar -->
+<div class="dashboard-nav-container visible-md visible-lg">
+  <nav class="navbar profile-header-navbar dashboard-header-navbar" role="navigation">
+    <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
+        <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+          <li class="cl-effect-4">
+            <a href="#"><h5>Dashboard</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html"><h5>Inbox</h5></a>
+            <span class="new-msg-counter">
+              <h5>26</h5>
+            </span>
+          </li>
+
+          <li class="cl-effect-4 dropdown">
+            <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Manage</h5></a>
+            <span class="caret"></span>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+              <li><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a></li>
+              <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
+              <li class="top-border"><a href="#"><h5>Your Shoots</h5></a></li>
+              <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+            </ul>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Wishlist</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Invite Friends</h5></a>
+          </li>
+
+          <li class="active">
+            <a href="#"><h5>Edit Profile</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="#"><h5>Account</h5></a>
+          </li>
+        </ul>
+    <!-- </div><END container-fluid profile-header-navbar-fluid-->
+  </nav> <!-- END navbar profile-header-navbar -->
+</div> <!--END dashboard-nav -->
+
+<div class="sidenav-trigger-container visible-xs visible-sm">
+  <a href="#sidebar-menu" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
+</div>
+
+<div class="dashboard-header-spacer"></div>
+
+<!-- jPanel sidenav -->
+<nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
+  <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+    <li class="cl-effect-1">
+      <a href="#"><h5>Dashboard</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <h5>Inbox</h5>
+         <span class="new-msg-counter">
+          <h5>26</h5>
+        </span>
+      </a>
+    </li>
+
+    <li class="active dropdown">
+      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Manage</h5>
+      <span class="caret"></span>
+      </a>
+      
+      <ul class="dropdown-menu" role="menu" aria-labelledby="manageDrop">
+        <li><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a></li>
+        <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear Bookings</h5></a></li>
+        <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a></li>
+        <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+      </ul>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Wishlist</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Invite Friends</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Edit Profile</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="#"><h5>Account</h5></a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="content-body">
+  <div class="app-container container">
+    <div class="app-content-main dashboard-content-main edit-reviews-content-main">
+
+      <!-- Side Nav Menu -->
+      <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
+        <!-- Side Verifications Only Visible @ min-width: 992px -->
+        <div class="widget-content verification-content manage-content edit-profile-content">
+           <ul class="list-unstyled">
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
+                    <h4 class="widget-element grey">Edit Profile</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_photos.html">
+                    <h4 class="widget-element grey">Photos and Badges</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_yourwork.html">
+                    <h4 class="widget-element grey">Your Work / Experience</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_verifications.html">
+                    <h4 class="widget-element grey">Trust and Verifications</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html">
+                    <h4 class="widget-element active bold">Reviews</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html">
+                    <h4 class="widget-element grey">References</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="#">
+                    <h4 class="bold">View Profile</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div> <!-- END widget-contents -->
+      </aside> <!-- END widget widget-verificaton -->
+
+      <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
+
+         <div class="widget-header dashboard-widget-header">
+           <h4 class="bold all-cap">Reviews</h4>
+        </div>
+
+        <!-- Main Section -->
+        <div class="widget-content edit-exp-content">
+
+          <div class="widget-subheader-first dropdown">
+            <button href="#" data-target="#" class="transparent-btn dropdown-toggle" id="sortDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5>Sort</h5> <span class="caret"></span></button>
+           
+            <ul class="dropdown-menu" role="menu" aria-labelledby="sortDrop">
+              <li><a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html"><h5>Reviews of You</h5></a></li>
+              <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsbyyou.html"><h5>Reviews by You</h5></a></li>
+            </ul>
+          </div>
+
+          <!-- Reviews Section -->
+          <div class="widget-section edit-photos-section edit-verifications-section">
+
+            <div class="widget-subheader-first">
+                <h4 class="all-cap">Reviews by You</h4>
+            </div> <!-- END widget-subheader -->
+            
+            <ul class="list-unstyled">
+
+              <li class="widget-row">
+                <div class="widget-element-container exp-title-container col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <div class="reviewer-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                  </div>
+                </div>
+                <div class="widget-element-container exp-descrip col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                  <div class="review-header-info-container row">
+                    <h5 class="bold all-cap review-date">AUG 2014</h5>
+                    <h5 class="review-listing-title all-cap bold"><a href="#">red dragon</a></h5>
+                  </div>
+                  <p class="review-comments">This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, </p>
+                </div>
+              </li>
+              
+              <li class="widget-row">
+                <div class="widget-element-container exp-title-container col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <div class="reviewer-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                  </div>
+                </div>
+                <div class="widget-element-container exp-descrip col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                  <div class="review-header-info-container row">
+                    <h5 class="bold all-cap review-date">AUG 2014</h5>
+                    <h5 class="review-listing-title all-cap bold"><a href="#">red dragon</a></h5>
+                  </div>
+                  <p>This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.</p>
+                </div>
+              </li>
+
+            </ul>
+
+          </div> <!-- END widget-section reviews section-->
+
+        </div> <!-- END widget-content -->
+
+      </div> <!-- END widget-main -->
+
+    </div> <!-- END app-content-main -->
+  </div> <!-- END app-container container -->
+</div> <!-- END content-body -->
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Sticky Booking Widget -->
+<script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
+
+<!-- Plugin for Responsive Slider (Similar Listings) -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
+
+<!-- Plugin for jPanel -->
+<script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
+
+<script> 
+  // CAROUSEL
+    $('#myCarousel').carousel({
+      interval: false
+    });
+
+    // handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+      var id_selector = $(this).attr("id");
+      var id = id_selector.substr(id_selector.length -1);
+      id = parseInt(id);
+      $('#myCarousel').carousel(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    // when the carousel slides, auto update
+    $('#myCarousel').on('slid', function (e) {
+      var id = $('.item.active').data('slide-number');
+      id = parseInt(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $('[id=carousel-selector-'+id+']').addClass('selected');
+    })
+  // END CAROUSEL
+
+  $(document).ready(function(){
+
+    $('[data-toggle=tooltip]').tooltip();
+
+    //jPanel
+    var jPM = $.jPanelMenu({
+      menu: "#sidebar-menu",
+      trigger: '.sidenav-trigger',
+      excludedPanelContent: ['.top-navbar', '.modal'],
+      openPosition: '20rem'
+    });
+
+    jPM.on();
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      $alert = $('#append-alert-wishlist-hero'); 
+      if($button.find('.fa-heart').hasClass('liked')){
+          //$.ajax(); Do Remove from Wishlist
+          $button.find('.fa-heart').removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none');
+      } else {
+          // $.ajax(); Do Add to Wishlist
+          $button.find('.fa-heart').addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline');
+          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
+          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      }
+    });
+
+    // Booking Request Button for LG screens only
+    $('.booking-request-btn').mouseenter(function() {
+      $(this).addClass('booking-request-btn-hover');
+    });
+    $('.booking-request-btn').mouseleave(function() {
+      $(this).removeClass('booking-request-btn-hover');
+    });
+
+    // STICKY.JS stuff
+    var width_sticky_break_01 = 991;
+    var width_sticky_break_02 = 767;
+
+    var sticky_wrapper = document.getElementById('undefined-sticky-wrapper');
+    
+    var device_size;
+    device_size = check_viewport($(window).width());
+    init_button(); // 0 1 or 2 determines the size of the current browser. 0
+    // for mobile, 1 tablet, 2 for desktop
+
+    // Creates button class dependent on size of window.
+    function init_button() { 
+      if ($(window).width() > width_sticky_break_01) {
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:50});
+        console.log('init xl button');
+      } 
+      else if ($(window).width() > width_sticky_break_02 && $(window).width() < width_sticky_break_01 ) {
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+          console.log('mid init button');
+      }
+      else if ($(window).width() < width_sticky_break_02) {
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+
+      }
+
+    }
+    
+    // Checks the size of the viewport based on width
+    function check_viewport(width) { 
+      var width = width; 
+      var size = -1;
+      if (width < width_sticky_break_02) {
+        // determines xs
+        size = 0;
+      }else if (width > width_sticky_break_02 && width < width_sticky_break_01) {
+        size = 1 // mid size
+      }else{ 
+        size = 2; // largest 
+      }
+      return size;
+    }
+
+    function stickyBookButtonSm() {
+      if(width_sticky_break_01 > $(window).width() && !$('.booking-request-btn-sm').hasClass('is-sticky')){
+        $('.booking-widget').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky SM added');
+      };
+    }
+
+    function stickyBookButtonXs() {
+      if (width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')) {
+        $('.booking-widget').removeClass('is-sticky');
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        //$('.book-button-container-sm-top').append("<button class='booking-request-button-sm-top'></button>");
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky XS added')
+      }
+    }
+
+    function bookingWidgetSticky() {
+      if (width_sticky_break_01 < $(window).width()) {
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        $('.booking-request-btn-sm-top').removeClass('is-sticky');
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+      }
+    }
+
+    /*
+    function stickyBookButtonXs() {
+      if(width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')){
+    }*/
+
+    //stickyBookButtonSm();
+    
+    $(window).resize(function(){
+      var windows_width = $(window).width();
+      var checked_view = check_viewport(windows_width);
+      console.log(checked_view + " " + device_size);
+
+      if (checked_view != device_size) {
+        console.log('changed');
+       if (width_sticky_break_02 < windows_width && windows_width < width_sticky_break_01) {
+              stickyBookButtonSm();
+              console.log('midsized resized');
+            }
+            else if (width_sticky_break_02 > windows_width) {
+              console.log('break 2 resized');
+              stickyBookButtonXs();
+            }
+            else if (width_sticky_break_01 < windows_width) {
+              bookingWidgetSticky();
+              console.log('break 1 < resized');
+            }
+        device_size = checked_view;
+      }
+
+    });
+    
+    // Init Sticky.js Booking Widget
+    //$(".is-sticky").sticky({topSpacing:50});
+
+    // Init Similar Listings slider
+    $('.responsive').slick({
+      dots: false,
+      infinite: false,
+      speed: 800,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 610,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+</html>

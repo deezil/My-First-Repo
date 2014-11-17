@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+
+<title>Listing</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/testwebsite/my-first-repo/slick-master/slick/slick.css"/>
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar -->
+<div class="top-navbar loggedin widget-row row visible-md visible-lg">
+  <div class="logo-container pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div> <!-- END logo-container -->
+
+  <div class="searchbar-container col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-md-1 col-lg-1 dropdown pull-right">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+    <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Steven</h5></a>
+    <span class="caret" id="profileCaret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li><a href="#"><h5>Dashboard</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Gear List</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Shoots</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Wishlist</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i></a></li>
+      <li class="top-border"><a href="#"><h5>Edit Profile</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Account</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Log Out</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <div class="navbar-option col-md-1 col-lg-1 pull-right">
+    <h5><a href="#"><i class="fa fa-envelope-o fa-lg"></i></a></h5>
+  </div> <!-- END navbar-option -->
+
+  <div class="navbar-option col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <div class="navbar-option col-md-2 col-lg-2 pull-right">
+    <button class="transparent-btn list-gear-naked" id="listGear"><a href="#"><h5 class="all-cap">List Your Gear</h5></a></button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<div class="stick-contain">
+  <!-- Sticky Booking Widget will live in this .sticky-wrapper -->
+
+  <!-- Booking Modal Large-->
+  <div class="booking-modal modal fade" id="booking-modal-large" tab-index="-1" role="dialog" aria-labelledby="bookingModalLarge" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h3 class="modal-title" id="bookingModalLargeLabel">Request to book - </h3>
+          <h3 class="modal-title bold">Red Dragon</h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="model-subheader">Give your Hive Host some details</h4>
+          <textarea class="form-control" rows="3" placeholder="e.g. I'd love to hire your gear. I've got a shoot coming up real soon!"></textarea>
+          <h5>Provide your Hive Host with as much information about your shoot as possible. This helps keep everyone on the same page. We're all about open communication here at Hirehive!</h5>
+
+          <div class="booking-modal-details row">
+          <div class="booking-modal-dates col-md-6">
+              <span class="modal-pickup">
+                <h5>Gear Pick-up - </h5>&nbsp;<h5 class="bold all-cap">20 nov 2014</h5>
+              </span>
+              <span class="modal-dropoff">
+                <h5>Gear Drop-off - </h5>&nbsp;<h5 class="bold all-cap">30 nov 2014</h5>
+              </span>            
+          </div>
+          <div class="booking-modal-payment-breakdown col-md-6">
+            <span class="modal-total-hire-fee">
+              <h5>Total hire price:</h5>&nbsp;&nbsp;<h5>$90,000</h5>
+            </span>
+            <span class="modal-security-deposit">
+              <h5>Security Deposit:</h5>&nbsp;&nbsp;<h5>$900</h5>
+              <i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="bottom" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i>
+            </span>
+            <span class="modal-total-hire-fee">
+              <h5 class="all-cap bold">Total payable:</h5>&nbsp;&nbsp;<h5 class="bold">$90,000</h5>
+            </span>
+          </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="transparent-btn modal-send-btn bold" id="send-request"><a href="#">Send</a></button>
+        </div> <!-- END modal-footer -->
+      </div> <!-- END modal-content -->
+    </div> <!-- END modal-dialog -->
+  </div> <!-- END booking large modal -->
+
+  <!-- Book modal mid -->
+  <div class="booking-modal modal fade" id="booking-modal-mid" tab-index="-1" role="dialog" aria-labelledby="bookingModalMed" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h3 class="modal-title" id="bookingModalLargeLabel">Request to book - </h3>
+          <h3 class="modal-title bold">Red Dragon</h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="model-subheader">Give your Hive Host some details</h4>
+          <textarea class="form-control" rows="3" placeholder="e.g. I'd love to hire your gear. I've got a shoot coming up real soon!"></textarea>
+          <h5>Provide your Hive Host with as much information about your shoot as possible. This helps keep everyone on the same page. We're all about open communication here at Hirehive!</h5>
+
+          <div class="booking-modal-details row">
+          <div class="booking-modal-dates col-xs-6 col-sm-6 col-md-6">
+              <span class="modal-pickup">
+                <h5>Gear Pick-up</h5>&nbsp;
+                <input type="date" class="simplebox datepick-box" value="" id="dpd1">
+              </span>
+              <span class="modal-dropoff">
+                <h5>Gear Drop-off</h5>&nbsp;
+                <input type="date" class="simplebox datepick-box" value="" id="dpd2">
+              </span>            
+          </div>
+          <div class="booking-modal-payment-breakdown col-xs-6 col-sm-6 col-md-6">
+            <span class="modal-total-hire-fee">
+              <h5>Total hire price:</h5>&nbsp;&nbsp;<h5 class="cash">$90,000</h5>
+            </span>
+            <span class="modal-security-deposit">
+              <h5>Security Deposit:</h5>&nbsp;&nbsp;<h5 class="cash">$900</h5>
+              <i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="bottom" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i>
+            </span>
+            <span class="modal-total-hire-fee">
+              <h5 class="all-cap bold">Total payable:</h5>&nbsp;<h5 class="cash bold">$90,000</h5>
+            </span>
+          </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Send</a></button>
+        </div> <!-- END modal-footer -->
+      </div> <!-- END modal-content -->
+    </div> <!-- END modal-dialog -->
+  </div> <!-- END booking mid modal -->
+
+    <!-- //// LISTING HEADER \\\\ -->
+
+    <!-- Static Header Bg Image. Placeholder here for BG color-->
+    <div class="profile-header-wrap listing-header-wrap"></div>
+
+    <div class="listing-header-spacer"></div>
+
+    <!-- Header Elements -->
+    <div class="container header-content listing-header-content">
+      <div class="listing-header-hero">
+
+        <!-- Listing Titles: visible @ max-width 991px -->
+        <div class="listing-heading-info-container visible-sm visible-xs">
+          <div class="listing-profile-name-sm all-cap white">
+            <!-- 85 characters max for listing name -->
+            <!-- Need to deal with the overflow:hidden problem -->
+            <h1 class="bold">reddragonreddragonredd
+            ragonreddragonr
+            eddragonreddragonreddragonred12345</h1>
+          </div> <!-- END listing-profile-name -->
+
+          <div class="listing-profile-nittygritty-sm white">
+            <div class="nittygritty-sm-left pull-left">
+              <h4 class="make">Red</h4>&nbsp;&nbsp;<h4 class="model">Epic-X</h4><br>
+              <h4 class="location">Manhattan, NY USA</h4>
+            </div>
+            <div class="nittygritty-sm-right pull-right">
+              <div class="star-rating">
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star-o fa-lg"></i>
+                &nbsp;&nbsp;
+                <h5 class="review-tally">(55)</h5>
+              </div> <!-- END star-rating -->
+            </div>
+          </div> <!-- END listing-profile-nittygritty -->
+        </div> <!-- END listing-heading-info-container -->
+
+          <div class="profile-header-row row listing-header-row">
+
+            <div class="listing-hero-image-container col-md-7 col-lg-7">
+
+              <div class="listing-hero-element-overlay visible-sm visible-xs">
+                <sup>$</sup>
+                <h2 class="bold price">9000</h2>
+                <sub>/ day</sub>
+              </div>
+
+              <div class="listing-hero-element-wishlist-xxs">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-2x"></i>
+                    <i class="icon fa fa-heart fa-2x"></i>
+                  </span>
+                   <!-- Needs some jQuery above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> <!-- END listing-hero-element-wishlist-xxs -->
+
+              <div class="listing-hero-element-wishlist-xs">
+                <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+                <label for="element-wishlist-widget">
+                  <span class="hearts">
+                    <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                    <i class="icon fa fa-heart fa-3x"></i>
+                  </span>
+                   <!-- Needs some jQuery above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+                   <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+                </label>
+              </div> <!-- END listing-hero-element-wishlist-xs -->
+
+              <!-- main slider carousel -->
+              <div class="listing-hero-slider-container" id="slider">
+                <div class="listing-hero-bounds" id="carousel-bounding-box">
+                  <div class="listing-profile-carousel carousel slide" id="myCarousel">
+
+                    <!-- main slider carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item" data-slide-number="0">
+                            <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="1">
+                          <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt="listing hero image"/>
+                        </div>
+                        <div class="item" data-slide-number="2">
+                            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSg8N8yoH_vzk88hM4vHVloEcVv0bB1c7lpd4kFD3nhB_AQIIcj" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="3">
+                           <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="listing hero image"/>
+                        </div>
+                        <div class="item" data-slide-number="4">
+                            <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/>
+                        </div>
+                    </div> <!-- END main slider carousel items -->
+
+                    <!-- main slider carousel nav controls --> 
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                      <i class="carousel-icon-xxs icon fa fa-angle-left fa-3x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-left fa-4x"></i>
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                      <i class="carousel-icon-xxs icon fa fa-angle-right fa-3x"></i>
+                      <i class="carousel-icon-xs icon fa fa-angle-right fa-4x"></i>
+                    </a>
+                  </div> <!-- END listing-profile-carousel -->
+                </div> <!-- END listing-hero-bounds -->
+              </div> <!-- END main slider carousel-->
+
+              <!-- thumb navigation carousel -->
+              <div class="carousel-thumbnail-container hidden-sm hidden-xs" id="slider-thumbs"> 
+                <!-- thumb navigation carousel items -->
+                <!-- maximum of 5 images -->
+                <!-- Script required: thumbnail only appears if image is true. i.e: if only 2 images are uploaded, then only 2 thumbnails appear -->
+                <ul class="carousel-thumbnails list-inline">
+                  <li> 
+                    <a id="carousel-selector-0" class="selected">
+                      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg" alt="listing hero image">
+                    </a>
+                  </li>
+                  <li> 
+                    <a id="carousel-selector-1">
+                      <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" alt="listing hero image"/>
+                    </a>
+                  </li>
+                  <li> 
+                    <a id="carousel-selector-2">
+                      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSg8N8yoH_vzk88hM4vHVloEcVv0bB1c7lpd4kFD3nhB_AQIIcj" alt="listing hero image">
+                    </a>
+                  </li>
+                  <li> 
+                    <a id="carousel-selector-3">
+                      <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="listing hero image"/>
+                    </a>
+                  </li>
+                  <li>
+                    <a id="carousel-selector-4">
+                     <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" alt="listing hero image"/>
+                    </a>
+                  </li>
+                </ul>
+              </div> <!-- END carousel-thumbnail-container -->
+
+              <!-- This button is only visible @ max-width: 767px -->
+              <div class="book-button-container-sm-top visible-xs">
+                <button class="booking-request-btn-sm-top" data-toggle="modal" data-target="#booking-modal-mid">
+                  <h4 class="bold">Request a Booking</h4>
+                </button>
+              </div> <!-- END book-button-container -->
+
+              <div class="host-profile-widget host-profile-widget-small">
+                <div class="small-avatar-container">
+                  <figure class="profile-avatar-mini">
+                    <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                  </figure>
+                  <h5 class="all-cap">BRENT W.</h5>
+                </div> <!-- END small-avatar-container -->
+
+                <aside class="host-widget-verification-bar-micro">
+                  <div class="widget-bar-mini">
+
+                    <div class="widget-verification-bar-mini-icon-container">
+                      <!-- "micro" suffix class is a refactored version of the mini veri-badge pills -->
+                      <div class="badge-pill-container-micro">
+                        <div class="listing-veri-badge-pill-micro email-pill-micro"></div>
+                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
+                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
+                      </div>
+                      <div class="badge-pill-container-micro">
+                        <div class="listing-veri-badge-pill-micro phone-pill-micro"></div>
+                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
+                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
+                      </div>
+                      <div class="badge-pill-container-micro">
+                        <div class="listing-veri-badge-pill-micro fb-pill-micro"></div>
+                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
+                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
+                      </div>
+                      <div class="badge-pill-container-micro">
+                        <div class="listing-veri-badge-pill-micro fb-pill-micro"></div>
+                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
+                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
+                      </div>
+
+                      <div class="badge-pill-container-micro">
+                        <div class="badge-pill-01-micro">
+                          <span class="badge-pill-count"><a href=""><h4 class="bold">55</h4></a></span>
+                        </div>
+                        <div class="badge-pill-subhead-micro"><h5>REVIEWS</h5></div>
+                      </div>
+
+                      <div class="badge-pill-container-micro">
+                        <div class="badge-pill-01-micro">
+                          <span class="badge-pill-count"><a href=""><h4 class="bold">6</h4></a></span>
+                        </div>
+                        <div class="badge-pill-subhead-micro"><h5>REFER.</h5></div>
+                      </div>
+                    </div> <!-- END widget-verification-bar-icon-container -->
+
+                  </div> <!-- END widget-header widget-bar -->
+                </aside> <!-- END widget widget-verification-bar -->
+
+                <div class="book-button-container-sm visible-sm">
+                  <button class="booking-request-btn-sm visible-sm" data-toggle="modal" data-target="#booking-modal-mid">
+                    <h4 class="bold">Request a Booking</h4>
+                  </button>
+                </div> <!-- END book-button-container -->
+              </div> <!-- END host-profile-widget -->
+
+            </div> <!-- END listing-hero-image-container -->
+
+            <div class="listing-info-container col-md-5 col-lg-5">
+              <div class="listing-profile-name all-cap white">
+                <!-- 85 characters max for listing name -->
+                <!-- Need to deal with the overflow:hidden problem -->
+                <h2 class="bold">red dragon</h2>
+              </div> <!-- END listing-profile-name -->
+
+              <div class="listing-profile-nittygritty white">
+                <h4 class="make">Red</h4>&nbsp;&nbsp;<h4 class="model">Epic-X</h4><br>
+                <h4 class="location">Manhattan, NY USA</h4>
+                <div class="star-rating">
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star fa-lg"></i>
+                  <i class="fa fa-star-o fa-lg"></i>
+                  &nbsp;&nbsp;
+                  <h5 class="review-tally">(55)</h5>
+                </div> <!-- END star-rating -->
+              </div> <!-- END listing-profile-nittygritty -->
+
+              <div class="booking-widget widget">
+              <!-- <div class="booking-widget widget"> -->
+                <!-- Gotta make widget-price div same height as scrolling header -->
+                <div class="booking-widget-price">
+                  <h2 class="white bold">$9000</h2>&nbsp;&nbsp;
+                  <h4 class="booking-price-perday white pull-right">Per Day</h4>
+                </div>
+
+                <div class="booking-widget-datepicker">
+                  <div class="gear-pickup">
+                    <h4>Gear Pick-Up</h4>
+                    <input type="date" class="simplebox datepick-box" value="" id="dpd1">
+                  </div> <!-- END gear-pickup -->
+                  <div class="gear-dropoff">
+                    <h4>Gear Drop-Off</h4>
+                    <input type="date" class="simplebox datepick-box" value="" id="dpd2">
+                  </div> <!-- END gear-dropoff -->  
+                </div> <!-- END booking-widget-datepicker -->
+
+                <div class="booking-widget-breakdown">
+                  <table class="table table-bordered table-breakdown">
+                    <tbody>
+                      <tr>
+                        <td>$9000 x 10 days</td>
+                        <td class="table-cell-price">$90000</td>
+                      </tr>
+                      <tr>
+                        <td>Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We love our early Hivers, so we've waived your Hiver Service Fees completely! Yay!"></i></td>
+                        <td class="table-cell-price">$9000</td>
+                      </tr>
+                      <tr>
+                        <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
+                        <td class="table-cell-price">$900</td>
+                      </tr>
+                      <tr>
+                        <td class="table-cell-total bold">Total</td>
+                        <td class="table-cell-price">$99000</td>
+                      </tr>
+                    </tbody>
+                  </table> <!-- END table-bordered table-breakdown -->
+                </div> <!-- END booking-widget-breakdown -->
+
+                <div class="book-button-container">
+                  <button class="booking-request-btn" data-toggle="modal" data-target="#booking-modal-large">
+                    <h4>Request a Booking</h4>
+                  </button>
+                </div> <!-- END book-button-container -->
+
+              </div> <!-- END booking-widget -->
+
+            </div> <!-- END listing-info-container -->
+
+          </div> <!-- END profile-header-row -->
+
+      </div> <!-- END profile-header-hero -->
+    </div> <!-- END header-content --> 
+
+    <!-- END LISTING HEADER -->
+
+    <!-- Main Content -->
+    <div class="content-body">
+
+      <div class="app-container listing-app-container container">
+        <div class="app-content-main">
+
+          <div class="widget widget-main listing-widget-main col-sm-12 col-md-7 col-lg-7">
+
+            <div class="widget-content listing-widget-content">
+
+              <div class="widget-section listing-widget-section">
+                <div class="listing-widget-first-header">
+                  <h4 class="bold all-cap">features</h4>
+                </div>
+                <div class="listing-widget-features-list">
+                  <ul class="list">
+                    <li><h4>Up to 400 fps</h4></li>
+                    <li><h4>Makes your movies look amazing</h4></li>
+                    <li><h4>True 4k</h4></li>
+                    <li><h4>It's a dragon</h4></li>
+                    <li><h4>Last feature (max 5?)</h4></li>
+                  </ul>
+                </div> <!-- END listing-widget-features-list -->
+              </div> <!-- widget-section -->
+
+              <div class="widget-section listing-widget-section top-border">
+                <div class="listing-widget-header">
+                  <h4 class="bold all-cap">listing includes</h4>
+                </div>
+                <div class="listing-widget-inventory-list-container">
+                  <ul class="list listing-widget-inventory-list-left">
+                    <li><h4>Item 1</h4></li>
+                    <li><h4>This is a really long string right here</h4></li>
+                    <li><h4>Item 1</h4></li>
+                    <li><h4>Item 1</h4></li>
+                    <li><h4>Item 1</h4></li>
+                  </ul>
+                  <ul class="list listing-widget-inventory-list-right">
+                    <li><h4>Item 1</h4></li>
+                    <li><h4>Item 1</h4></li>
+                    <li><h4>Item 1</h4></li>
+                    <li><h4>Item 1</h4></li>
+                    <li><h4><a href="#">See More</a></h4></li>
+                  </ul>
+                </div> <!-- END listing-widget-inventory-list-container -->
+              </div> <!-- END widget-section -->
+
+              <div class="widget-section listing-widget-section top-border">
+                <div class="listing-widget-header">
+                  <h4 class="bold all-cap">description</h4>
+                </div>
+                <div class="listing-widget-host-p-container">
+                  <p>this is me describing my listing.</p>
+                </div> <!-- END listing-widget-host-tips-container -->
+              </div> <!-- END widget-section -->
+
+              <div class="widget-section listing-widget-section top-border">
+                <div class="listing-widget-header">
+                  <h4 class="bold all-cap">brent's tips</h4>
+                </div>
+                <div class="listing-widget-host-p-container">
+                  <p>This is what I recommend for this kit. 1 egg, 2 lbs of bacon, 3 turtle doves, 4 slices of watermelon. Put in a blender on high. Place blender in microwave on high. Place microwave in fridge on low. Eat while hot.</p>
+                </div> <!-- END listing-widget-host-tips-container -->
+              </div> <!-- END widget-section -->
+
+              <div class="widget-section listing-widget-section top-border">
+
+                <div class="listing-widget-header">
+                  <h4 class="bold all-cap">reviews</h4>
+                </div>
+
+                <div class="widget-row">
+                  <div class="widget-element-container exp-title-container col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="reviewer-avatar-container listing-widget-reviewer-avatar-container">
+                      <figure class="profile-avatar-mini">
+                        <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                      </figure>
+                      <h5 class="all-cap">BRENT W.</h5>
+                    </div> <!-- END listing-widget-reviewer-avatar-container -->
+                  </div> <!-- END widget-element-container -->
+                  <div class="widget-element-container exp-descrip col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <div class="review-header-info-container row">
+                      <h5 class="bold all-cap">AUG 2014</h5>
+                      <h5 class="review-listing-title all-cap bold"></h5>
+                    </div>
+                    <p class="review-comments">This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, </p>
+                  </div>
+                </div> <!-- END widget-row -->
+                
+                <div class="widget-row">
+                  <div class="widget-element-container exp-title-container col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="reviewer-avatar-container listing-widget-reviewer-avatar-container">
+                      <figure class="profile-avatar-mini">
+                        <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                      </figure>
+                      <h5 class="all-cap">BRENT W.</h5>
+                    </div> <!-- END listing-widget-reviewer-avatar-container -->
+                  </div> <!-- END widget-element-container -->
+                  <div class="widget-element-container exp-descrip col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <div class="review-header-info-container row">
+                      <h5 class="bold all-cap review-info-details">AUG 2014</h5>
+                      <h5 class="bold all-cap review-info-details review-listing-title"></h5>
+                    </div>
+                    <p class="review-comments">This was a really fun project to work on. Richard Dreyfuss was a joy, and those UFOS were amazing to work with as well.This was a really fun project to work on. Richard Dreyfuss was a joy, </p>
+                  </div>
+                </div> <!-- END widget-row -->
+
+              </div> <!-- END widget-section -->
+
+              
+
+            </div> <!-- END widget-content -->
+          </div> <!-- END widget-main -->
+        </div> <!-- END app-content-main -->
+      </div> <!-- END app-container container -->
+    </div> <!-- END content-body -->
+
+  </div> <!-- END sticky-wrapper -->
+</div> <!-- END stick-contain -->
+
+<div class="container listing-bottom-container">
+
+  <div class="col-xs-12 col-sm-12 col-md-7 widget-section listing-bottom-section">
+
+    <div class="listing-widget-header">
+      <h4 class="bold all-cap">more about this hive host</h4>
+    </div>
+
+    <div class="widget-element-container listing-bottom-avatar-wrapper col-xs-3 col-sm-2 col-md-2 col-lg-2">
+      <div class="reviewer-avatar-container listing-widget-host-avatar-container">
+        <figure class="profile-avatar-mini">
+          <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+        </figure>
+        <h5 class="all-cap">BRENT W.</h5>
+      </div>
+    </div> <!-- END widget-element-container -->
+
+    <div class="widget-element-container exp-descrip listing-bottom-host-descrip col-xs-8 col-sm-8 col-md-10 col-lg-10">
+      <p class="host-profile-widget description"> This is a short description of me This is a short description of me This is a short description of me This is a short description of me This is a short description of me</p>
+
+      <aside class="widget-verification-bar host-widget-verification-bar-micro-bottom">
+        <div class="widget-bar-mini-bottom">
+
+          <div class="widget-verification-bar-mini-icon-container">
+            <!-- "micro" suffix class is a refactored version of the mini veri-badge pills -->
+            <div class="badge-pill-container-micro">
+              <div class="listing-veri-badge-pill-micro email-pill-micro"></div>
+              <div class="badge-pill-subhead-micro"><h5>VERIFIED</h5></div>
+            </div>
+
+            <div class="badge-pill-container-micro">
+              <div class="listing-veri-badge-pill-micro phone-pill-micro"></div>
+              <div class="badge-pill-subhead-micro"><h5>VERIFIED</h5></div>
+            </div>
+
+            <div class="badge-pill-container-micro">
+              <div class="listing-veri-badge-pill-micro fb-pill-micro"></div>
+              <div class="badge-pill-subhead-micro"><h5>VERIFIED</h5></div>
+            </div>
+            <div class="badge-pill-container-micro">
+              <div class="listing-veri-badge-pill-micro fb-pill-micro"></div>
+              <div class="badge-pill-subhead-micro"><h5>VERIFIED</h5></div>
+            </div>
+
+            <div class="badge-pill-container-micro">
+              <div class="badge-pill-01-micro">
+                <span class="badge-pill-count"><a href=""><h4 class="bold">55</h4></a></span>
+              </div>
+              <div class="badge-pill-subhead-micro"><h5>REVIEWS</h5></div>
+            </div>
+
+            <div class="badge-pill-container-micro">
+              <div class="badge-pill-01-micro">
+                <span class="badge-pill-count"><a href=""><h4 class="bold">6</h4></a></span>
+              </div>
+              <div class="badge-pill-subhead-micro"><h5>REFER.</h5></div>
+            </div>
+          </div> <!-- END widget-verification-bar-icon-container -->
+
+        </div> <!-- END widget-header widget-bar -->
+      </aside> <!-- END widget widget-verification-bar-micro-bottom -->
+
+      <div class="review-header-info-container row">
+        <h5 class="all-cap">Manhattan, New York USA</h5>
+        <h5 class="all-cap">Member Since: May 2014</h5>
+        <!-- More stuff will go in there, Response Rate, etc etc -->
+      </div>
+    </div> <!-- END widget-element-container -->
+
+  </div> <!-- END listing-bottom-section -->
+
+  <div class="col-xs-12 col-sm-12 col-md-12 map-placeholder">
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 listing-bottom-section similar-listings-container">
+
+    <div class="listing-widget-header">
+      <h4 class="bold all-cap">similar listings</h4>
+    </div>
+
+    <div class="slider responsive">
+
+      <div class="element-item slider-item grip " data-category="grip">
+        <div class="element-item-top slider-item-top">
+          <div class="element-item-hero slider-item-hero">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt=""></a>
+          </div>
+          
+          <a class="element-link" href="#"></a>
+          <div class="element-overlay">
+            <sup>$</sup>
+            <h3 class="bold price">1100</h3>
+            <sub>/ day</sub>
+          </div>
+          
+          <div class="element-wishlist">
+            <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+            <label for="element-wishlist-widget">
+              <span class="hearts">
+                <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                <i class="icon fa fa-heart fa-3x"></i>
+              </span>
+               <!-- Needs some jQuery above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+               <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+            </label>
+          </div> 
+        </div> <!-- END element-item-top -->
+
+        <div class="element-item-bottom">
+          <div class="element-avatar-container slider-item-avatar-container">
+            <figure class="profile-avatar-mini">
+              <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+            </figure>
+          </div>
+          <div class="element-listing-details">
+            <a class="element-listing-title" href="#"><h4 class="bold all-cap">freefly movi</h4></a>
+            <div class="element-listing-nittygritty">
+              <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+            </div>
+          </div>
+        </div> <!-- END element-item-bottom -->
+      </div> <!-- END element-item slider-item -->
+
+      <div class="element-item slider-item grip " data-category="grip">
+        <div class="element-item-top slider-item-top">
+          <div class="element-item-hero slider-item-hero">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt=""></a>
+          </div>
+          
+          <a class="element-link" href="#"></a>
+          <div class="element-overlay">
+            <sup>$</sup>
+            <h3 class="bold price">1100</h3>
+            <sub>/ day</sub>
+          </div>
+          
+          <div class="element-wishlist">
+            <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+            <label for="element-wishlist-widget">
+              <span class="hearts">
+                <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                <i class="icon fa fa-heart fa-3x"></i>
+              </span>
+               <!-- Needs some jQuery above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+               <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+            </label>
+          </div> 
+        </div> <!-- END element-item-top -->
+
+        <div class="element-item-bottom">
+          <div class="element-avatar-container slider-item-avatar-container">
+            <figure class="profile-avatar-mini">
+              <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+            </figure>
+          </div>
+          <div class="element-listing-details">
+            <a class="element-listing-title" href="#"><h4 class="bold all-cap">freefly movi</h4></a>
+            <div class="element-listing-nittygritty">
+              <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+            </div>
+          </div>
+        </div> <!-- END element-item-bottom -->
+      </div> <!-- END element-item slider-item -->
+
+      <div class="element-item slider-item grip " data-category="grip">
+        <div class="element-item-top slider-item-top">
+          <div class="element-item-hero slider-item-hero">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt=""></a>
+          </div>
+          
+          <a class="element-link" href="#"></a>
+          <div class="element-overlay">
+            <sup>$</sup>
+            <h3 class="bold price">1100</h3>
+            <sub>/ day</sub>
+          </div>
+          
+          <div class="element-wishlist">
+            <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+            <label for="element-wishlist-widget">
+              <span class="hearts">
+                <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                <i class="icon fa fa-heart fa-3x"></i>
+              </span>
+               <!-- Needs some jQuery above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+               <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+            </label>
+          </div> 
+        </div> <!-- END element-item-top -->
+
+        <div class="element-item-bottom">
+          <div class="element-avatar-container slider-item-avatar-container">
+            <figure class="profile-avatar-mini">
+              <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+            </figure>
+          </div>
+          <div class="element-listing-details">
+            <a class="element-listing-title" href="#"><h4 class="bold all-cap">freefly movi</h4></a>
+            <div class="element-listing-nittygritty">
+              <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+            </div>
+          </div>
+        </div> <!-- END element-item-bottom -->
+      </div> <!-- END element-item slider-item -->
+
+      <div class="element-item slider-item grip " data-category="grip">
+        <div class="element-item-top slider-item-top">
+          <div class="element-item-hero slider-item-hero">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt=""></a>
+          </div>
+          
+          <a class="element-link" href="#"></a>
+          <div class="element-overlay">
+            <sup>$</sup>
+            <h3 class="bold price">1100</h3>
+            <sub>/ day</sub>
+          </div>
+          
+          <div class="element-wishlist">
+            <input type="checkbox" id="element-wishlist-widget" name="element-wishlist-widget">
+            <label for="element-wishlist-widget">
+              <span class="hearts">
+                <i class="icon toggle-unchecked fa fa-heart-o fa-3x"></i>
+                <i class="icon fa fa-heart fa-3x"></i>
+              </span>
+               <!-- Needs some jQuery above: on 'selected': NEED TO CHANGE COLOR TO WHITE BORDER, FILL OF #ff5a5f-->
+               <!-- On hover: white border, fill of rgba (0,0,0,0.4), transition: color 0.3s -->
+            </label>
+          </div> 
+        </div> <!-- END element-item-top -->
+
+        <div class="element-item-bottom">
+          <div class="element-avatar-container slider-item-avatar-container">
+            <figure class="profile-avatar-mini">
+              <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+            </figure>
+          </div>
+          <div class="element-listing-details">
+            <a class="element-listing-title" href="#"><h4 class="bold all-cap">freefly movi</h4></a>
+            <div class="element-listing-nittygritty">
+              <h5 class="make">Make</h5> <h5 class="model">Model</h5><br><h5 class="location">Manhattan, NY USA</h5>
+            </div>
+          </div>
+        </div> <!-- END element-item-bottom -->
+      </div> <!-- END element-item slider-item -->
+ 
+    </div> <!-- END slider responsive -->
+
+  </div> <!-- END listing-bottom-section similar-listings-container -->
+
+</div> <!-- END listing-bottom-container -->
+  
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Sticky Booking Widget -->
+<script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
+
+<!-- Plugin for Responsive Slider (Similar Listings) -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
+
+<script> 
+  // CAROUSEL
+    $('#myCarousel').carousel({
+      interval: false
+    });
+
+    // handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+      var id_selector = $(this).attr("id");
+      var id = id_selector.substr(id_selector.length -1);
+      id = parseInt(id);
+      $('#myCarousel').carousel(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    // when the carousel slides, auto update
+    $('#myCarousel').on('slid', function (e) {
+      var id = $('.item.active').data('slide-number');
+      id = parseInt(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $('[id=carousel-selector-'+id+']').addClass('selected');
+    })
+  // END CAROUSEL
+
+  $(document).ready(function(){
+
+    // Init Bootstrap Tooltip
+    $('[data-toggle=tooltip]').tooltip();
+
+    // Init Bootstrap Dropdown
+    $('.dropdown-toggle').dropdown();
+
+    // #listGear button hover fill
+    $('#listGear').mouseenter(function(){
+      $(this).addClass('yellow-btn-fill');
+      $(this).find('a').css('color', '#1c1d20');
+      $(this).find('h5').css('font-weight', '700');
+    });
+
+    $('#listGear').mouseleave(function(){
+      $(this).removeClass('yellow-btn-fill');
+      $(this).find('a').css('color', 'white');
+      $(this).find('h5').css('font-weight', '400');
+    });
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      $alert = $('#append-alert-wishlist-hero'); 
+      if($button.find('.fa-heart').hasClass('liked')){
+          //$.ajax(); Do Remove from Wishlist
+          $button.find('.fa-heart').removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none');
+      } else {
+          // $.ajax(); Do Add to Wishlist
+          $button.find('.fa-heart').addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline');
+          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
+          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      }
+    });
+
+    // Booking Request Button for LG screens only
+    $('.booking-request-btn').mouseenter(function() {
+      $(this).addClass('booking-request-btn-hover');
+    });
+    $('.booking-request-btn').mouseleave(function() {
+      $(this).removeClass('booking-request-btn-hover');
+    });
+
+    // STICKY.JS stuff
+    var width_sticky_break_01 = 991;
+    var width_sticky_break_02 = 767;
+
+    var sticky_wrapper = document.getElementById('undefined-sticky-wrapper');
+    
+    var device_size;
+    device_size = check_viewport($(window).width());
+    init_button(); // 0 1 or 2 determines the size of the current browser. 0
+    // for mobile, 1 tablet, 2 for desktop
+
+    // Creates button class dependent on size of window.
+    function init_button() { 
+      if ($(window).width() > width_sticky_break_01) {
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:50});
+        console.log('init xl button');
+      } 
+      else if ($(window).width() > width_sticky_break_02 && $(window).width() < width_sticky_break_01 ) {
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+          console.log('mid init button');
+      }
+      else if ($(window).width() < width_sticky_break_02) {
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+
+      }
+
+    }
+    
+    // Checks the size of the viewport based on width
+    function check_viewport(width) { 
+      var width = width; 
+      var size = -1;
+      if (width < width_sticky_break_02) {
+        // determines xs
+        size = 0;
+      }else if (width > width_sticky_break_02 && width < width_sticky_break_01) {
+        size = 1 // mid size
+      }else{ 
+        size = 2; // largest 
+      }
+      return size;
+    }
+
+    function stickyBookButtonSm() {
+      if(width_sticky_break_01 > $(window).width() && !$('.booking-request-btn-sm').hasClass('is-sticky')){
+        $('.booking-widget').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky SM added');
+      };
+    }
+
+    function stickyBookButtonXs() {
+      if (width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')) {
+        $('.booking-widget').removeClass('is-sticky');
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        //$('.book-button-container-sm-top').append("<button class='booking-request-button-sm-top'></button>");
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky XS added')
+      }
+    }
+
+    function bookingWidgetSticky() {
+      if (width_sticky_break_01 < $(window).width()) {
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        $('.booking-request-btn-sm-top').removeClass('is-sticky');
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+      }
+    }
+
+    /*
+    function stickyBookButtonXs() {
+      if(width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')){
+    }*/
+
+    //stickyBookButtonSm();
+    
+    $(window).resize(function(){
+      var windows_width = $(window).width();
+      var checked_view = check_viewport(windows_width);
+      console.log(checked_view + " " + device_size);
+
+      if (checked_view != device_size) {
+        console.log('changed');
+       if (width_sticky_break_02 < windows_width && windows_width < width_sticky_break_01) {
+              stickyBookButtonSm();
+              console.log('midsized resized');
+            }
+            else if (width_sticky_break_02 > windows_width) {
+              console.log('break 2 resized');
+              stickyBookButtonXs();
+            }
+            else if (width_sticky_break_01 < windows_width) {
+              bookingWidgetSticky();
+              console.log('break 1 < resized');
+            }
+        device_size = checked_view;
+      }
+
+    });
+    
+    // Init Sticky.js Booking Widget
+    //$(".is-sticky").sticky({topSpacing:50});
+
+    // Init Similar Listings slider
+    $('.responsive').slick({
+      dots: false,
+      infinite: false,
+      speed: 800,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 610,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+</html>

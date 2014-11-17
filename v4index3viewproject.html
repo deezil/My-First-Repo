@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+
+<title>Close Encounters of The Third Kind</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<div class="top-navbar not-loggedin widget-row row visible-md visible-lg">
+  <div class="logo-container pull-left">
+    <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+  </div>
+  <div class="searchbar-container col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+  <div class="navbar-option col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-md-2 col-lg-2 pull-right">
+    <button class="transparent-btn modal-send-btn" id="listGear"><a href="#"><h5 class="all-cap bold">List Your Gear</h5></a></button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- //// THE HEADER. ONE TO RULE THEM ALL. \\\\ -->
+  <!-- Static Header Bg Image -->
+  <div class="profile-header-wrap project-header-wrap"> 
+    <div class="profile-header-bg project-header-bg"></div>
+  </div>
+
+  <div class="profile-header-spacer project-header-spacer"></div>
+
+  <!-- Header Elements -->
+  <div class="header-content project-header-content">
+    <div class="profile-header-hero project-header-hero">
+
+      <div class="profile-info-hero project-info-hero">
+        <div class="profile-header-row project-header-row row">
+
+          <div class="profile-info-container project-info-container col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+          
+            <div class="profile-details project-details">
+              <div class="profile-user-roles project-type">
+                <h3 class="letter-spaced bold all-cap">feature film</h3>
+              </div>
+              <div class="profile-user-name project-title all-cap bold">
+                Close Encounters of The Third Kind
+              </div>
+              
+              <div class="profile-user-location">
+                <i class="fa fa-map-marker fa-lg visible-sm visible-md visible-lg" id="fa-map-reg"></i>
+                <i class="fa fa-map-marker" id="fa-map-xxs"></i>Los Angeles, California, USA
+              </div>
+              <div class="follow-project">
+                <button class="transparent-btn followButton all-cap">
+                  <i class="fa fa-plus"></i>
+                  Follow
+                </button>
+              </div>
+
+            </div> <!-- END profile-details -->
+
+          </div> <!-- END profile-info-container project-info-container-->
+
+        </div> <!-- END profile-header-row project-header-row-->
+      </div> <!-- END profile-info-hero project-info-hero-->
+
+      <div class="profile-header-nav-menu">
+        <nav class="navbar profile-header-navbar" role="navigation">
+          <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
+              <ul class="nav navbar-nav profile-navbar-nav">
+                <li class="active"><a href="#"><h3 class="all-cap">activity</h3></a></li>
+                <li class="cl-effect-4"><a href="/testwebsite/my-first-repo/v4index3viewproject_credits.html"><h3 class="all-cap">credits</h3></a></li>
+                <li class="cl-effect-4"><a href="/testwebsite/my-first-repo/v4index3listings.html"><h3 class="all-cap">press</h3></a></li>
+                <!--<li class="cl-effect-4"><a href="/testwebsite/my-first-repo/v4index3reviews.html"><h3 class="all-cap">REVIEWS</h3></a></li>-->
+              </ul>
+          <!-- </div><END container-fluid profile-header-navbar-fluid-->
+        </nav> <!-- END navbar profile-header-navbar -->
+      </div> <!-- END profile-header-nav-menu -->
+
+    </div> <!-- END profile-header-hero -->
+  </div> <!-- END header-content --> 
+<!-- //// END THE HEADER. ONE TO RULE THEM ALL. \\\\ -->
+
+<!-- Main Content -->
+<div class="content-body">
+  <div class="app-container container">
+    <div class="app-content-main">
+
+      <!--<aside class="widget widget-verificaton col-sm-3 col-md-3 visible-md visible-lg">
+        <div class="widget-header">
+           <h4 class="bold">VERIFICATIONS</h4>
+        </div>
+        <div class="widget-content verification-content">
+          <ul class="list-unstyled">
+            <li class="widget-verify-row row">
+              <div class="widget-element-container col-sm-9 col-md-9 col-lg-10">
+                <div><h4 class="widget-element">Email Address</h4></div>
+                <div><h5 class="verified">Verified</h5></div>
+              </div>
+              <div class="col-sm-2 col-md-2 verify-check">
+                <i class="fa fa-check fa-lg"></i>
+              </div>
+            </li>
+            <li class="widget-verify-row row">
+              <div class="widget-element-container col-sm-9 col-md-9 col-lg-10">
+                <div><h4 class="widget-element">Phone</h4></div>
+                <div><h5 class="verified">xxxx-xxx-x66</h5></div>
+              </div>
+               <div class="col-sm-2 col-md-2 verify-check">
+                <i class="fa fa-check fa-lg"></i>
+              </div>
+            </li>
+            <li class="widget-verify-row row ">
+              <div class="widget-element-container col-sm-9 col-md-9 col-lg-10">
+                <div><h4 class="widget-element">Facebook</h4></div>
+                <div><h5 class="verified">999 Friends</h5></div>
+              </div>
+               <div class="col-sm-2 col-md-2 verify-check">
+                <i class="fa fa-check fa-lg"></i>
+              </div>
+            </li>
+            <!-- If we cannot handle Verified ID just yet, then comment this <li> out -->
+            <!--<li class="widget-verify-row row ">
+              <div class="widget-element-container col-sm-9 col-md-9 col-lg-10">
+                <div><h4 class="widget-element">Verified I.D</h4></div>
+                <div><h5 class="verified">Driver's License</h5></div>
+              </div>
+               <div class="col-sm-2 col-md-2 verify-check">
+                <i class="fa fa-check fa-lg"></i>
+              </div>
+            </li>
+            <li class="widget-verify-row row ">
+              <div class="widget-element-container col-sm-9 col-md-9 col-lg-10">
+                <div><h4 class="widget-element">Reviews</h4></div>
+                <div><h5 class="verified">56 Reviews</h5></div>
+              </div>
+               <div class="col-sm-2 col-md-2 verify-check">
+                <i class="fa fa-check fa-lg"></i>
+              </div>
+            </li>
+            <li class="widget-verify-row row ">
+              <div class="widget-element-container col-sm-9 col-md-9 col-lg-10">
+                <div><h4 class="widget-element">References</h4></div>
+                <div><h5 class="verified">6 References</h5></div>
+              </div>
+               <div class="col-sm-2 col-md-2 verify-check">
+                <i class="fa fa-check fa-lg"></i>
+              </div>
+            </li>
+          </ul>
+        </div> <!-- END widget-contents -->
+      <!--</aside> <!-- END widget widget-verificaton -->
+
+      <div class="widget widget-main project-main">
+        <div class="widget-header project-header col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+           <h4>This is a short writeup about my sci-fi film. It's was a blast. This is a short writeup about my sci-fi film. It's was a blast. This is a short writeup about my sci-fi film. It's was a blast. This is a short writeup about my sci-fi film. It's was a blast. </h4>
+           <div class="project-trailer-container">
+            <img src="/testwebsite/my-first-repo/assets/vimeo_placeholder.jpg" class="img-responsive">
+           </div>
+        </div>
+        <div class="project-social col-md-2 col-lg-2">
+          <span class="hearts">
+            <i class="fa fa-heart-o fa-2x"></i>
+            <i class="fa fa-heart fa-2x"></i>
+          </span>
+          <i class="fa fa-facebook-square fa-2x" id="project-social-fb"></i>
+          <i class="fa fa-twitter-square fa-2x" id="project-social-twitter"></i>
+          <i class="fa fa-linkedin-square fa-2x" id="project-social-linkedin"></i><br>
+          <h5 class="bold">6</h5>&nbsp;<h5>followers</h5><br>
+          <h5 class="bold">12</h5>&nbsp;<h5>likes</h5>
+        </div> <!-- END project-social-->
+
+        <div class="widget-content project-widget-content">
+          <div class="widget-section">
+            <div class="widget-subheader-first project-subheader-first">
+              <h4 class="all-cap">hive collaborators</h4>
+              <h5 class="all-cap pull-right"><a href="#">see all cast & crew</a></h5>
+            </div>
+
+            <div class="project-collab-row row">
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+              <div class="collab-avatar col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <h5 class="all-cap">BRENT W.</h5>
+                    <h5 class="all-cap bold">director</h5>
+                  </div>
+              </div> <!-- END collab-avatar -->
+
+            </div> <!-- END project-collab-row -->
+          </div> <!-- END widget-section -->
+
+          <div class="widget-section top-border">
+            
+            <ul class="list-unstyled">
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-project-header col-md-12 col-lg-12">
+                  <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://a5.files.biography.com/image/upload/c_fill,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2Mzc0MDA5MzU1.jpg"/></a>
+                    </figure>
+                    <div class="widget-project-activity-title">
+                      <h5 class="all-cap">Steven S.</h5>&nbsp;
+                      <h5>added an update</h5>&nbsp;
+                    </div>
+                  </div>
+                  <h5 class="widget-project-published pull-right">Oct 2014</h5>
+                </div> <!-- END widget-project-header -->
+
+                <div class="clearfix"></div>
+
+                <div class="widget-element-container exp-title-container project-title-container col-md-4 col-lg-4">
+                  <figure class="widget-project-hero-small">
+                    <img src="http://indienyc.com/wp-content/uploads/2012/11/seedspark-300x180.jpg" alt="Project Thumbnail"/>
+                  </figure> 
+                </div> <!-- END widget-element-container exp-title-container -->
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <h5 class="bold letter-spaced all-cap">We're raising funds on seed&spark!</h5>                    
+                  </div>
+                  <p>I'm very excited to let all of you know that we've launched our S&S crowdfunding campaign! Here's the link for all of you to check out! <a href="#">www.seed&spark/projects/CETK/</a>.</p>
+                </div>
+                <div class="widget-project-social col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
+                  <span class="hearts">
+                    <i class="fa fa-heart-o fa-lg"></i>
+                    <i class="fa fa-heart fa-lg"></i>
+                  </span>
+                  <span class="shares">
+                    <i class="fa fa-share-square-o fa-lg"></i>
+                    <i class="fa fa-share-square fa-lg"></i>
+                  </span>
+                </div>
+              </li>
+
+              <li class="widget-row project-row project-view-row top-border row">
+                <div class="widget-project-header col-md-12 col-lg-12">
+                  <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <div class="widget-project-activity-title">
+                      <h5 class="all-cap">BRENT W.</h5>&nbsp;
+                      <h5>is now</h5>&nbsp;
+                      <h5 class="all-cap bold">colorist</h5>
+                    </div>
+                  </div>
+                  <h5 class="widget-project-published pull-right">Oct 2014</h5>
+                </div> <!-- END widget-project-header -->
+
+                <div class="clearfix"></div>
+
+                <div class="widget-element-container exp-title-container project-title-container col-md-4 col-lg-4">
+                  <figure class="widget-project-hero-small">
+                    <img src="http://i.kinja-img.com/gawker-media/image/upload/s--oOScfPOq--/woy6vnwz3lsofc1qjkl4.jpg" alt="Project Thumbnail"/>
+                  </figure> 
+                </div> <!-- END widget-element-container exp-title-container -->
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <h5 class="bold letter-spaced all-cap">Close encounters of the third kind</h5>                    
+                  </div>
+                  <p>A short synopsis of the film.</p>
+                </div> <!--END widget-element-container exp-descrip -->
+
+                <div class="clearfix"></div>
+
+                <div class="widget-project-social col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
+                  <span class="hearts">
+                    <i class="fa fa-heart-o fa-lg"></i>
+                    <i class="fa fa-heart fa-lg"></i>
+                  </span>
+                  <span class="shares">
+                    <i class="fa fa-share-square-o fa-lg"></i>
+                    <i class="fa fa-share-square fa-lg"></i>
+                  </span>
+                </div>
+              </li>
+              
+              <li class="widget-row project-row project-view-row top-border row">
+                <div class="widget-project-header col-md-12 col-lg-12">
+                  <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+                    </figure>
+                    <div class="widget-project-activity-title">
+                      <h5 class="all-cap">Dee D.</h5>&nbsp;
+                      <h5>is now a</h5>&nbsp;
+                      <h5 class="all-cap bold">follower</h5>
+                    </div>  
+                  </div>
+                  <h5 class="widget-project-published pull-right">Oct 2014</h5>
+                </div> <!-- END widget-project-header -->
+
+                <div class="clearfix"></div>
+
+                <div class="widget-element-container exp-title-container project-title-container col-md-4 col-lg-4">
+                  <figure class="widget-project-hero-small">
+                    <img src="http://i.kinja-img.com/gawker-media/image/upload/s--oOScfPOq--/woy6vnwz3lsofc1qjkl4.jpg" alt="Project Thumbnail"/>
+                  </figure> 
+                </div> <!-- END widget-element-container exp-title-container -->
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <h5 class="bold letter-spaced all-cap">Close encounters of the third kind</h5>                    
+                  </div>
+                  <p>A short synopsis of the film.</p>
+                </div>
+                <div class="widget-project-social col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
+                  <span class="hearts">
+                    <i class="fa fa-heart-o fa-lg"></i>
+                    <i class="fa fa-heart fa-lg"></i>
+                  </span>
+                  <span class="shares">
+                    <i class="fa fa-share-square-o fa-lg"></i>
+                    <i class="fa fa-share-square fa-lg"></i>
+                  </span>
+                </div>
+              </li>
+
+              <li class="widget-row project-row project-view-row top-border row">
+                <div class="widget-project-header col-md-12 col-lg-12">
+                  <div class="reviewer-avatar-container collab-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="#"><img src="http://a5.files.biography.com/image/upload/c_fill,dpr_1.0,g_face,h_300,q_80,w_300/MTE5NTU2MzE2Mzc0MDA5MzU1.jpg"/></a>
+                    </figure>
+                    <div class="widget-project-activity-title">
+                      <h5 class="all-cap">Steven S.</h5>&nbsp;
+                      <h5>added Production Stills</h5>&nbsp;
+                    </div>
+                  </div>
+                  <h5 class="widget-project-published pull-right">Aug 2014</h5>
+                </div> <!-- END widget-project-header -->
+
+                <div class="clearfix"></div>
+
+                <div class="widget-element-container exp-title-container project-title-container col-md-12 col-lg-12">
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://i.kinja-img.com/gawker-media/image/upload/s--oOScfPOq--/woy6vnwz3lsofc1qjkl4.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://i.telegraph.co.uk/multimedia/archive/01474/et_1474485b.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://pmcdeadline2.files.wordpress.com/2013/01/jurassicpark__130111230212.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://i.kinja-img.com/gawker-media/image/upload/s--oOScfPOq--/woy6vnwz3lsofc1qjkl4.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://i.telegraph.co.uk/multimedia/archive/01474/et_1474485b.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://pmcdeadline2.files.wordpress.com/2013/01/jurassicpark__130111230212.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://i.kinja-img.com/gawker-media/image/upload/s--oOScfPOq--/woy6vnwz3lsofc1qjkl4.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://i.telegraph.co.uk/multimedia/archive/01474/et_1474485b.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+                  <figure class="widget-project-hero-small project-stills-uploaded">
+                    <a href="#">
+                      <img src="http://pmcdeadline2.files.wordpress.com/2013/01/jurassicpark__130111230212.jpg" alt="Project Thumbnail"/>
+                    </a>
+                  </figure>
+
+                </div> <!-- END widget-element-container exp-title-container widget-project-stills-container-->
+  
+                <div class="widget-project-social col-xs-4 col-xs-offset-8 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
+                  <span class="hearts">
+                    <i class="fa fa-heart-o fa-lg"></i>
+                    <i class="fa fa-heart fa-lg"></i>
+                  </span>
+                  <span class="shares">
+                    <i class="fa fa-share-square-o fa-lg"></i>
+                    <i class="fa fa-share-square fa-lg"></i>
+                  </span>
+                </div>
+              </li>
+
+            </ul>
+          </div> <!-- END widget-section top-border -->
+        </div> <!-- END widget-content -->
+
+      </div> <!-- END widget-main -->
+
+    </div> <!-- END app-content-main -->
+  </div> <!-- END app-container container -->
+</div> <!-- END content-body -->
+  
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.dropdown-toggle').dropdown();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
+    });
+
+    // Project Social
+    $('#project-social-fb').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
+      }
+    );
+    $('#project-social-fb').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
+      }
+    );
+
+    $('#project-social-twitter').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
+      }
+    );
+    $('#project-social-twitter').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
+      }
+    );
+
+    $('#project-social-linkedin').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
+      }
+    );
+    $('#project-social-linkedin').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
+      }
+    );
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('liked')){
+          //$.ajax(); Do Unlike
+          $button.removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none'); 
+      } else {
+          // $.ajax(); Do Liked
+          $button.addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline'); 
+      }
+    });
+  });
+
+</script>
+
+</html>

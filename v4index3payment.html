@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<title>Payment</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<div class="top-navbar visible-md visible-lg">NAVBAR PLACEHOLDER</div>
+
+<div class="stick-contain">
+  <!-- Sticky Booking Widget will live in this .sticky-wrapper -->
+
+    <!-- //// LISTING HEADER \\\\ -->
+
+    <!-- Static Header Bg Image. Placeholder here for BG color-->
+    <div class="profile-header-wrap listing-header-wrap"></div>
+
+    <div class="listing-header-spacer"></div>
+
+    <!-- Header Elements -->
+    <div class="header-content inquiry-header-content payment-header-content">
+      <div class="listing-header-hero">
+
+          <div class="profile-header-row row listing-header-row">
+
+            <div class="booking-inquiry-header-lg">
+              <h2>Payment for Red Dragon</h2>
+            </div>
+
+            <!-- Payment Breakdown Sm, Xs -->
+            <div class="payment-breakdown-widget-sm widget-row row visible-xs visible-sm">
+              <div class="col-xs-12 col-sm-4">
+                <div class="listing-profile-name all-cap">
+                  <!-- 85 characters max for listing name -->
+                  <!-- Need to deal with the overflow:hidden problem -->
+                  <h2 class="bold">red dragon</h2>
+                </div> <!-- END listing-profile-name -->
+
+                <div class="listing-profile-nittygritty">
+                  <div class="payment-listing-hero-container">
+                  <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/>
+                </div>
+                  <h4 class="make">Red</h4>&nbsp;&nbsp;<h4 class="model">Epic-X</h4><br>
+                  <h4 class="location">Manhattan, NY USA</h4>
+                </div> <!-- END listing-profile-nittygritty -->
+              </div>
+
+              <div class="col-xs-12 col-sm-8">
+                <div class="booking-widget-breakdown">
+                  <table class="table table-bordered table-breakdown">
+                    <tbody>
+                      <tr>
+                        <td>Total days</td>
+                        <td class="table-cell-price">10</td>
+                      </tr>
+                      <tr>
+                        <td>$9,000 x 10 days&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="Average Per Day price is rounded. "></i></td>
+                        <td class="table-cell-price">$90,000</td>
+                      </tr>
+                      <tr>
+                        <td>Service Fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="We love our early Hivers, so we've waived your Hiver Service Fees completely! Yay!"></i></td>
+                        <td class="table-cell-price">Waived</td>
+                      </tr>
+                      <tr>
+                        <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
+                        <td class="table-cell-price">$900</td>
+                      </tr>
+                      <tr>
+                        <td class="table-cell-total bold"><h3 class="bold">Total</h3></td>
+                        <td class="table-cell-price"><h3 class="bold">$99,000</h3></td>
+                      </tr>
+                    </tbody>
+                  </table> <!-- END table-bordered table-breakdown -->
+                </div> <!-- END booking-widget-breakdown -->
+
+              </div>
+            </div> <!-- END payment-breakdown-widget-sm widget-row row-->
+
+            <div class="payment-hero-container col-xs-12 col-sm-12 col-md-7 col-lg-7">
+              <div class="payment-details-row row">
+                <span class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                  <h4>Name on card</h4>
+                </span>
+                <span class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                  <form role="form">
+                    <input type="cardName" class="form-control" id="cardName"/>
+                  </form>
+                </span>
+              </div> <!-- END payment-details-row row -->
+
+              <div class="payment-details-row row">
+                <span class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                  <h4>Credit Card number</h4>
+                </span>
+                <span class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                  <form role="form">
+                    <input type="lastName" class="form-control" id="lastName"/>
+                  </form>
+                </span>
+
+                <span class="creditcards col-xs-8 col-sm-6 col-sm-offset-4 col-md-6 col-md-offset-4 col-lg-6 col-lg-offset-4">
+                  <span class="creditcard-01"></span>
+                  <span class="creditcard-02"></span>
+                  <span class="creditcard-03"></span>
+                  <span class="stripe"></span>
+                </span>
+              </div> <!-- END payment-details-row row -->
+
+              <div class="payment-details-row row">
+                <span class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                  <h4>Exp. month</h4>
+                  <form role="form">
+                    <select class="form-control" id="expMonth">
+                      <option value="initial">Month</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </form>
+                </span>
+                <span class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                  <h4>Exp. year</h4>
+                  <form role="form">
+                    <select class="form-control" id="expYear">
+                      <option value="initial">Year</option>
+                      <option value="14">2014</option>
+                      <option value="15">2015</option>
+                      <option value="16">2016</option>
+                      <option value="17">2017</option>
+                      <option value="18">2018</option>
+                      <option value="19">2019</option>
+                      <option value="20">2020</option>
+                      <option value="21">2021</option>
+                      <option value="22">2022</option>
+                      <option value="23">2023</option>
+                      <option value="24">2024</option>
+                      <option value="25">2025</option>
+                      <option value="26">2026</option>
+                      <option value="27">2027</option>
+                      <option value="28">2028</option>
+                    </select>
+                  </form>
+                </span>
+                <span class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                  <h4>CVV</h4><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="For Mastercard and Visa, your CVV is the last three digits in the signature area on the back of your card. For American Express, it's the last four digits."></i>
+                  <form role="form">
+                    <input type="cvv" class="form-control" id="cvv"/>
+                  </form>
+                </span>
+              </div> <!-- END payment-details-row row -->
+
+              <div class="payment-details-row row">
+                <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <h5>By clicking on "Book now", you agree to pay the total amount shown, which includes Service Fees, on the right (or above, if viewing on mobile or tablet) and to the <a href="#">Terms of Service.</a></h5>
+                </span>
+              </div> <!-- END payment-details-row row -->
+
+              <div class="payment-details-row row">
+                <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="transparent-btn modal-send-btn book-now-btn bold" id="send-request"><h4 class="bold"><a href="#">Book Now</a></h4></button>
+                </span>
+              </div> <!-- END payment-details-row row -->
+
+            </div> <!-- END payment-hero-container -->
+
+            <div class="listing-info-container col-md-5 col-lg-5">
+              <!--<div class="listing-profile-name all-cap white">
+                <!-- 85 characters max for listing name -->
+                <!-- Need to deal with the overflow:hidden problem -->
+                <!--<h2 class="bold">red dragon</h2>
+              <!--</div> <!-- END listing-profile-name -->
+
+              <!--<div class="listing-profile-nittygritty white">
+                <div class="payment-listing-hero-container">
+                <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/>
+              </div>
+                <h4 class="make">Red</h4>&nbsp;&nbsp;<h4 class="model">Epic-X</h4><br>
+                <h4 class="location">Manhattan, NY USA</h4>
+              </div> <!-- END listing-profile-nittygritty -->
+
+              <div class="booking-widget widget">
+                <div class="listing-profile-name all-cap">
+                  <!-- 85 characters max for listing name -->
+                  <!-- Need to deal with the overflow:hidden problem -->
+                  <h2 class="bold">red dragon</h2>
+                </div> <!-- END listing-profile-name -->
+
+                <div class="listing-profile-nittygritty">
+                  <div class="payment-listing-hero-container">
+                  <img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/movi/alpine-aerials_MOVI_2.jpg" class="img-responsive" alt="listing hero image"/>
+                </div>
+                  <h4 class="make">Red</h4>&nbsp;&nbsp;<h4 class="model">Epic-X</h4><br>
+                  <h4 class="location">Manhattan, NY USA</h4>
+                </div> <!-- END listing-profile-nittygritty -->
+             
+                <div class="booking-widget-datepicker">
+                  <div class="gear-pickup">
+                    <h4>Gear Pick-Up</h4>
+                    <h4 class="all-cap">20 nov 2014</h4>
+                  </div> <!-- END gear-pickup -->
+                  <div class="gear-dropoff">
+                    <h4>Gear Drop-Off</h4>
+                    <h4 class="all-cap">30 nov 2014</h4>
+                  </div> <!-- END gear-dropoff -->  
+                </div> <!-- END booking-widget-datepicker -->
+
+                <div class="booking-widget-breakdown">
+                  <table class="table table-bordered table-breakdown">
+                    <tbody>
+                      <tr>
+                        <td>Total days</td>
+                        <td class="table-cell-price">10</td>
+                      </tr>
+                      <tr>
+                        <td>$9,000 x 10 days&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="Average Per Day price is rounded. "></i></td>
+                        <td class="table-cell-price">$90,000</td>
+                      </tr>
+                      <tr>
+                        <td>Service Fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="We love our early Hivers, so we've waived your Hiver Service Fees completely! Yay!"></i></td>
+                        <td class="table-cell-price">Waived</td>
+                      </tr>
+                      <tr>
+                        <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
+                        <td class="table-cell-price">$900</td>
+                      </tr>
+                      <tr>
+                        <td class="table-cell-total bold"><h3 class="bold">Total</h3></td>
+                        <td class="table-cell-price"><h3 class="bold">$99,000</h3></td>
+                      </tr>
+                    </tbody>
+                  </table> <!-- END table-bordered table-breakdown -->
+                </div> <!-- END booking-widget-breakdown -->
+
+              </div> <!-- END booking-widget -->
+
+            </div> <!-- END listing-info-container -->
+
+          </div> <!-- END profile-header-row -->
+
+      </div> <!-- END profile-header-hero -->
+    </div> <!-- END header-content --> 
+
+    <!-- END LISTING HEADER -->
+
+
+  </div> <!-- END sticky-wrapper -->
+
+  
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Sticky Booking Widget -->
+<script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
+
+<!-- Plugin for Responsive Slider (Similar Listings) -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
+
+<script> 
+  // CAROUSEL
+    $('#myCarousel').carousel({
+      interval: false
+    });
+
+    // handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+      var id_selector = $(this).attr("id");
+      var id = id_selector.substr(id_selector.length -1);
+      id = parseInt(id);
+      $('#myCarousel').carousel(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    // when the carousel slides, auto update
+    $('#myCarousel').on('slid', function (e) {
+      var id = $('.item.active').data('slide-number');
+      id = parseInt(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $('[id=carousel-selector-'+id+']').addClass('selected');
+    })
+  // END CAROUSEL
+
+  $(document).ready(function(){
+
+    $('[data-toggle=tooltip]').tooltip();
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      $alert = $('#append-alert-wishlist-hero'); 
+      if($button.find('.fa-heart').hasClass('liked')){
+          //$.ajax(); Do Remove from Wishlist
+          $button.find('.fa-heart').removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none');
+      } else {
+          // $.ajax(); Do Add to Wishlist
+          $button.find('.fa-heart').addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline');
+          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
+          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      }
+    });
+
+    // Booking Request Button for LG screens only
+    $('.booking-request-btn').mouseenter(function() {
+      $(this).addClass('booking-request-btn-hover');
+    });
+    $('.booking-request-btn').mouseleave(function() {
+      $(this).removeClass('booking-request-btn-hover');
+    });
+
+    // STICKY.JS stuff
+    var width_sticky_break_01 = 991;
+    var width_sticky_break_02 = 767;
+
+    var sticky_wrapper = document.getElementById('undefined-sticky-wrapper');
+    
+    var device_size;
+    device_size = check_viewport($(window).width());
+    init_button(); // 0 1 or 2 determines the size of the current browser. 0
+    // for mobile, 1 tablet, 2 for desktop
+
+    // Creates button class dependent on size of window.
+    function init_button() { 
+      if ($(window).width() > width_sticky_break_01) {
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:50});
+        console.log('init xl button');
+      } 
+      else if ($(window).width() > width_sticky_break_02 && $(window).width() < width_sticky_break_01 ) {
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+          console.log('mid init button');
+      }
+      else if ($(window).width() < width_sticky_break_02) {
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+
+      }
+
+    }
+    
+    // Checks the size of the viewport based on width
+    function check_viewport(width) { 
+      var width = width; 
+      var size = -1;
+      if (width < width_sticky_break_02) {
+        // determines xs
+        size = 0;
+      }else if (width > width_sticky_break_02 && width < width_sticky_break_01) {
+        size = 1 // mid size
+      }else{ 
+        size = 2; // largest 
+      }
+      return size;
+    }
+
+    function stickyBookButtonSm() {
+      if(width_sticky_break_01 > $(window).width() && !$('.booking-request-btn-sm').hasClass('is-sticky')){
+        $('.booking-widget').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        $('.booking-request-btn-sm').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky SM added');
+      };
+    }
+
+    function stickyBookButtonXs() {
+      if (width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')) {
+        $('.booking-widget').removeClass('is-sticky');
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        //$('#undefined-sticky-wrapper').remove();
+        //$('.book-button-container-sm-top').append("<button class='booking-request-button-sm-top'></button>");
+        $('.booking-request-btn-sm-top').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+        console.log('sticky XS added')
+      }
+    }
+
+    function bookingWidgetSticky() {
+      if (width_sticky_break_01 < $(window).width()) {
+        $('.booking-request-btn-sm').removeClass('is-sticky');
+        $('.booking-request-btn-sm-top').removeClass('is-sticky');
+        $('.booking-widget').addClass('is-sticky');
+        $(".is-sticky").sticky({topSpacing:0});
+      }
+    }
+
+    /*
+    function stickyBookButtonXs() {
+      if(width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')){
+    }*/
+
+    //stickyBookButtonSm();
+    
+    $(window).resize(function(){
+      var windows_width = $(window).width();
+      var checked_view = check_viewport(windows_width);
+      console.log(checked_view + " " + device_size);
+
+      if (checked_view != device_size) {
+        console.log('changed');
+       if (width_sticky_break_02 < windows_width && windows_width < width_sticky_break_01) {
+              stickyBookButtonSm();
+              console.log('midsized resized');
+            }
+            else if (width_sticky_break_02 > windows_width) {
+              console.log('break 2 resized');
+              stickyBookButtonXs();
+            }
+            else if (width_sticky_break_01 < windows_width) {
+              bookingWidgetSticky();
+              console.log('break 1 < resized');
+            }
+        device_size = checked_view;
+      }
+
+    });
+    
+    // Init Sticky.js Booking Widget
+    //$(".is-sticky").sticky({topSpacing:50});
+
+    // Init Similar Listings slider
+    $('.responsive').slick({
+      dots: false,
+      infinite: false,
+      speed: 800,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 610,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+</html>

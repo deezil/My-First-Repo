@@ -1,145 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-<title>Purely Bootstrap</title>
+<title>Test Profile Page</title>
 
 <head>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-<link href='http://fonts.googleapis.com/css?family=Cabin:600' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="v4style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="v4style.css">
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>
 
-<nav class="navbar navbar-inverse" role="navigation" id="navbar">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
+  <div class="app-container">
+
+    <div class="jumbotron">
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Photos</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu" id="ulblack">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+    <div class="profile-header-row row">
+      <div class="profile-header col-xs-2 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+        <figure class="profile-avatar">
+          <a class="profile-avatar" href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
+        </figure>
+      </div>
+
+      <div class="profile-info-container col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
+        <div class="profile-details">
+          <div class="profile-user-name">Steven Spielberg</div>
+          <div class="profile-user-roles">PRODUCER, DIRECTOR, WRITER, BIGWIG</div>
+          <div class="profile-user-location"><i class="fa fa-map-marker fa-lg"></i>Los Angeles, California, USA</div>
         </div>
-        <button type="submit" class="btn btn-default">Find Gear</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu" id="ulblack">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="jumbotron">
-	<div class="container">
-	  <h1>Hello, world!</h1>
-	  <p>And this is some subtitle!</p>
-	  <p><a href="#"><button type="button" class="btn btn-primary btn-lg">Learn More <span id ="chev" class="glyphicon glyphicon-chevron-right"></span></button></a></p>
-	 </div>
-	 <div id="downchevron">
-	 	<span id="chevdown" class="glyphicon glyphicon-chevron-down"></span>
-	 </div>
-</div>
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
-  <!-- Indicators -->
-	<ol class="carousel-indicators">
-    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  	</ol> -->
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="http://24.media.tumblr.com/336248495dfd5ea44f32eeebd35108af/tumblr_n5e0gloGfW1st5lhmo1_1280.jpg" alt="photo1">
-      <div class="carousel-caption">
-      	<p>Lorum ipsum</p>
       </div>
     </div>
-  
-    <div class="item">
-      <img src="http://24.media.tumblr.com/336248495dfd5ea44f32eeebd35108af/tumblr_n5e0gloGfW1st5lhmo1_1280.jpg" alt="photo1">
-      <div class="carousel-caption">
-      	<p>Lorum ipsum</p>
-      </div>
-    </div>
-  
-    <div class="item">
-      <img src="http://24.media.tumblr.com/336248495dfd5ea44f32eeebd35108af/tumblr_n5e0gloGfW1st5lhmo1_1280.jpg" alt="photo1">
-      <div class="carousel-caption">
-      	<p>Lorum ipsum</p>
-      </div>
-    </div>
-  </div> 
+  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div> 
-
-<div class="container">
-	<div class="row" id="valueprop">
-		<div class="col-md-4" id="vp1">
-			<h1>COL1</h1>
-			<p class="lineheight">Some subtitle<br>One more subtitle here</p>
-			<a href="#">Learn more</a>
-		</div>
-		<div class="col-md-4" id="vp2">
-			<h1>COL2</h1>
-			<p>Some subtitle</p>
-			<a href="#">Learn more</a>
-		</div>
-		<div class="col-md-4" id="vp3">
-			<h1>COL3</h1>
-			<p>Some subtitle</p>
-			<a href="#">Learn more</a>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div> 
+</body>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
