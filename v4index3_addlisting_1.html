@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<title>Add Listing Main</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: User Avatar Dropdown Nav onwards** -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Top navbar User Avatar Dropdown Nav -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li>
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+          <h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i>
+        </a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="#"><h5>Log Out</h5></a>
+      </li>
+    </ul>
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
+
+  <!-- Top navbar Inbox Icon -->
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <i class="fa fa-envelope-o fa-lg"></i>
+      </a>
+    </h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
+
+  <!-- Top navbar Browse Dropdown -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <!-- Top navbar list gear button -->
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear"><h5 class="all-cap">List Your Gear</h5></button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Spacer to clear fixed navbars -->
+<div class="fivefive-header-spacer"></div>
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<!-- Invite Header Hero -->
+<div class="add-listing-header-wrapper">
+    <h1 class="bold">Add a Listing</h1>
+    <h2 class="bold">Make your gear work for you.</h2>
+  <span class="inline-content">
+    <h2 class="bold">Earn up to $10,000 a year.</h2>
+    <sup><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="The average hire price for a Red Epic kit is $1,200 a day. You do the math."></i></sup>
+  </span>
+</div> <!-- END add-listing-header-wrapper -->
+
+<!-- Main Content -->
+<div class="content-body">
+  <div class="app-container container">
+    <div class="app-content-main dashboard-content-main add-listing-content-main" >
+
+      <div class="widget col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <div class="add-listing-content top-border">
+
+          <div class="widget-row category-row row">
+            <div class="category-header-centered col-sm-5 col-md-5">
+              <h3>Gear dept</h3>
+            </div>
+
+            <div class="category-each dropdown col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
+              <button class="fatty-btn dropdown-toggle inline-content" id="categoryDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h3>Department</h3>
+                <i class="fa fa-chevron-down fa-lg"></i>
+              </button>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="categoryDrop">
+                <li>
+                  <a href="#"><h3>Camera</h3></a>
+                </li>
+                <li>
+                  <a href="#"><h3>Lighting</h3></a>
+                </li>
+                <li>
+                  <a href="#"><h3>Sound</h3></a>
+                </li>
+                <li>
+                  <a href="#"><h3>Grip</h3></a>
+                </li>
+                <li>
+                  <a href="#"><h3>Art</h3></a>
+                </li>
+                <li>
+                  <a href="#"><h3>Other</h3></a>
+                </li>
+              </ul>
+            </div> <!-- END category-each -->
+          </div> <!-- END widget-row category-row row -->
+
+          <div class="widget-row category-row row">
+            <div class="category-header col-md-5">
+              <h3>Listing title</h3>
+            </div>
+
+            <div class="category-each dropdown col-md-4  col-md-offset-1">
+              <form role="form">
+                <input type="listingTitle" class="form-control" id="listingTitle" placeholder="e.g. Ultimate Red Dragon 6k Kit"/>
+              </form>
+              <h4>Keep your listing title punchy! Grab someone's attention!</h4>
+            </div> <!-- END category-each -->
+          </div> <!-- END widget-row category-row row -->
+
+          <div class="widget-row category-row row">
+            <div class="category-header col-md-5">
+              <h3>Listing location</h3>
+              <i class="fa fa-lock fa-lg"></i>
+            </div>
+
+            <div class="category-each dropdown col-md-4  col-md-offset-1">
+              <form role="form">
+                <input type="listingLocation" class="form-control" id="listingLocation"/>
+              </form>
+              <h4>To successfully create a listing, you'll need to include a physical address.</h4>
+
+              <h5>Don't worry. This is only revealed when you have a confirmed booking with another Hirehive member.</h5>
+            </div> <!-- END category-each -->
+          </div> <!-- END widget-row category-row row -->
+
+          <div class="widget-row category-row row">
+            <div class="category-header-centered col-sm-5 col-md-5">
+              <h3>Listing photos</h3>
+            </div>
+
+            <div class="category-each dropdown col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1">
+              <div class="add-listing-photos-wrapper">
+                <div class="add-listing-photos-each" id="add-listing-photo-1">
+                  <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg">
+                  <i class="fa fa-times fa-3x"></i>
+                </div>
+                <div class="add-listing-photos-each" id="add-listing-photo-1">
+                  <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg">
+                  <i class="fa fa-times fa-3x"></i>
+                </div>
+                <div class="add-listing-photos-each" id="add-listing-photo-1">
+                  <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg">
+                  <i class="fa fa-times fa-3x"></i>
+                </div>
+                <div class="add-listing-photos-each" id="add-listing-photo-1">
+                  <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg">
+                  <i class="fa fa-times fa-3x"></i>
+                </div>
+                <div class="add-listing-photos-each" id="add-listing-photo-1">
+                  <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg">
+                  <i class="fa fa-times fa-3x"></i>
+                </div>
+              </div>
+              <!-- Do some Dropzone JS magic here -->
+              <button class="transparent-btn list-gear-naked"><h4>Upload a photo</h4></button>
+              <h4 class="bold">Upload up to 5 photos</h4>
+              <h5>We recommend that you upload photos with these dimensions:</h5>
+              <h5>Minimum size: 1200 x 960 pixels.</h5>
+              <h5>Recommended size: 1200 x 960 pixels.</h5>
+            </div> <!-- END category-each -->
+          </div> <!-- END widget-row category-row row -->
+
+          <div class="widget-row category-row row">
+            <div class="col-sm-12 col-md-3 col-md-offset-6">
+              <button class="transparent-btn-yellow list-gear-naked" id="createListing"><h4>Continue</h4></button>
+              <button class="yellow-btn-fill list-gear-naked inline-content" id="creatingListingLoader">
+                <h4>Creating your listing</h4>
+                <i class="fa fa-circle-o-notch fa-lg fa-spin"></i>
+              </button>
+            </div>
+          </div> <!-- END widget-row category-row row -->
+
+
+
+        </div> <!-- END widget-content add-listing-content -->
+
+
+      </div> <!-- END widget -->
+
+    </div> <!-- END app-content-main -->
+  </div> <!-- END app-container container -->
+</div> <!-- END content-body -->
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for jPanel -->
+<script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
+
+<!-- Plugin for Countdown Timer -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
+
+<script> 
+
+  $(document).ready(function(){
+
+    $('[data-toggle=tooltip]').tooltip();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    // Yellow Transparent buttons
+    $('.transparent-btn-yellow').mouseenter(function() {
+      $(this).addClass('yellow-btn-fill');
+    });
+
+
+    $('.transparent-btn-yellow').mouseleave(function() {
+      $(this).removeClass('yellow-btn-fill');
+    }); 
+
+    // Project Social Hover Effects
+    $('.fa-facebook-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
+      }
+    );
+    $('.fa-facebook-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
+      }
+    );
+
+    $('.fa-twitter-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
+      }
+    );
+    $('.fa-twitter-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
+      }
+    );
+
+    $('.fa-linkedin-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
+      }
+    );
+    $('.fa-linkedin-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
+      }
+    );
+
+    //Remove Photos 
+    $('.add-listing-photos-each').mouseenter(function() {
+      $(this).find('img').css('opacity', '0.5');
+      $(this).find('i').css('display', 'inline');
+
+      $(this).find('i').click(function(){
+        $(this).closest('.add-listing-photos-each').fadeOut(300, function(){
+          $(this).remove();
+          //Do some AJAX to remove photo from database
+        });
+      });
+    });
+
+    //Remove Photos 
+    $('.add-listing-photos-each').mouseleave(function() {
+      $(this).find('img').css('opacity', '1');
+      $(this).find('i').css('display', 'none');
+      console.log('winning');
+    });
+
+    // Department Dropdown shows the selected value
+    $(".dropdown-menu").on('click', 'li a', function(){
+      $(".fatty-btn:first-child").text($(this).text());
+      $(".fatty-btn:first-child").val($(this).text());
+      $(".fatty-btn:first-child").css('font', "2.4rem 'proxima-nova', sans-serif")
+    });
+
+    //Creating Your Listing Loader
+    $('.category-row').find('#createListing').click(function(){
+      $(this).fadeOut(300, function(){
+        $(this).closest('.category-row').find('#creatingListingLoader').fadeIn(500, function(){
+          // Do some AJAX and load up the next page
+          setTimeout(function(){
+            window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_listingincludes.html';
+          }, 1000);   
+        });
+      });
+    });
+
+  });
+
+</script>
+
+</html>

@@ -24,45 +24,94 @@
 
 <body>
 
-<!-- Top Navbar -->
-<div class="top-navbar loggedin widget-row row visible-md visible-lg">
-  <div class="logo-container pull-left">
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: User Avatar Dropdown Nav onwards** -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
     <a href="#">
       <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
     </a>
-  </div> <!-- END logo-container -->
+  </div>
 
-  <div class="searchbar-container col-md-3 col-lg-3">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
     <i class="fa fa-search fa-lg"></i>
     <form role="form">
       <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
     </form>
   </div> <!-- END searchbar-container -->
 
-  <div class="navbar-option col-md-1 col-lg-1 dropdown pull-right">
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Top navbar User Avatar Dropdown Nav -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <figure class="profile-avatar-mini">
       <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
     </figure>
-    <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Steven</h5></a>
-    <span class="caret" id="profileCaret"></span>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
-      <li><a href="#"><h5>Dashboard</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Your Gear List</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Your Shoots</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Wishlist</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i></a></li>
-      <li class="top-border"><a href="#"><h5>Edit Profile</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Account</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Log Out</h5></a></li>
+      <li>
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+          <h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i>
+        </a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="#"><h5>Log Out</h5></a>
+      </li>
     </ul>
-  </div> <!-- END navbar-option -->
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
 
-  <div class="navbar-option col-md-1 col-lg-1 pull-right">
-    <h5><a href="#"><i class="fa fa-envelope-o fa-lg"></i></a></h5>
-  </div> <!-- END navbar-option -->
+  <!-- Top navbar Inbox Icon -->
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <i class="fa fa-envelope-o fa-lg"></i>
+      </a>
+    </h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
 
-  <div class="navbar-option col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+  <!-- Top navbar Browse Dropdown -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
     <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
     <span class="caret"></span>
     <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
@@ -72,10 +121,30 @@
     </ul>
   </div> <!-- END navbar-option -->
 
-  <div class="navbar-option col-md-2 col-lg-2 pull-right">
-    <button class="transparent-btn list-gear-naked" id="listGear"><a href="#"><h5 class="all-cap">List Your Gear</h5></a></button>
+  <!-- Top navbar list gear button -->
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
   </div> <!-- END navbar-option -->
 </div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
 
 <div class="stick-contain">
   <!-- Sticky Booking Widget will live in this .sticky-wrapper -->
@@ -112,14 +181,14 @@
               <i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="bottom" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i>
             </span>
             <span class="modal-total-hire-fee">
-              <h5 class="all-cap bold">Total payable:</h5>&nbsp;&nbsp;<h5 class="bold">$90,000</h5>
+              <h5 class="all-cap bold">Total:</h5>&nbsp;&nbsp;<h5 class="bold">$90,000</h5>
             </span>
           </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
-          <button type="button" class="transparent-btn modal-send-btn bold" id="send-request"><a href="#">Send</a></button>
+          <button type="button" class="transparent-btn modal-send-btn bold" id="send-request"><a href="/testwebsite/my-first-repo/v4index3_bookingconvo.html">Send</a></button>
         </div> <!-- END modal-footer -->
       </div> <!-- END modal-content -->
     </div> <!-- END modal-dialog -->
@@ -151,22 +220,32 @@
               </span>            
           </div>
           <div class="booking-modal-payment-breakdown col-xs-6 col-sm-6 col-md-6">
-            <span class="modal-total-hire-fee">
-              <h5>Total hire price:</h5>&nbsp;&nbsp;<h5 class="cash">$90,000</h5>
+            <span>
+              <h5>$900 x 10 days:</h5>&nbsp;&nbsp;<h5 class="cash">$9,000</h5>
+            </span>
+            <span>
+              <h5>Service fee:&nbsp;&nbsp;</h5>
+              <h5 class="cash">$400</h5>
+              <i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We charge a 6-12% Hiver service fee every time gear is booked. This helps us cover the cost of running Hirehive. Find out more in our FAQ."></i>
+            </span>
+            <span>
+              <h5>Service fee Waiver Token</h5>
+              <i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="left" title="Enter your Service Fee Waiver Token code after you've made a Booking Request and your Service Fee will be totally on us!"></i>
+              <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html" target="_blank"><h5 class="bold">Earn tokens</h5></a>
             </span>
             <span class="modal-security-deposit">
               <h5>Security Deposit:</h5>&nbsp;&nbsp;<h5 class="cash">$900</h5>
               <i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="bottom" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i>
             </span>
             <span class="modal-total-hire-fee">
-              <h5 class="all-cap bold">Total payable:</h5>&nbsp;<h5 class="cash bold">$90,000</h5>
+              <h5 class="all-cap bold">Total:</h5>&nbsp;<h5 class="cash bold">$90,000</h5>
             </span>
           </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
-          <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Send</a></button>
+          <button type="button" class="transparent-btn modal-send-btn bold"><a href="/testwebsite/my-first-repo/v4index3_bookingconvo.html">Send</a></button>
         </div> <!-- END modal-footer -->
       </div> <!-- END modal-content -->
     </div> <!-- END modal-dialog -->
@@ -407,10 +486,10 @@
               </div> <!-- END listing-profile-nittygritty -->
 
               <div class="booking-widget widget">
-              <!-- <div class="booking-widget widget"> -->
+              
                 <!-- Gotta make widget-price div same height as scrolling header -->
                 <div class="booking-widget-price">
-                  <h2 class="white bold">$9000</h2>&nbsp;&nbsp;
+                  <h2 class="white bold">$900</h2>&nbsp;&nbsp;
                   <h4 class="booking-price-perday white pull-right">Per Day</h4>
                 </div>
 
@@ -429,20 +508,27 @@
                   <table class="table table-bordered table-breakdown">
                     <tbody>
                       <tr>
-                        <td>$9000 x 10 days</td>
-                        <td class="table-cell-price">$90000</td>
+                        <td class="table-cell-left">$900 x 10 days</td>
+                        <td class="table-cell-right">$9,000</td>
                       </tr>
                       <tr>
-                        <td>Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We love our early Hivers, so we've waived your Hiver Service Fees completely! Yay!"></i></td>
-                        <td class="table-cell-price">$9000</td>
+                        <td class="table-cell-left">Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We charge a 6-12% Hiver service fee every time gear is booked. This helps us cover the cost of running Hirehive. Find out more in our FAQ."></i></td>
+                        <td class="table-cell-right">$450</td>
                       </tr>
                       <tr>
-                        <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
-                        <td class="table-cell-price">$900</td>
+                        <td class="table-cell-left">Service Fee Waiver Token</td>
+                        <td class="table-cell-right">
+                          <i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="left" title="Enter your Service Fee Waiver Token code after you've made a Booking Request and your Service Fee will be totally on us!"></i>
+                          <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html" target="_blank"><h5 class="bold">Earn tokens</h5></a>
+                        </td>
                       </tr>
                       <tr>
-                        <td class="table-cell-total bold">Total</td>
-                        <td class="table-cell-price">$99000</td>
+                        <td class="table-cell-left">Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
+                        <td class="table-cell-right">$400</td>
+                      </tr>
+                      <tr>
+                        <td class="table-cell-left table-cell-total bold">Total</td>
+                        <td class="table-cell-right bold">$9,450</td>
                       </tr>
                     </tbody>
                   </table> <!-- END table-bordered table-breakdown -->
@@ -946,12 +1032,12 @@
       } 
       else if ($(window).width() > width_sticky_break_02 && $(window).width() < width_sticky_break_01 ) {
         $('.booking-request-btn-sm').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
+        $(".is-sticky").sticky({topSpacing:50});
           console.log('mid init button');
       }
       else if ($(window).width() < width_sticky_break_02) {
         $('.booking-request-btn-sm-top').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
+        $(".is-sticky").sticky({topSpacing:50});
 
       }
 

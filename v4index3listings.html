@@ -19,14 +19,85 @@
 
 <body>
 
-<div class="top-navbar">NAVBAR PLACEHOLDER</div>
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
 
 <div class="follow-user-fixed col-xs-2 col-xs-offset-10 col-sm-2 col-sm-offset-10 col-md-2 col-md-offset-10 col-lg-2 col-lg-offset-10">
-  <button class="transparent-btn">
+  <button class="transparent-btn followButton">
     <i class="fa fa-plus"></i>
     Follow
   </button>
 </div>
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
 
 <!-- //// THE HEADER. ONE TO RULE THEM ALL. \\\\ -->
   <!-- Static Header Bg Image -->
@@ -341,11 +412,11 @@
                     <div class="carousel-inner">
 
                       <div class="active item" data-slide-number="0">
-                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt="listing hero image"/></a>
+                        <a href="/testwebsite/my-first-repo/v4index3viewlisting.html"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/desertDragonShoot_0007.jpg" class="img-responsive" alt="listing hero image"/></a>
                       </div>
 
                       <div class="item" data-slide-number="1">
-                        <a href="#"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="listing hero image"/></a>
+                        <a href="/testwebsite/my-first-repo/v4index3viewlisting.html"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="listing hero image"/></a>
                       </div>
 
                     </div> <!-- END carousel-inner -->
@@ -622,6 +693,47 @@
             $(this).remove();
           });
       }
+    });
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
     });
     
 

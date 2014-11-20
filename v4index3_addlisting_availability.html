@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Dashboard Edit Profile Reference Request</title>
+<title>Add Listing Availability</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -119,64 +119,31 @@
 
   <!-- Top navbar list gear button -->
   <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
-    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+    <button class="transparent-btn-yellow" id="listGear"><h5 class="all-cap">List Your Gear</h5></button>
   </div> <!-- END navbar-option -->
 </div> <!-- END top-navbar widget-row row -->
 
-<!-- Dashboard Navbar visible @min-width: 992px -->
+<!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
 <div class="dashboard-nav-container visible-md visible-lg">
-  <nav class="navbar profile-header-navbar dashboard-header-navbar" role="navigation">
+  <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+          <li class="back-arrow-wrapper">
+            <!-- Display only for Edit Listing -->
+            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
           </li>
 
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html"><h5>Inbox</h5></a>
-            <span class="new-msg-counter">
-              <h5>26</h5>
-            </span>
+          <li class="add-listing-navbar-title">
+            <h5>Ultimate Red Dragon 6k Kit</h5>
           </li>
 
-          <li class="cl-effect-4 dropdown">
-            <a href="#" data-target="#" class="dropdown-toggle" id="manageDropDashNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              <h5>Manage</h5>
+          <li class="add-listing-navbar-preview pull-right">
+            <a href="#" target="_blank">
+              <i class="fa fa-eye"></i>
+              <h5>Preview Listing</h5>
             </a>
-            <span class="caret"></span>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="manageDropDashNav">
-              <li>
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
-                  <h5>Your Gear List</h5>
-                </a>
-              </li>
-              <li class="top-border">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
-              </li>
-              <li class="top-border">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
-              </li>
-              <li class="top-border">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
-              </li>
-            </ul>
           </li>
 
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
-          </li>
-
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html"><h5>Invite Friends</h5></a>
-          </li>
-
-          <li class="active">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
-          </li>
-
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
-          </li>
         </ul>
     <!-- </div><END container-fluid profile-header-navbar-fluid-->
   </nav> <!-- END navbar profile-header-navbar -->
@@ -194,107 +161,30 @@
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
-        <h5>Inbox</h5>
-         <span class="new-msg-counter">
-          <h5>26</h5>
-        </span>
+    <li class="active">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
+        <h5>Availability</h5>
       </a>
     </li>
 
-    <li class="cl-effect-1 dropdown">
-      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <h5>Manage</h5>
-        <span class="caret"></span>
-      </a>
-      
-      <ul class="dropdown-menu" role="menu" aria-labelledby="manageDrop">
-        <li>
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
-            <h5>Your Gear List</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html">
-            <h5>Your Gear Bookings</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html">
-            <h5>Your Shoots</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html">
-            <h5>Your Projects</h5>
-          </a>
-        </li>
-      </ul>
-    </li>
-
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
-        <h5>Invite Friends</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
+        <h5>Pricing</h5>
       </a>
     </li>
 
-    <li class="active dropdown">
-      <a href="#" data-target="#" class="dropdown-toggle" id="editProfileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <h5>Profile</h5>
-        <span class="caret"></span>
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
+        <h5>Description</h5>
       </a>
-
-      <ul class="dropdown-menu" role="menu" aria-labelledby="editProfileDrop">
-        <li>
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
-            <h5>Edit Profile</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_photos.html">
-            <h5>Photos & Badges</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_yourwork.html">
-            <h5>Your Work</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_verifications.html">
-            <h5>Verifications</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html">
-            <h5>Reviews</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html">
-            <h5>References</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3.html">
-            <h5>View Profile</h5>
-          </a>
-        </li>
-      </ul>
-
     </li>
 
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html">
-        <h5>Account</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
+        <h5>Features</h5>
       </a>
     </li>
   </ul>
@@ -322,18 +212,19 @@
 <!-- Main Content -->
 <div class="content-body">
   <div class="app-container container">
-    <div class="app-content-main dashboard-content-main edit-reviews-content-main">
+    <div class="app-content-main dashboard-content-main add-listing-content-main">
 
       <!-- Side Nav Menu -->
       <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
+
         <!-- Side Verifications Only Visible @ min-width: 992px -->
         <div class="widget-content verification-content manage-content edit-profile-content">
-           <ul class="list-unstyled">
+          <ul class="list-unstyled">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
-                    <h4 class="widget-element grey">Edit Profile</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html">
+                    <h4 class="widget-element grey">Listing Includes</h4>
                   </a>
                 </div>
               </div>
@@ -342,8 +233,8 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_photos.html">
-                    <h4 class="widget-element grey">Photos and Badges</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
+                    <h4 class="widget-element active bold">Availability</h4>
                   </a>
                 </div>
               </div>
@@ -352,8 +243,8 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_yourwork.html">
-                    <h4 class="widget-element grey">Your Work / Experience</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
+                    <h4 class="widget-element grey">Pricing</h4>
                   </a>
                 </div>
               </div>
@@ -362,8 +253,8 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_verifications.html">
-                    <h4 class="widget-element grey">Trust and Verifications</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
+                    <h4 class="widget-element grey">Description</h4>
                   </a>
                 </div>
               </div>
@@ -372,28 +263,8 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html">
-                    <h4 class="widget-element grey">Reviews</h4>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="widget-verify-row row">
-              <div class="widget-element-container">
-                <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html">
-                    <h4 class="widget-element active bold">References</h4>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="widget-verify-row row">
-              <div class="widget-element-container">
-                <div>
-                  <a href="#">
-                    <h4 class="bold">View Profile</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
+                    <h4 class="widget-element grey">Features</h4>
                   </a>
                 </div>
               </div>
@@ -405,59 +276,62 @@
 
       <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
 
-        <div class="widget-header dashboard-widget-header references-widget-header">
-           <nav class="navbar profile-header-navbar dashboard-header-navbar references-header-navbar" role="navigation">
-    
-            <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-              <li class="active">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html"><h4 class="all-cap bold">Request References</h4></a>
-              </li>
-
-              <li class="cl-effect-4">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencesofyou.html"><h4 class="all-cap bold">References</h4></a>
-              </li>
-            </ul>
-            
-          </nav> <!-- END navbar profile-header-navbar -->
+        <div class="widget-header dashboard-widget-header">
+           <h4 class="bold all-cap">Availability</h4>
         </div>
 
-        <!-- Main Section -->
-        <div class="widget-content edit-references-content">
+        <!-- Activity Section -->
+        <div class="widget-content edit-profile-content add-availability-content">
 
-          <div class="widget-subheader-first dropdown">
-            <button href="#" data-target="#" class="transparent-btn dropdown-toggle" id="sortDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5>Sort</h5> <span class="caret"></span></button>
-           
-            <ul class="dropdown-menu" role="menu" aria-labelledby="sortDrop">
-              <li><a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html"><h5>Reviews of You</h5></a></li>
-              <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsbyyou.html"><h5>Reviews by You</h5></a></li>
-            </ul>
-          </div>
+          <div class="widget-section edit-profile-section add-availability-section">
 
-          <!-- Email Section -->
-          <div class="widget-section edit-photos-section edit-references-section top-border">
             <div class="widget-subheader-first">
-              <span class="widget-subheader-left">
-                <h4 class="all-cap">Email References</h4>
-              </span>
-            </div> <!-- END widget-subheader -->
-
-            <h5>Send out an email to your peers asking for a personal reference. Peers that you email can signup to Hirehive and write you a personal reference. You can then review that reference and choose to accept or ignore the reference.</h5>
+              <h5>Here's where you manage your listing's availability.</h5>
+              <h5>Don't sweat the small stuff, you can always change your Availability settings later.</h5>
+            </div>
 
             <div class="widget-row row">
-              <div class="exp-header col-sm-8 col-md-8 col-lg-8">
-                <span class="table-view">
-                 <form role="form">
-                    <input type="referenceReqEmail" class="form-control" id="referenceReqEmail" placeholder="Enter email addresses ...">
-                  </form>
-                  <button class="transparent-btn invite-friends-btn bold">
-                    Send
-                  </button>
-                </span>
-                <h5>Make sure to separate emails with a comma.</h5>
-              </div>
+              <div class="availability-all-wrapper col-md-12">
+                <div class="availability-select-wrapper" id="select-always">
+                  <h3 class="bold">Always</h3>
+                  <div class="calendar-icon-lg-wrapper">
+                    <i class="fa fa-calendar fa-4x"></i>
+                  </div>
+                  <h4>List all dates as available</h4>
+                </div> <!-- END availability-select-wrapper -->
 
+                <div class="availability-select-wrapper">
+                  <h3 class="bold">Sometimes</h3>
+                  <div class="calendar-icon-lg-wrapper" id="select-sometimes">
+                    <i class="fa fa-calendar fa-4x"></i>
+                  </div>
+                  <h4>List some dates as available.</h4>
+                </div> <!-- END availability-select-wrapper --> 
+              </div>
             </div> <!-- END widget-row row -->
-          </div> <!-- END widget-section email section-->
+
+          </div> <!-- END widget-section add-listing-section-->
+
+          <!--<div class="widget-section edit-profile-section add-listing-section">
+            <ul class="list-unstyled top-border-light added-items-list">
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="added-item-col col-md-3" id="added-item-make">
+                  <h4 class="bold">Make</h4>
+                </div>
+
+                <div class="added-item-col col-md-6" id="added-item-model">
+                  <h4 class="bold">Model</h4>
+                </div>
+
+                <div class="added-item-col col-md-1" id="added-item-qty">
+                  <h4 class="bold">Qty</h4>
+                </div>
+              </li>
+
+            </ul>
+          </div> <!-- END widget-section edit-profile-section add-listing-section -->
+
         </div> <!-- END widget-content -->
 
       </div> <!-- END widget-main -->
@@ -476,7 +350,7 @@
 <script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
 
 <script> 
- 
+
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
@@ -485,7 +359,7 @@
     var jPM = $.jPanelMenu({
       menu: "#sidebar-menu",
       trigger: '.sidenav-trigger',
-      excludedPanelContent: ['.top-navbar', '.modal'],
+      excludedPanelContent: '.top-navbar',
       openPosition: '20rem'
     });
 
@@ -496,7 +370,6 @@
       $(this).addClass('transparent-btn-fill');
     });
 
-
     $('.transparent-btn').mouseleave(function() {
       $(this).removeClass('transparent-btn-fill');
     }); 
@@ -506,12 +379,114 @@
       $(this).addClass('yellow-btn-fill');
     });
 
-
     $('.transparent-btn-yellow').mouseleave(function() {
       $(this).removeClass('yellow-btn-fill');
     }); 
 
+    $('.availability-select-wrapper').mouseenter(function(){
+      $(this).addClass('select-wrapper-active');
+    });
+    $('.availability-select-wrapper').mouseleave(function(){
+      $(this).removeClass('select-wrapper-active');
+    });
+
+    /*$('.availability-select-wrapper').click(function(){
+      if $(this).hasClass('select-wrapper-clicked')
+      $(this).addClass('select-wrapper-clicked').fadeIn('slow');
+    });*/
+
+    /* Add Item to Gear List - submitAdd
+    function submitAdd () {
+      $('#addItemToList').click(function(){
+        var make = $('#itemMake').val();
+        var model = $('#itemModel').val();
+        var qty = $('#itemQty').val();
+
+        // Conditional to insert Error alert 
+        if (make.length < 3) {
+          $('#itemMake').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid make.</h5>');
+        }
+
+        // Conditional to insert Error alert 
+        if (model.length < 4) {
+          $('#itemModel').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid model.</h5>');
+        }
+
+        // Conditional to insert Error alert 
+        if (qty == 0) {
+          $('#itemQty').closest('.exp-header').append('<h5 class="error-alert red">Wait what?</h5>');
+        }
+
+        if (make.length >= 3 && model.length >= 4 && qty > 0) {
+          // Add values to Gear List as <li>
+          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-md-3"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+          $('.added-items-list').append($newProduct);
+          
+          // Do some AJAX to record input values
+
+          //Re-init tooltip
+          $('[data-toggle=tooltip]').tooltip();
+
+          // Clear out the entered values
+          $('#itemMake').val('');
+          $('#itemModel').val('');
+          $('#itemQty').val('');
+
+          //Remove any error alerts
+          $('.add-items-input-list').find('.error-alert').fadeOut(500, function(){
+            $(this).remove();
+          });
+
+          // Delete a main item from the list
+          $newProduct.find('.fa-times').click(function(){
+            $(this).closest('li').fadeOut(500, function() {
+              $(this).remove();
+            });
+          });
+
+          //Add a Sub-Item - append a new <li> with inputs
+          $newProduct.find('.fa-plus-circle').click(function(){
+            var $thisProduct = $(this).closest('li');
+            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+            $thisProduct.append($thisSubProduct);
+
+              //Re-init tooltip ... again
+              $('[data-toggle=tooltip]').tooltip();
+
+              //Clicking on plus locks it in the DOM
+              $thisSubProduct.find('.fa-plus').click(function(){
+                var subModel = $(this).closest('li').find('#subItemModel').val();
+                var subQty = $(this).closest('li').find('#subItemQty').val();
+
+                $(this).closest('li').find('#subItemModel').replaceWith( '<h5 class="capitalize">' + subModel + '</h5>' );
+                $(this).closest('li').find('#subItemQty').replaceWith( '<h5 class="capitalize">' + subQty + '</h5>' );
+              });
+
+              // Re-init: Delete a main item from the list
+              $thisSubProduct.find('.added-item-col').find('.fa-times').click(function(){
+                $(this).closest('li').fadeOut(500, function() {
+                  $(this).remove();
+                });
+              });
+          });
+        }
+      });
+    };
+
+    // Init submitAdd
+    submitAdd();
+
+    // Emulate submitAdd on hitting 'enter' in any input fields
+    $('.add-items-input-list').find('.form-control').keypress(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        $('#addItemToList').click();
+      }
+    }); */
+
+
   });
+
 </script>
 
 </html>

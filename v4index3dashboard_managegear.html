@@ -20,7 +20,7 @@
 
 <body>
 
-<!-- Top Navbar -->
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: User Avatar Dropdown Nav onwards** -->
 <div class="top-navbar loggedin widget-row row">
 
   <!-- Logo for @min-width 768px -->
@@ -50,6 +50,7 @@
     <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
   </div> <!-- END searchbar-container -->
 
+  <!-- Top navbar User Avatar Dropdown Nav -->
   <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
    <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <figure class="profile-avatar-mini">
@@ -58,26 +59,54 @@
    <h5>Steven</h5>
     <span class="caret" id="profileCaret"></span></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
-      <li><a href="#"><h5>Dashboard</h5></a></li>
-      <li class="top-border active"><a href="#"><h5>Your Gear List</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
-      <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Wishlist</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i></a></li>
-      <li class="top-border"><a href="#"><h5>Edit Profile</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Account</h5></a></li>
-      <li class="top-border"><a href="#"><h5>Log Out</h5></a></li>
+      <li>
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+          <h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i>
+        </a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="#"><h5>Log Out</h5></a>
+      </li>
     </ul>
   </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
 
+  <!-- Top navbar Inbox Icon -->
   <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
-    <h5><a href="#"><i class="fa fa-envelope-o fa-lg"></i></a></h5>
+    <h5>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <i class="fa fa-envelope-o fa-lg"></i>
+      </a>
+    </h5>
     <span class="new-msg-counter">
       <h5>26</h5>
     </span>
   </div>
 
+  <!-- Top navbar Browse Dropdown -->
   <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
     <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
     <span class="caret"></span>
@@ -88,18 +117,19 @@
     </ul>
   </div> <!-- END navbar-option -->
 
+  <!-- Top navbar list gear button -->
   <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
-    <button class="transparent-btn list-gear-naked" id="listGear"><a href="#"><h5 class="all-cap">List Your Gear</h5></a></button>
+    <button class="transparent-btn-yellow" id="listGear"><h5 class="all-cap">List Your Gear</h5></button>
   </div> <!-- END navbar-option -->
 </div> <!-- END top-navbar widget-row row -->
 
-<!-- Dashboard Navbar -->
+<!-- Dashboard Navbar visible @min-width: 992px -->
 <div class="dashboard-nav-container visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="cl-effect-4">
-            <a href="#"><h5>Dashboard</h5></a>
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
           </li>
 
           <li class="cl-effect-4">
@@ -110,47 +140,61 @@
           </li>
 
           <li class="active dropdown">
-            <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Manage</h5></a>
+            <a href="#" data-target="#" class="dropdown-toggle" id="manageDropDashNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <h5>Manage</h5>
+            </a>
             <span class="caret"></span>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
-              <li><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a></li>
-              <li class="top-border"><a href="#"><h5>Your Gear Bookings</h5></a></li>
-              <li class="top-border"><a href="#"><h5>Your Shoots</h5></a></li>
-              <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="manageDropDashNav">
+              <li>
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
+                  <h5>Your Gear List</h5>
+                </a>
+              </li>
+              <li class="top-border">
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+              </li>
+              <li class="top-border">
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+              </li>
+              <li class="top-border">
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+              </li>
             </ul>
           </li>
 
           <li class="cl-effect-4">
-            <a href="#"><h5>Wishlist</h5></a>
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
           </li>
 
           <li class="cl-effect-4">
-            <a href="#"><h5>Invite Friends</h5></a>
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html"><h5>Invite Friends</h5></a>
           </li>
 
           <li class="cl-effect-4">
-            <a href="#"><h5>Edit Profile</h5></a>
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
           </li>
 
           <li class="cl-effect-4">
-            <a href="#"><h5>Account</h5></a>
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
           </li>
         </ul>
     <!-- </div><END container-fluid profile-header-navbar-fluid-->
   </nav> <!-- END navbar profile-header-navbar -->
 </div> <!--END dashboard-nav -->
 
+<!-- jPanel sidenav trigger visible @max-width:991px -->
 <div class="sidenav-trigger-container visible-xs visible-sm">
   <a href="#sidebar-menu" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
 </div>
 
+<!-- Spacer to clear fixed navbars -->
 <div class="dashboard-header-spacer"></div>
 
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
     <li class="cl-effect-1">
-      <a href="#"><h5>Dashboard</h5></a>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
     </li>
 
     <li class="cl-effect-1">
@@ -163,38 +207,101 @@
     </li>
 
     <li class="active dropdown">
-      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Manage</h5>
-      <span class="caret"></span>
+      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <h5>Manage</h5>
+        <span class="caret"></span>
       </a>
       
       <ul class="dropdown-menu" role="menu" aria-labelledby="manageDrop">
-        <li><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a></li>
-        <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear Bookings</h5></a></li>
-        <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a></li>
-        <li class="top-border"><a href="#"><h5>Your Projects</h5></a></li>
+        <li>
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
+            <h5>Your Gear List</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html">
+            <h5>Your Gear Bookings</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html">
+            <h5>Your Shoots</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html">
+            <h5>Your Projects</h5>
+          </a>
+        </li>
       </ul>
     </li>
 
     <li class="cl-effect-1">
-      <a href="#"><h5>Wishlist</h5></a>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
     </li>
 
     <li class="cl-effect-1">
-      <a href="#"><h5>Invite Friends</h5></a>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+        <h5>Invite Friends</h5>
+      </a>
+    </li>
+
+    <li class="cl-effect-1 dropdown">
+      <a href="#" data-target="#" class="dropdown-toggle" id="editProfileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <h5>Profile</h5>
+        <span class="caret"></span>
+      </a>
+
+      <ul class="dropdown-menu" role="menu" aria-labelledby="editProfileDrop">
+        <li>
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
+            <h5>Edit Profile</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_photos.html">
+            <h5>Photos & Badges</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_yourwork.html">
+            <h5>Your Work</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_verifications.html">
+            <h5>Verifications</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html">
+            <h5>Reviews</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html">
+            <h5>References</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3.html">
+            <h5>View Profile</h5>
+          </a>
+        </li>
+      </ul>
+
     </li>
 
     <li class="cl-effect-1">
-      <a href="#"><h5>Edit Profile</h5></a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="#"><h5>Account</h5></a>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html">
+        <h5>Account</h5>
+      </a>
     </li>
   </ul>
-</nav>
+</nav> <!-- END <!-- jPanel sidenav -->
 
 <!-- Search Modal Sm -->
-<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="bookingModalMed" aria-hidden="true">
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -210,7 +317,7 @@
       </div> <!-- END modal-footer -->
     </div> <!-- END modal-content -->
   </div> <!-- END modal-dialog -->
-</div> <!-- END booking large modal -->
+</div> <!-- END search modal -->
 
 <!-- Main Content -->
 <div class="content-body">
@@ -226,7 +333,7 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="#">
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
                     <h4 class="widget-element active bold">Your Gear List</h4>
                   </a>
                 </div>
@@ -236,7 +343,7 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html">
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html">
                     <h4 class="widget-element grey">Your Gear Bookings</h4>
                   </a>
                 </div>
@@ -256,13 +363,11 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="#">
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html">
                     <h4 class="widget-element grey">Your Projects</h4>
                   </a>
                 </div>
               </div>
-            </li>
-
             </li>
           </ul>
         </div> <!-- END widget-contents -->
@@ -273,14 +378,14 @@
         <div class="widget-header dashboard-widget-header">
            <h4 class="bold all-cap">Your Gear List</h4>
            <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This is where you manage all your gear and add new listings."></i>
-           <button class="transparent-btn manage-add-btn pull-right">
+           <button class="transparent-btn-yellow pull-right">
            <i class="fa fa-plus"></i> Add a Listing</button>
         </div>
 
         <!-- Activity Section -->
         <div class="widget-content">
 
-          <div class="widget-section manage-section">
+          <div class="widget-section manage-section gear">
 
             <div class="widget-subheader-first dropdown">
               <button href="#" data-target="#" class="transparent-btn dropdown-toggle" id="filterDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5>Filter</h5> <span class="caret"></span></button>
@@ -316,7 +421,7 @@
                 </div> <!-- END widget-element-container exp-title-container -->
                 <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
                   <div class="exp-header">
-                    <h4 class="bold letter-spaced all-cap">Close encounters of the third kind Close encounters of the third kind Close encounters of the third kind</h4>
+                    <h4 class="bold letter-spaced all-cap">Close encounters of the third kind</h4>
                     <span class="gearlist-widget-details">
                       <h5 class="all-cap">Department: Camera</h5>
                       <h5 class="all-cap pull-right">$900 per day</h5>
@@ -327,7 +432,7 @@
                     <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing is now listed and publicly viewable."></i>
                   </span>
                   <a href="#"><h4>Manage listing</h4></a>
-                  <a href="#"><h4>View listing</h4></a>
+                  <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><h4>View listing</h4></a>
                 </div> <!--END widget-element-container exp-descrip -->
 
                 <div class="clearfix"></div>
@@ -362,7 +467,7 @@
                     <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing has been unlisted and cannot be publicly viewed."></i>
                   </span>
                   <a href="#"><h4>Manage listing</h4></a>
-                  <a href="#"><h4>View listing</h4></a>  
+                  <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><h4>View listing</h4></a>
                 </div> <!--END widget-element-container exp-descrip -->
 
                 <div class="clearfix"></div>
@@ -392,42 +497,14 @@
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 <!-- Plugins / Scripts -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-<!-- Plugin for Sticky Booking Widget -->
-<script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
-
-<!-- Plugin for Responsive Slider (Similar Listings) -->
-<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
 
 <!-- Plugin for jPanel -->
 <script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
 
 <script> 
-  // CAROUSEL
-    $('#myCarousel').carousel({
-      interval: false
-    });
-
-    // handles the carousel thumbnails
-    $('[id^=carousel-selector-]').click( function(){
-      var id_selector = $(this).attr("id");
-      var id = id_selector.substr(id_selector.length -1);
-      id = parseInt(id);
-      $('#myCarousel').carousel(id);
-      $('[id^=carousel-selector-]').removeClass('selected');
-      $(this).addClass('selected');
-    });
-
-    // when the carousel slides, auto update
-    $('#myCarousel').on('slid', function (e) {
-      var id = $('.item.active').data('slide-number');
-      id = parseInt(id);
-      $('[id^=carousel-selector-]').removeClass('selected');
-      $('[id=carousel-selector-'+id+']').addClass('selected');
-    })
-  // END CAROUSEL
 
   $(document).ready(function(){
 
@@ -443,173 +520,72 @@
 
     jPM.on();
 
-    // Wishlist / Like
-    $('.hearts').on('click', function(e){
-      e.preventDefault();
-      $button = $(this);
-      $alert = $('#append-alert-wishlist-hero'); 
-      if($button.find('.fa-heart').hasClass('liked')){
-          //$.ajax(); Do Remove from Wishlist
-          $button.find('.fa-heart').removeClass('liked');
-          $button.find('.fa-heart-o').css('display', 'inline');
-          $button.find('.fa-heart').css('display', 'none');
-      } else {
-          // $.ajax(); Do Add to Wishlist
-          $button.find('.fa-heart').addClass('liked');
-          $button.find('.fa-heart-o').css('display', 'none');
-          $button.find('.fa-heart').css('display', 'inline');
-          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
-          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
-            $(this).remove();
-          });
-      }
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
     });
 
-    // Booking Request Button for LG screens only
-    $('.booking-request-btn').mouseenter(function() {
-      $(this).addClass('booking-request-btn-hover');
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    // Yellow Transparent buttons
+    $('.transparent-btn-yellow').mouseenter(function() {
+      $(this).addClass('yellow-btn-fill');
     });
-    $('.booking-request-btn').mouseleave(function() {
-      $(this).removeClass('booking-request-btn-hover');
-    });
 
-    // STICKY.JS stuff
-    var width_sticky_break_01 = 991;
-    var width_sticky_break_02 = 767;
 
-    var sticky_wrapper = document.getElementById('undefined-sticky-wrapper');
-    
-    var device_size;
-    device_size = check_viewport($(window).width());
-    init_button(); // 0 1 or 2 determines the size of the current browser. 0
-    // for mobile, 1 tablet, 2 for desktop
+    $('.transparent-btn-yellow').mouseleave(function() {
+      $(this).removeClass('yellow-btn-fill');
+    }); 
 
-    // Creates button class dependent on size of window.
-    function init_button() { 
-      if ($(window).width() > width_sticky_break_01) {
-        $('.booking-widget').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:50});
-        console.log('init xl button');
-      } 
-      else if ($(window).width() > width_sticky_break_02 && $(window).width() < width_sticky_break_01 ) {
-        $('.booking-request-btn-sm').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
-          console.log('mid init button');
+    // Project Social Hover Effects
+    $('.fa-facebook-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
       }
-      else if ($(window).width() < width_sticky_break_02) {
-        $('.booking-request-btn-sm-top').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
-
+    );
+    $('.fa-facebook-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
       }
+    );
 
-    }
-    
-    // Checks the size of the viewport based on width
-    function check_viewport(width) { 
-      var width = width; 
-      var size = -1;
-      if (width < width_sticky_break_02) {
-        // determines xs
-        size = 0;
-      }else if (width > width_sticky_break_02 && width < width_sticky_break_01) {
-        size = 1 // mid size
-      }else{ 
-        size = 2; // largest 
+    $('.fa-twitter-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
       }
-      return size;
-    }
-
-    function stickyBookButtonSm() {
-      if(width_sticky_break_01 > $(window).width() && !$('.booking-request-btn-sm').hasClass('is-sticky')){
-        $('.booking-widget').removeClass('is-sticky');
-        //$('#undefined-sticky-wrapper').remove();
-        $('.booking-request-btn-sm').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
-        console.log('sticky SM added');
-      };
-    }
-
-    function stickyBookButtonXs() {
-      if (width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')) {
-        $('.booking-widget').removeClass('is-sticky');
-        $('.booking-request-btn-sm').removeClass('is-sticky');
-        //$('#undefined-sticky-wrapper').remove();
-        //$('.book-button-container-sm-top').append("<button class='booking-request-button-sm-top'></button>");
-        $('.booking-request-btn-sm-top').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
-        console.log('sticky XS added')
+    );
+    $('.fa-twitter-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
       }
-    }
+    );
 
-    function bookingWidgetSticky() {
-      if (width_sticky_break_01 < $(window).width()) {
-        $('.booking-request-btn-sm').removeClass('is-sticky');
-        $('.booking-request-btn-sm-top').removeClass('is-sticky');
-        $('.booking-widget').addClass('is-sticky');
-        $(".is-sticky").sticky({topSpacing:0});
+    $('.fa-linkedin-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
       }
-    }
-
-    /*
-    function stickyBookButtonXs() {
-      if(width_sticky_break_02 > $(window).width() && !$('.booking-request-btn-sm-top').hasClass('is-sticky')){
-    }*/
-
-    //stickyBookButtonSm();
-    
-    $(window).resize(function(){
-      var windows_width = $(window).width();
-      var checked_view = check_viewport(windows_width);
-      console.log(checked_view + " " + device_size);
-
-      if (checked_view != device_size) {
-        console.log('changed');
-       if (width_sticky_break_02 < windows_width && windows_width < width_sticky_break_01) {
-              stickyBookButtonSm();
-              console.log('midsized resized');
-            }
-            else if (width_sticky_break_02 > windows_width) {
-              console.log('break 2 resized');
-              stickyBookButtonXs();
-            }
-            else if (width_sticky_break_01 < windows_width) {
-              bookingWidgetSticky();
-              console.log('break 1 < resized');
-            }
-        device_size = checked_view;
+    );
+    $('.fa-linkedin-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
       }
+    );
 
-    });
-    
-    // Init Sticky.js Booking Widget
-    //$(".is-sticky").sticky({topSpacing:50});
+     //Transparent Btn Hover Effect
+    $('.transparent-btn').mouseenter(
+      function() {
+        $(this).addClass('transparent-btn-fill');
+      }
+    );
+    $('.transparent-btn').mouseleave(
+      function() {
+        $(this).removeClass('transparent-btn-fill');
+      }
+    ); 
 
-    // Init Similar Listings slider
-    $('.responsive').slick({
-      dots: false,
-      infinite: false,
-      speed: 800,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 900,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: false,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 610,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
   });
 </script>
 

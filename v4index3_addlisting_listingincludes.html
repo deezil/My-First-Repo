@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Dashboard Manage Shoots</title>
+<title>Add Listing 2 Listing Includes</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -119,64 +119,31 @@
 
   <!-- Top navbar list gear button -->
   <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
-    <button class="transparent-btn-yellow" id="listGear"<h5 class="all-cap">List Your Gear</h5></button>
+    <button class="transparent-btn-yellow" id="listGear"><h5 class="all-cap">List Your Gear</h5></button>
   </div> <!-- END navbar-option -->
 </div> <!-- END top-navbar widget-row row -->
 
-<!-- Dashboard Navbar visible @min-width: 992px -->
+<!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
 <div class="dashboard-nav-container visible-md visible-lg">
-  <nav class="navbar profile-header-navbar dashboard-header-navbar" role="navigation">
+  <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+          <li class="back-arrow-wrapper">
+            <!-- Display only for Edit Listing -->
+            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
           </li>
 
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html"><h5>Inbox</h5></a>
-            <span class="new-msg-counter">
-              <h5>26</h5>
-            </span>
+          <li class="add-listing-navbar-title">
+            <h5>Ultimate Red Dragon 6k Kit</h5>
           </li>
 
-          <li class="active dropdown">
-            <a href="#" data-target="#" class="dropdown-toggle" id="manageDropDashNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              <h5>Manage</h5>
+          <li class="add-listing-navbar-preview pull-right">
+            <a href="#" target="_blank">
+              <i class="fa fa-eye"></i>
+              <h5>Preview Listing</h5>
             </a>
-            <span class="caret"></span>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="manageDropDashNav">
-              <li>
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
-                  <h5>Your Gear List</h5>
-                </a>
-              </li>
-              <li class="top-border">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
-              </li>
-              <li class="top-border">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
-              </li>
-              <li class="top-border">
-                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
-              </li>
-            </ul>
           </li>
 
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
-          </li>
-
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html"><h5>Invite Friends</h5></a>
-          </li>
-
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
-          </li>
-
-          <li class="cl-effect-4">
-            <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
-          </li>
         </ul>
     <!-- </div><END container-fluid profile-header-navbar-fluid-->
   </nav> <!-- END navbar profile-header-navbar -->
@@ -188,113 +155,36 @@
 </div>
 
 <!-- Spacer to clear fixed navbars -->
-<div class="dashboard-header-spacer"></div>
+<div class="ninety-header-spacer"></div>
 
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+    <li class="active">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
-        <h5>Inbox</h5>
-         <span class="new-msg-counter">
-          <h5>26</h5>
-        </span>
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
+        <h5>Availability</h5>
       </a>
     </li>
 
-    <li class="active dropdown">
-      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <h5>Manage</h5>
-        <span class="caret"></span>
-      </a>
-      
-      <ul class="dropdown-menu" role="menu" aria-labelledby="manageDrop">
-        <li>
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
-            <h5>Your Gear List</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html">
-            <h5>Your Gear Bookings</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html">
-            <h5>Your Shoots</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html">
-            <h5>Your Projects</h5>
-          </a>
-        </li>
-      </ul>
-    </li>
-
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
-        <h5>Invite Friends</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
+        <h5>Pricing</h5>
       </a>
     </li>
 
-    <li class="cl-effect-1 dropdown">
-      <a href="#" data-target="#" class="dropdown-toggle" id="editProfileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <h5>Profile</h5>
-        <span class="caret"></span>
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
+        <h5>Description</h5>
       </a>
-
-      <ul class="dropdown-menu" role="menu" aria-labelledby="editProfileDrop">
-        <li>
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
-            <h5>Edit Profile</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_photos.html">
-            <h5>Photos & Badges</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_yourwork.html">
-            <h5>Your Work</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_verifications.html">
-            <h5>Verifications</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html">
-            <h5>Reviews</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html">
-            <h5>References</h5>
-          </a>
-        </li>
-        <li class="top-border">
-          <a href="/testwebsite/my-first-repo/v4index3.html">
-            <h5>View Profile</h5>
-          </a>
-        </li>
-      </ul>
-
     </li>
 
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html">
-        <h5>Account</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
+        <h5>Features</h5>
       </a>
     </li>
   </ul>
@@ -322,29 +212,19 @@
 <!-- Main Content -->
 <div class="content-body">
   <div class="app-container container">
-    <div class="app-content-main dashboard-content-main manage-content-main">
+    <div class="app-content-main dashboard-content-main add-listing-content-main">
 
       <!-- Side Nav Menu -->
       <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
-        <div class="widget-content verification-content manage-content">
+        <div class="widget-content verification-content manage-content edit-profile-content">
           <ul class="list-unstyled">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
-                    <h4 class="widget-element grey">Your Gear List</h4>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-             <li class="widget-verify-row row">
-              <div class="widget-element-container">
-                <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html">
-                    <h4 class="widget-element grey">Your Gear Bookings</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html">
+                    <h4 class="widget-element active bold">Listing Includes</h4>
                   </a>
                 </div>
               </div>
@@ -353,8 +233,8 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html">
-                    <h4 class="widget-element active bold">Your Shoots</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
+                    <h4 class="widget-element grey">Availability</h4>
                   </a>
                 </div>
               </div>
@@ -363,12 +243,33 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div>
-                  <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html">
-                    <h4 class="widget-element grey">Your Projects</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
+                    <h4 class="widget-element grey">Pricing</h4>
                   </a>
                 </div>
               </div>
             </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
+                    <h4 class="widget-element grey">Description</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
+                    <h4 class="widget-element grey">Features</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
           </ul>
         </div> <!-- END widget-contents -->
       </aside> <!-- END widget widget-verificaton -->
@@ -376,77 +277,92 @@
       <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
 
         <div class="widget-header dashboard-widget-header">
-           <h4 class="bold all-cap">Your Shoots</h4>
-           <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This is where you manage all your upcoming hires for your shoots."></i>
+           <h4 class="bold all-cap">Listing Includes</h4>
+           <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Add all the items that this listing includes."></i>
         </div>
 
         <!-- Activity Section -->
-        <div class="widget-content">
+        <div class="widget-content edit-profile-content add-listing-content">
 
-          <div class="widget-section manage-section shoots">
+          <div class="widget-section edit-profile-section add-listing-section">
 
-            <ul class="list-unstyled">
+            <div class="widget-subheader-first">
+              <h5>Here's where you list all the Main Items that your listing includes.</h5>
+              <h5>Listing these items will help keep track of your gear when you perform pre and post-shoot checks.</h5>
+            </div>
+
+            <ul class="list-unstyled add-items-input-list">
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-4 col-lg-4">
-                  <figure class="widget-project-hero-small">
-                    <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="Listing Hero Thumbnail"/></a>
-                  </figure> 
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Make</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
-                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                  <div class="exp-header">
-                    <a href="#"><h4 class="bold all-cap">red dragon</h4></a>
-                    <h4>20 - 30 Nov 2014</h4>
-                    <h4>$9,000</h4>                       
-                  </div>
-                  <span class="status-span">
-                    <h5 class="bold green">Accepted</h5>
-                  </span>
-                </div> <!--END widget-element-container exp-descrip -->
 
-                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
                   <div class="exp-header">
-                    <span class="manage-details-right">
-                      <h4>Host: </h4>
-                      <a href="/testwebsite/my-first-repo/v4index3.html" target="_blank"><h4>Brent W.</h4></a>
-                    </span>
-                    <a href="/testwebsite/my-first-repo/v4index3_bookingconvo.html" target="_blank"><h4>Message History</h4></a>
-                    <a href="#" target="_blank"><h4>View Callsheet</h4></a>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-              
-              <li class="widget-row project-row project-view-row top-border row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-4 col-lg-4">
-                  <figure class="widget-project-hero-small">
-                    <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><img src="/testwebsite/my-first-repo/assets/img/listing_thumb_hero/red/Red-Dragon-thefilmbook.jpg" alt="Listing Hero Thumbnail"/></a>
-                  </figure> 
-                </div> <!-- END widget-element-container exp-title-container -->
-                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                  <div class="exp-header">
-                    <a href="#"><h4 class="bold all-cap">red dragon</h4></a>
-                    <h4>20 - 30 Nov 2014</h4>
-                    <h4>$9,000</h4>                       
-                  </div>
-                  <span class="status-span">
-                    <h5 class="bold grey">Cancelled</h5>
-                  </span>
-                </div> <!--END widget-element-container exp-descrip -->
-
-                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                  <div class="exp-header">
-                    <span class="manage-details-right">
-                      <h4>Host: </h4>
-                      <a href="/testwebsite/my-first-repo/v4index3.html" target="_blank"><h4>Brent W.</h4></a>
-                    </span>
-                    <a href="/testwebsite/my-first-repo/v4index3_bookingconvo.html" target="_blank"><h4>Message History</h4></a>
-                    <a href="#" target="_blank"><h4>View Callsheet</h4></a>
+                    <form role="form">
+                      <input type="itemMake" class="form-control" placeholder="e.g. Red, Arri, Canon, etc" id="itemMake">
+                    </form>
                   </div>
                 </div> <!--END widget-element-container exp-descrip -->
               </li> <!-- END row -->
 
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Model</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="itemModel" class="form-control" placeholder="e.g. CP.2 50mm T1.5 Super Speed Compact Prime Cine Lens" id="itemModel">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <h4>Qty</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="itemQty" class="form-control" id="itemQty">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button class="transparent-btn-yellow inline-content pull-right" id="addItemToList">
+                    <i class="fa fa-plus"></i>
+                    <h5>Add</h5>
+                  </button>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
             </ul>
           </div> <!-- END widget-section manage-section-->
+
+          <div class="widget-section edit-profile-section add-listing-section">
+            <ul class="list-unstyled top-border-light added-items-list">
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="added-item-col col-md-3" id="added-item-make">
+                  <h4 class="bold">Make</h4>
+                </div>
+
+                <div class="added-item-col col-md-6" id="added-item-model">
+                  <h4 class="bold">Model</h4>
+                </div>
+
+                <div class="added-item-col col-md-1" id="added-item-qty">
+                  <h4 class="bold">Qty</h4>
+                </div>
+              </li>
+
+            </ul>
+          </div> <!-- END widget-section edit-profile-section add-listing-section -->
 
         </div> <!-- END widget-content -->
 
@@ -501,8 +417,98 @@
       $(this).removeClass('yellow-btn-fill');
     }); 
 
+    // Add Item to Gear List - submitAdd
+    function submitAdd () {
+      $('#addItemToList').click(function(){
+        var make = $('#itemMake').val();
+        var model = $('#itemModel').val();
+        var qty = $('#itemQty').val();
+
+        // Conditional to insert Error alert 
+        if (make.length < 3) {
+          $('#itemMake').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid make.</h5>');
+        }
+
+        // Conditional to insert Error alert 
+        if (model.length < 4) {
+          $('#itemModel').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid model.</h5>');
+        }
+
+        // Conditional to insert Error alert 
+        if (qty == 0) {
+          $('#itemQty').closest('.exp-header').append('<h5 class="error-alert red">Wait what?</h5>');
+        }
+
+        if (make.length >= 3 && model.length >= 4 && qty > 0) {
+          // Add values to Gear List as <li>
+          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-md-3"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+          $('.added-items-list').append($newProduct);
+          
+          // Do some AJAX to record input values
+
+          //Re-init tooltip
+          $('[data-toggle=tooltip]').tooltip();
+
+          // Clear out the entered values
+          $('#itemMake').val('');
+          $('#itemModel').val('');
+          $('#itemQty').val('');
+
+          //Remove any error alerts
+          $('.add-items-input-list').find('.error-alert').fadeOut(500, function(){
+            $(this).remove();
+          });
+
+          // Delete a main item from the list
+          $newProduct.find('.fa-times').click(function(){
+            $(this).closest('li').fadeOut(500, function() {
+              $(this).remove();
+            });
+          });
+
+          //Add a Sub-Item - append a new <li> with inputs
+          $newProduct.find('.fa-plus-circle').click(function(){
+            var $thisProduct = $(this).closest('li');
+            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+            $thisProduct.append($thisSubProduct);
+
+              //Re-init tooltip ... again
+              $('[data-toggle=tooltip]').tooltip();
+
+              //Clicking on plus locks it in the DOM
+              $thisSubProduct.find('.fa-plus').click(function(){
+                var subModel = $(this).closest('li').find('#subItemModel').val();
+                var subQty = $(this).closest('li').find('#subItemQty').val();
+
+                $(this).closest('li').find('#subItemModel').replaceWith( '<h5 class="capitalize">' + subModel + '</h5>' );
+                $(this).closest('li').find('#subItemQty').replaceWith( '<h5 class="capitalize">' + subQty + '</h5>' );
+              });
+
+              // Re-init: Delete a main item from the list
+              $thisSubProduct.find('.added-item-col').find('.fa-times').click(function(){
+                $(this).closest('li').fadeOut(500, function() {
+                  $(this).remove();
+                });
+              });
+          });
+        }
+      });
+    };
+
+    // Init submitAdd
+    submitAdd();
+
+    // Emulate submitAdd on hitting 'enter' in any input fields
+    $('.add-items-input-list').find('.form-control').keypress(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        $('#addItemToList').click();
+      }
+    }); 
+
+
   });
-  
+
 </script>
 
 </html>

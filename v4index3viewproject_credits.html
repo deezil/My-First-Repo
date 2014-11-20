@@ -22,7 +22,59 @@
 
 <body>
 
-<div class="top-navbar visible-md visible-lg">NAVBAR PLACEHOLDER</div>
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
 
 <!-- //// THE HEADER. ONE TO RULE THEM ALL. \\\\ -->
   <!-- Static Header Bg Image -->

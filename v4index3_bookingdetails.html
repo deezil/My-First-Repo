@@ -20,12 +20,249 @@
 
 <body>
 
-<div class="top-navbar visible-md visible-lg">NAVBAR PLACEHOLDER</div>
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: User Avatar Dropdown Nav onwards** -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Top navbar User Avatar Dropdown Nav -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li>
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+          <h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i>
+        </a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="#"><h5>Log Out</h5></a>
+      </li>
+    </ul>
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
+
+  <!-- Top navbar Inbox Icon -->
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <i class="fa fa-envelope-o fa-lg"></i>
+      </a>
+    </h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
+
+  <!-- Top navbar Browse Dropdown -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <!-- Top navbar list gear button -->
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<!-- Listing Includes Modal Sm -->
+<div class="booking-modal modal fade" id="listingIncludes-modal-sm" tab-index="-1" role="dialog" aria-labelledby="listingIncludesModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="listingIncludesModal">Listing Includes</h3>
+      </div>
+
+      <div class="modal-body top-border">
+        <ul class="list-unstyled">
+          <li class="modal-list-each">
+            <div class="modal-list-left">
+              <h3 class="bold">Item</h3>
+            </div>
+            <div class="modal-list-right">
+              <h3 class="bold">Qty</h3>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h4 class="major-list-item bold">Red Dragon Camera Body</h4>
+            </div>
+            <div class="modal-list-right">
+              <h4 class="major-list-qty bold">1</h4>
+            </div>
+          </li>
+
+           <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Red V-lock Battery</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>4</h5>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Red Onboard Monitor</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>1</h5>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h4 class="major-list-item bold">Canon 70 - 200mm f2.8 L Series Zoom Lens</h4>
+            </div>
+            <div class="modal-list-right">
+              <h4 class="major-list-qty bold">1</h4>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Lens Soft Case</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>1</h5>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Front Lens Cap</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>1</h5>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Rear Lens Cap</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>1</h5>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h4 class="major-list-item bold">O'Connor 150mm Heavy Duty Tripod</h4>
+            </div>
+            <div class="modal-list-right">
+              <h4 class="major-list-qty bold">1</h4>
+            </div>
+          </li>
+
+           <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Rubber Feet</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>4</h5>
+            </div>
+          </li>
+
+          <li class="modal-list-each top-border-light">
+            <div class="modal-list-left">
+              <h5 class="minor-list-item">Tripod Hard Case</h5>
+            </div>
+            <div class="modal-list-right">
+              <h5>1</h5>
+            </div>
+          </li>
+        </ul>
+      </div> <!-- END modal-body -->
+
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Close</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#" target="_blank">PDF</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END listing includes modal -->
 
 <div class="stick-contain">
-  <!-- Sticky Booking Widget will live in this .sticky-wrapper -->
-
-    <!-- //// LISTING HEADER \\\\ -->
 
     <!-- Static Header Bg Image. Placeholder here for BG color-->
     <div class="profile-header-wrap listing-header-wrap"></div>
@@ -78,9 +315,7 @@
               <div class="listing-profile-name-sm all-cap white">
                 <!-- 85 characters max for listing name -->
                 <!-- Need to deal with the overflow:hidden problem -->
-                <h3><a href="#">reddragonreddragonredd
-                ragonreddragonr
-                eddragonreddragonreddragonred12345</a></h3>
+                <h3>Red Dragon</h3>
               </div> <!-- END listing-profile-name -->
 
               <div class="listing-profile-nittygritty-sm white">
@@ -89,6 +324,16 @@
                   <h4 class="location">Manhattan, NY USA</h4>
                 </div>
               </div> <!-- END listing-profile-nittygritty -->
+
+              <div class="star-rating">
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star fa-lg"></i>
+                <i class="fa fa-star-o fa-lg"></i>
+                &nbsp;&nbsp;
+                <h5 class="review-tally">(55)</h5>
+              </div> <!-- END star-rating -->
 
               <div class="inquiry-listing-hero">
                 <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg" class="img-responsive">
@@ -124,23 +369,7 @@
 
                   <div class="col-xs-6 col-sm-12">
                     <!-- Trigger a Modal, Modal can print item-list -->
-                    <h4><a href="#">See all</a></h4>
-                  </div>
-                </div> <!-- END row inquiry-details-row -->
-
-                <div class="row inquiry-details-row top-border">
-                  <div class="col-xs-6 col-sm-6">
-                    <div class="small-avatar-container">
-                      <figure class="profile-avatar-mini">
-                        <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
-                      </figure>
-                      <h5 class="all-cap">BRENT W.</h5>
-                    </div> <!-- END small-avatar-container -->
-                  </div>
-
-                  <div class="col-xs-6 col-sm-6">
-                    <h4>+61 444 555 666</h4>
-                    <h4><a href="#">brent@hire-hive.com</a></h4>
+                    <h4><a href="#" data-toggle="modal" data-target="#listingIncludes-modal-sm">See all</a></h4>
                   </div>
                 </div> <!-- END row inquiry-details-row -->
 
@@ -169,62 +398,6 @@
             </div>
 
             <div class="inquiry-hero-container col-md-7 col-lg-7">
-
-              <!--
-              <div class="host-profile-widget host-profile-widget-small">
-                <div class="small-avatar-container">
-                  <figure class="profile-avatar-mini">
-                    <a href="#"><img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/></a>
-                  </figure>
-                  <h5 class="all-cap">BRENT W.</h5>
-                </div> <!-- END small-avatar-container -->
-                <!--
-                <aside class="host-widget-verification-bar-micro">
-                  <div class="widget-bar-mini">
-
-                    <div class="widget-verification-bar-mini-icon-container">
-                      <!-- "micro" suffix class is a refactored version of the mini veri-badge pills -->
-                      <!--
-                      <div class="badge-pill-container-micro">
-                        <div class="listing-veri-badge-pill-micro email-pill-micro"></div>
-                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
-                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
-                      </div>
-                      <div class="badge-pill-container-micro">
-                        <div class="listing-veri-badge-pill-micro phone-pill-micro"></div>
-                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
-                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
-                      </div>
-                      <div class="badge-pill-container-micro">
-                        <div class="listing-veri-badge-pill-micro fb-pill-micro"></div>
-                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
-                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
-                      </div>
-                      <div class="badge-pill-container-micro">
-                        <div class="listing-veri-badge-pill-micro fb-pill-micro"></div>
-                        <div class="badge-pill-subhead"><h5>VERIFIED</h5></div>
-                        <div class="badge-pill-subhead-placeholder"><h5>&nbsp;</h5></div>
-                      </div>
-
-                      <div class="badge-pill-container-micro">
-                        <div class="badge-pill-01-micro">
-                          <span class="badge-pill-count"><a href=""><h4 class="bold">55</h4></a></span>
-                        </div>
-                        <div class="badge-pill-subhead-micro"><h5>REVIEWS</h5></div>
-                      </div>
-
-                      <div class="badge-pill-container-micro">
-                        <div class="badge-pill-01-micro">
-                          <span class="badge-pill-count"><a href=""><h4 class="bold">6</h4></a></span>
-                        </div>
-                        <div class="badge-pill-subhead-micro"><h5>REFER.</h5></div>
-                      </div>
-                    </div> <!-- END widget-verification-bar-icon-container -->
-
-                  <!--</div> <!-- END widget-header widget-bar -->
-                <!--</aside> <!-- END widget widget-verification-bar -->
-
-              <!--</div> <!-- END host-profile-widget -->
 
                <div class="inbox-messages input">
                 <div class="widget-row row">
@@ -320,10 +493,10 @@
               </div> <!-- END listing-profile-nittygritty -->
 
               <div class="booking-widget widget">
-              <!-- <div class="booking-widget widget"> -->
+              
                 <!-- Gotta make widget-price div same height as scrolling header -->
                 <div class="booking-widget-price">
-                  <h2 class="white bold">$9000</h2>&nbsp;&nbsp;
+                  <h2 class="white bold">$900</h2>&nbsp;&nbsp;
                   <h4 class="booking-price-perday white pull-right">Per Day</h4>
                 </div>
 
@@ -342,20 +515,38 @@
                   <table class="table table-bordered table-breakdown">
                     <tbody>
                       <tr>
-                        <td>$9000 x 10 days</td>
-                        <td class="table-cell-price">$90000</td>
+                        <td class="table-cell-left">$900 x 10 days</td>
+                        <td class="table-cell-right">$9,000</td>
                       </tr>
                       <tr>
-                        <td>Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We love our early Hivers, so we've waived your Hiver Service Fees completely! Yay!"></i></td>
-                        <td class="table-cell-price">$9000</td>
+                        <td class="table-cell-left">Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We charge a 6-12% Hiver service fee every time gear is booked. This helps us cover the cost of running Hirehive. Find out more in our FAQ."></i></td>
+                        <td class="table-cell-right">$450</td>
+                      </tr>
+
+                      <!-- Uncomment this below & comment the above <tr> to see Service Fee Waived state -->
+                      <!--<tr>
+                        <td class="table-cell-left">Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="Awesome! You've used a Service Fee Waiver Token! No Service Fees for you!"></i></td>
+
+                        <td class="table-cell-right grey">
+                          $450
+                          <h5 class="green bold">Waived</h5>
+                        </td>
+                      </tr>-->
+                      <tr>
+                        <td class="table-cell-left">Service Fee Waiver Token&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="Enter your Service Fee Waiver Token code and your Service Fee will be totally on us!"></i></td>
+                        <td class="table-cell-right">
+                          <form role="form">
+                            <input type="waiverTokenInput" class="form-control" id="waiverTokenInput"/>
+                          </form>
+                        </td>
                       </tr>
                       <tr>
-                        <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
-                        <td class="table-cell-price">$900</td>
+                        <td class="table-cell-left">Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
+                        <td class="table-cell-right">$400</td>
                       </tr>
                       <tr>
-                        <td class="table-cell-total bold">Total</td>
-                        <td class="table-cell-price">$99000</td>
+                        <td class="table-cell-left table-cell-total bold">Total</td>
+                        <td class="table-cell-right bold">$9,450</td>
                       </tr>
                     </tbody>
                   </table> <!-- END table-bordered table-breakdown -->
@@ -393,19 +584,13 @@
                   <h4 class="bold all-cap">listing includes</h4>
                 </div>
                 <div class="listing-widget-inventory-list-container">
-                  <ul class="list listing-widget-inventory-list-left">
-                    <li><h4>Item 1</h4></li>
-                    <li><h4>This is a really long string right here</h4></li>
-                    <li><h4>Item 1</h4></li>
-                    <li><h4>Item 1</h4></li>
-                    <li><h4>Item 1</h4></li>
-                  </ul>
-                  <ul class="list listing-widget-inventory-list-right">
-                    <li><h4>Item 1</h4></li>
-                    <li><h4>Item 1</h4></li>
-                    <li><h4>Item 1</h4></li>
-                    <li><h4>Item 1</h4></li>
-                    <li><h4><a href="#">See More</a></h4></li>
+                  <ul class="list listing-widget-inventory-list">
+                    <li><h4 class="major-list-item bold">Main Item 1</h4></li>
+                    <li><h4 class="major-list-item bold">Main item 2</h4></li>
+                    <li><h4 class="major-list-item bold">Main item 3</h4></li>
+                    <li><h4 class="major-list-item bold">Main item 4</h4></li>
+                    <li><h4 class="major-list-item bold">Main item 5 max</h4></li>
+                    <li><h4><a href="#" data-toggle="modal" data-target="#listingIncludes-modal-sm">See All</a></h4></li>
                   </ul>
                 </div> <!-- END listing-widget-inventory-list-container -->
               </div> <!-- END widget-section -->
@@ -568,59 +753,35 @@
 <!-- Plugin for Sticky Booking Widget -->
 <script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
 
-<!-- Plugin for Responsive Slider (Similar Listings) -->
-<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
-
 <script> 
-  // CAROUSEL
-    $('#myCarousel').carousel({
-      interval: false
-    });
-
-    // handles the carousel thumbnails
-    $('[id^=carousel-selector-]').click( function(){
-      var id_selector = $(this).attr("id");
-      var id = id_selector.substr(id_selector.length -1);
-      id = parseInt(id);
-      $('#myCarousel').carousel(id);
-      $('[id^=carousel-selector-]').removeClass('selected');
-      $(this).addClass('selected');
-    });
-
-    // when the carousel slides, auto update
-    $('#myCarousel').on('slid', function (e) {
-      var id = $('.item.active').data('slide-number');
-      id = parseInt(id);
-      $('[id^=carousel-selector-]').removeClass('selected');
-      $('[id=carousel-selector-'+id+']').addClass('selected');
-    })
-  // END CAROUSEL
 
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
 
-    // Wishlist / Like
-    $('.hearts').on('click', function(e){
-      e.preventDefault();
-      $button = $(this);
-      $alert = $('#append-alert-wishlist-hero'); 
-      if($button.find('.fa-heart').hasClass('liked')){
-          //$.ajax(); Do Remove from Wishlist
-          $button.find('.fa-heart').removeClass('liked');
-          $button.find('.fa-heart-o').css('display', 'inline');
-          $button.find('.fa-heart').css('display', 'none');
-      } else {
-          // $.ajax(); Do Add to Wishlist
-          $button.find('.fa-heart').addClass('liked');
-          $button.find('.fa-heart-o').css('display', 'none');
-          $button.find('.fa-heart').css('display', 'inline');
-          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
-          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
-            $(this).remove();
-          });
+    //Transparent Btn Hover Effect
+    $('.transparent-btn').mouseenter(
+      function() {
+        $(this).addClass('transparent-btn-fill');
       }
-    });
+    );
+    $('.transparent-btn').mouseleave(
+      function() {
+        $(this).removeClass('transparent-btn-fill');
+      }
+    ); 
+
+    //Yellow Btn Hover Effect
+    $('.transparent-btn-yellow').mouseenter(
+      function() {
+        $(this).addClass('yellow-btn-fill');
+      }
+    );
+    $('.transparent-btn-yellow').mouseleave(
+      function() {
+        $(this).removeClass('yellow-btn-fill');
+      }
+    ); 
 
     // Booking Request Button for LG screens only
     $('.booking-request-btn').mouseenter(function() {
