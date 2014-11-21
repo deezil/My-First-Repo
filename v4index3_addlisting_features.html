@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Add Listing Availability</title>
+<title>Add Listing Features</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -12,9 +12,6 @@
 
   <!-- Hirehive CSS -->
   <link rel="stylesheet" href="v4style3.css">
-
-  <!-- Full Cal css -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.css">
 
   <!-- Adobe Typekit -->
   <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
@@ -167,7 +164,7 @@
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
-    <li class="active">
+    <li class="cl-effect-1">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
         <h5>Availability</h5>
       </a>
@@ -185,10 +182,16 @@
       </a>
     </li>
 
-    <li class="cl-effect-1">
+    <li class="active">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
         <h5>Features</h5>
       </a>
+    </li>
+
+    <!-- displays how many steps left to list the gear. If all steps complete, this <li> changes to a 'List It' <li> -->
+    <li class="call-to-action inline-content">
+      <h5 class="bold yellow">5</h5>
+      <h5 class="white"> steps to list</h5>
     </li>
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
@@ -215,14 +218,14 @@
 <!-- Main Content -->
 <div class="content-body">
   <div class="app-container container">
-    <div class="app-content-main dashboard-content-main add-listing-content-main">
+    <div class="app-content-main dashboard-content-main add-features-content-main">
 
-            <!-- Side Nav Menu -->
+      <!-- Side Nav Menu -->
       <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
-        <div class="widget-content verification-content manage-content add-listing-content">
-          <ul class="list-unstyled">
+        <div class="widget-content verification-content manage-content add-listing-content add-features-content">
+          <ul class="list-unstyled add-listing-sidenav">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
@@ -249,7 +252,7 @@
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-pricing">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-                    <h4 class="widget-element active bold">Pricing</h4>
+                    <h4 class="widget-element grey">Pricing</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
@@ -271,11 +274,22 @@
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-features">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
-                    <h4 class="widget-element grey">Features</h4>
+                    <h4 class="widget-element active bold">Features</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
               </div>
+            </li>
+
+             <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
+            <li class="call-to-action inline-content">
+              <!--<span>
+                <h4 class="bold yellow">5</h4>
+                <h4 class="white"> steps to list</h4>
+              </span>-->
+              <button class="transparent-btn-yellow">
+                List It!
+              </button>
             </li>
 
           </ul>
@@ -285,46 +299,91 @@
       <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
 
         <div class="widget-header dashboard-widget-header">
-           <h4 class="bold all-cap">Availability</h4>
+           <h4 class="bold all-cap">Features</h4>
         </div>
 
         <!-- Activity Section -->
-        <div class="widget-content edit-profile-content add-availability-content">
+        <div class="widget-content edit-profile-content add-listing-content">
 
-          <!--<div id='calendar'></div>
-            <div class='row'>
-              <button class='btn btn-success active' id='available'>Available</button>
-              <button class='btn btn-danger' id='unavailable'>Unavailable</button>
-          </div>-->
-
-          <div class="widget-section edit-profile-section add-availability-section">
+          <div class="widget-section edit-profile-section add-listing-section">
 
             <div class="widget-subheader-first">
-              <h5>Here's where you manage your listing's availability.</h5>
-              <h5>Don't sweat the small stuff, you can always change your Availability settings later.</h5>
+              <h5>Add up to 5 features for your listing. This will help with searchability for your listing.</h5>
             </div>
 
-            <div class="widget-row row">
-              <div class="availability-all-wrapper col-md-12">
-                <div class="availability-select-wrapper" id="select-always">
-                  <h3 class="bold">Always</h3>
-                  <div class="calendar-icon-lg-wrapper">
-                    <i class="fa fa-calendar fa-4x"></i>
-                  </div>
-                  <h4>List all dates as available</h4>
-                </div> <!-- END availability-select-wrapper -->
+            <ul class="list-unstyled add-items-input-list">
 
-               <div class="availability-select-wrapper">
-                  <h3 class="bold">Sometimes</h3>
-                  <div class="calendar-icon-lg-wrapper" id="select-sometimes">
-                    <i class="fa fa-calendar fa-4x"></i>
-                  </div>
-                  <h4>List some dates as available.</h4>
-                </div> <!-- END availability-select-wrapper --> 
-              </div>
-            </div> <!-- END widget-row row -->
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Feature 1</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
 
-          </div> <!-- END widget-section add-listing-section-->
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="listingFeature1" class="form-control" placeholder="e.g. 240 fps" id="listingFeature1">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Feature 2</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="listingFeature2" class="form-control" placeholder="e.g. 6k" id="listingFeature2">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Feature 3</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="listingFeature3" class="form-control" placeholder="e.g. Image Stabilized" id="listingFeature3">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Feature 4</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="listingFeature4" class="form-control" placeholder="e.g. RAW" id="listingFeature4">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                  <h4>Feature 5</h4>
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                  <div class="exp-header">
+                    <form role="form">
+                      <input type="listingFeature5" class="form-control" placeholder="e.g. Declicked" id="listingFeature5">
+                    </form>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+              </li> <!-- END row -->
+            </ul>
+          </div> <!-- END widget-section manage-section-->
 
         </div> <!-- END widget-content -->
 
@@ -343,21 +402,11 @@
 <!-- Plugin for jPanel -->
 <script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
 
-<!-- Plugin for Full Calendar -->
-<script src="/testwebsite/my-first-repo/assets/js/moment.min.js"></script>
-
-<!-- Plugin for Full Calendar -->
-<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.js"></script>
-
 <script> 
 
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
-
-    $('#calendar').fullCalendar({
-      fixedWeekCount: false
-    });
 
     //jPanel
     var jPM = $.jPanelMenu({
@@ -367,13 +416,13 @@
       openPosition: '20rem'
     });
 
-    // Init jPanel
     jPM.on();
 
     // Transparent buttons
     $('.transparent-btn').mouseenter(function() {
       $(this).addClass('transparent-btn-fill');
     });
+
 
     $('.transparent-btn').mouseleave(function() {
       $(this).removeClass('transparent-btn-fill');
@@ -384,35 +433,100 @@
       $(this).addClass('yellow-btn-fill');
     });
 
+
     $('.transparent-btn-yellow').mouseleave(function() {
       $(this).removeClass('yellow-btn-fill');
     }); 
 
-    // Availability Selection Hover and Clicks
-    function availabilitySelect () {
+    // Add Item to Gear List - submitAdd
+    function submitAdd () {
+      $('#addItemToList').click(function(){
+        var make = $('#itemMake').val();
+        var model = $('#itemModel').val();
+        var qty = $('#itemQty').val();
 
-      var $wrapper = $('.availability-select-wrapper');
+        // Conditional to insert Error alert 
+        if (make.length < 3) {
+          $('#itemMake').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid make.</h5>');
+        }
 
-      $wrapper.mouseenter(function(){
-        $(this).addClass('select-wrapper-active');
-      });
+        // Conditional to insert Error alert 
+        if (model.length < 4) {
+          $('#itemModel').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid model.</h5>');
+        }
 
-      $wrapper.mouseleave(function(){
-        $(this).removeClass('select-wrapper-active');
-      });
+        // Conditional to insert Error alert 
+        if (qty == 0) {
+          $('#itemQty').closest('.exp-header').append('<h5 class="error-alert red">Wait what?</h5>');
+        }
 
-      $wrapper.click(function(){
-        $wrapper.removeClass('select-wrapper-clicked');
-        $(this).addClass('select-wrapper-clicked');
+        if (make.length >= 3 && model.length >= 4 && qty > 0) {
+          // Add values to Gear List as <li>
+          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-md-3"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+          $('.added-items-list').append($newProduct);
+          
+          // Do some AJAX to record input values
+
+          //Re-init tooltip
+          $('[data-toggle=tooltip]').tooltip();
+
+          // Clear out the entered values
+          $('#itemMake').val('');
+          $('#itemModel').val('');
+          $('#itemQty').val('');
+
+          //Remove any error alerts
+          $('.add-items-input-list').find('.error-alert').fadeOut(500, function(){
+            $(this).remove();
+          });
+
+          // Delete a main item from the list
+          $newProduct.find('.fa-times').click(function(){
+            $(this).closest('li').fadeOut(500, function() {
+              $(this).remove();
+            });
+          });
+
+          //Add a Sub-Item - append a new <li> with inputs
+          $newProduct.find('.fa-plus-circle').click(function(){
+            var $thisProduct = $(this).closest('li');
+            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+            $thisProduct.append($thisSubProduct);
+
+              //Re-init tooltip ... again
+              $('[data-toggle=tooltip]').tooltip();
+
+              //Clicking on plus locks it in the DOM
+              $thisSubProduct.find('.fa-plus').click(function(){
+                var subModel = $(this).closest('li').find('#subItemModel').val();
+                var subQty = $(this).closest('li').find('#subItemQty').val();
+
+                $(this).closest('li').find('#subItemModel').replaceWith( '<h5 class="capitalize">' + subModel + '</h5>' );
+                $(this).closest('li').find('#subItemQty').replaceWith( '<h5 class="capitalize">' + subQty + '</h5>' );
+              });
+
+              // Re-init: Delete a main item from the list
+              $thisSubProduct.find('.added-item-col').find('.fa-times').click(function(){
+                $(this).closest('li').fadeOut(500, function() {
+                  $(this).remove();
+                });
+              });
+          });
+        }
       });
     };
 
-    availabilitySelect();
+    // Init submitAdd
+    submitAdd();
 
-    /*        
-        $(this).click(function(){
-          
-        });*/
+    // Emulate submitAdd on hitting 'enter' in any input fields
+    $('.add-items-input-list').find('.form-control').keypress(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        $('#addItemToList').click();
+      }
+    }); 
+
 
   });
 

@@ -1387,6 +1387,10 @@
 	** ADD / EDIT LISTING **
 ===============================*/
 
+	.add-listing-content .leftnav-link-wrapper i {
+		margin-left: 0.5rem;
+	}
+
 	.add-listing-content .transparent-btn-yellow {
 		height: 3.4rem;
 	}
@@ -1427,6 +1431,10 @@
 
 	.add-listing-content .added-items-list #subItemQty {
 		padding: 0 0.2rem;
+	}
+
+	.add-listing-sidenav .call-to-action {
+		margin-top: 3rem;
 	}
 
 	/* -- Availability -- */
@@ -1532,6 +1540,31 @@
 		}
 
 	/* -- END Availability -- */
+
+	/* -- Price -- */
+
+		.add-pricing-section #listingPrice {
+			padding-left: 6rem;
+			width: 14rem;
+			font: bold 1.8rem 'proxima-nova', sans-serif;
+		}
+
+		.add-pricing-section .input-addon {
+			position: absolute;
+			color: #1c1d20;
+			bottom: 5rem;
+			left: 1rem;
+		}
+
+		@media (max-width: 396px) {
+			.add-pricing-section .input-addon {
+				bottom: 6.5rem;
+			}
+		}
+
+	/* -- END Price -- */
+
+
 
 
 /*===================================

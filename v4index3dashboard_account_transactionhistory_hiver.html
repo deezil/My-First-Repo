@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<title>Dashboard Edit Account Transaction History Hiver</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: User Avatar Dropdown Nav onwards** -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Top navbar User Avatar Dropdown Nav -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li>
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+          <h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i>
+        </a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="#"><h5>Log Out</h5></a>
+      </li>
+    </ul>
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
+
+  <!-- Top navbar Inbox Icon -->
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <i class="fa fa-envelope-o fa-lg"></i>
+      </a>
+    </h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
+
+  <!-- Top navbar Browse Dropdown -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <!-- Top navbar list gear button -->
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Dashboard Navbar visible @min-width: 992px -->
+<div class="dashboard-nav-container visible-md visible-lg">
+  <nav class="navbar profile-header-navbar dashboard-header-navbar" role="navigation">
+    <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
+        <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html"><h5>Inbox</h5></a>
+            <span class="new-msg-counter">
+              <h5>26</h5>
+            </span>
+          </li>
+
+          <li class="cl-effect-4 dropdown">
+            <a href="#" data-target="#" class="dropdown-toggle" id="manageDropDashNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <h5>Manage</h5>
+            </a>
+            <span class="caret"></span>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="manageDropDashNav">
+              <li>
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
+                  <h5>Your Gear List</h5>
+                </a>
+              </li>
+              <li class="top-border">
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+              </li>
+              <li class="top-border">
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+              </li>
+              <li class="top-border">
+                <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html"><h5>Invite Friends</h5></a>
+          </li>
+
+          <li class="cl-effect-4">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+          </li>
+
+          <li class="active">
+            <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+          </li>
+        </ul>
+    <!-- </div><END container-fluid profile-header-navbar-fluid-->
+  </nav> <!-- END navbar profile-header-navbar -->
+</div> <!--END dashboard-nav -->
+
+<!-- jPanel sidenav trigger visible @max-width:991px -->
+<div class="sidenav-trigger-container visible-xs visible-sm">
+  <a href="#sidebar-menu" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
+</div>
+
+<!-- Spacer to clear fixed navbars -->
+<div class="ninety-header-spacer"></div>
+
+<!-- jPanel sidenav -->
+<nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
+  <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <h5>Inbox</h5>
+         <span class="new-msg-counter">
+          <h5>26</h5>
+        </span>
+      </a>
+    </li>
+
+    <li class="cl-effect-1 dropdown">
+      <a href="#" data-target="#" class="dropdown-toggle" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <h5>Manage</h5>
+        <span class="caret"></span>
+      </a>
+      
+      <ul class="dropdown-menu" role="menu" aria-labelledby="manageDrop">
+        <li>
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html">
+            <h5>Your Gear List</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html">
+            <h5>Your Gear Bookings</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html">
+            <h5>Your Shoots</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html">
+            <h5>Your Projects</h5>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+        <h5>Invite Friends</h5>
+      </a>
+    </li>
+
+    <li class="cl-effect-1 dropdown">
+      <a href="#" data-target="#" class="dropdown-toggle" id="editProfileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <h5>Profile</h5>
+        <span class="caret"></span>
+      </a>
+
+      <ul class="dropdown-menu" role="menu" aria-labelledby="editProfileDrop">
+        <li>
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
+            <h5>Edit Profile</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_photos.html">
+            <h5>Photos & Badges</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_yourwork.html">
+            <h5>Your Work</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_verifications.html">
+            <h5>Verifications</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_reviewsofyou.html">
+            <h5>Reviews</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_referencerequest.html">
+            <h5>References</h5>
+          </a>
+        </li>
+        <li class="top-border">
+          <a href="/testwebsite/my-first-repo/v4index3.html">
+            <h5>View Profile</h5>
+          </a>
+        </li>
+      </ul>
+
+    </li>
+
+    <li class="active">
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html">
+        <h5>Account</h5>
+      </a>
+    </li>
+  </ul>
+</nav> <!-- END <!-- jPanel sidenav -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<!-- Main Content -->
+<div class="content-body">
+  <div class="app-container container">
+    <div class="app-content-main dashboard-content-main account-transaction-content-main">
+
+      <!-- Side Nav Menu -->
+      <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
+
+        <!-- Side Verifications Only Visible @ min-width: 992px -->
+        <div class="widget-content verification-content manage-content account-transaction-content">
+          <ul class="list-unstyled">
+
+            <!-- To be implemented later -->
+            <!--<li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html">
+                    <h4 class="widget-element active bold">Payment Methods</h4>
+                  </a>
+                </div>
+              </div>
+            </li>-->
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html">
+                    <h4 class="widget-element grey">Pay Day Preferences</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_account_transactionhistory_host.html">
+                    <h4 class="widget-element active bold">Transaction History</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div>
+                  <a href="/testwebsite/my-first-repo/v4index3dashboard_account_security.html">
+                    <h4 class="widget-element grey">Security</h4>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div> <!-- END widget-contents -->
+      </aside> <!-- END widget widget-verificaton -->
+
+      <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
+
+        <div class="widget-header dashboard-widget-header">
+           <h4 class="bold all-cap">Transaction History</h4>
+           <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This is where you can see all your past transactions, both as a Host and as a Hiver."></i>
+           <!--<button class="transparent-btn manage-add-btn pull-right">
+           <i class="fa fa-plus"></i> Add Payment Method</button>-->
+        </div>
+
+        <!-- Activity Section -->
+        <div class="widget-content edit-profile-content account-transaction-content">
+
+          <div class="widget-subheader-first dropdown">
+            <button href="#" data-target="#" class="transparent-btn dropdown-toggle" id="sortDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><h5>Sort</h5> <span class="caret"></span></button>
+           
+            <ul class="dropdown-menu" role="menu" aria-labelledby="sortDrop">
+              <li><a href="/testwebsite/my-first-repo/v4index3dashboard_account_transactionhistory_host.html"><h5>Host Transactions</h5></a></li>
+              <li class="top-border"><a href="/testwebsite/my-first-repo/v4index3dashboard_account_transactionhistory_hiver.html"><h5>Hiver Transactions</h5></a></li>
+            </ul>
+          </div>
+
+          <div class="widget-section edit-profile-section account-transaction-section">
+
+            <div class="widget-subheader-first">
+              <h4 class="all-cap">Hiver Transactions</h4>
+            </div> <!-- END widget-subheader -->
+
+            <ul class="list-unstyled">
+
+              <li class="widget-row project-row project-view-row row">
+
+                <div class="widget-element-container exp-descrip edit-exp-widget-left col-xs-8 col-sm-4 col-md-4 col-lg-4">
+                  <div class="exp-header">
+                    <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><h4 class="bold all-cap">Red Dragon</h4></a>
+                    <h5>10 - 13 AUG 2014</h5>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+                <div class="widget-element-container exp-descrip edit-exp-widget-left col-xs-8 col-sm-4 col-md-4 col-lg-4">
+                  <div class="exp-header">
+                    <span class="transaction-widget-pricebreakdown">
+                      <h5>Total hire price:</h5>
+                      <h5 class="bold">$5,000</h5>
+                    </span>
+                    <span class="transaction-widget-pricebreakdown">
+                      <h5>Security Deposit:</h5>
+                      <h5 class="bold">$200</h5>
+                    </span>
+                    <span class="transaction-widget-pricebreakdown">
+                      <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="A Dispute Free hire means that neither the Host nor you had any disputes and the Security Deposit for the hire was never charged."></i>
+                      <h5>Dispute Free?</h5>
+                      <h5 class="bold green">Yes</h5>
+                    </span>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+                <div class="widget-element-container exp-descrip edit-exp-widget-right col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <div class="exp-header">
+                    <a href="#" target="_blank"><h5>View Receipt</h5></a>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+              </li> <!-- END row -->
+
+              <li class="widget-row project-row project-view-row row top-border-light">
+
+                <div class="widget-element-container exp-descrip edit-exp-widget-left col-xs-8 col-sm-4 col-md-4 col-lg-4">
+                  <div class="exp-header">
+                    <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><h4 class="bold all-cap">Red Dragon</h4></a>
+                    <h5>10 - 13 AUG 2014</h5>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+                <div class="widget-element-container exp-descrip edit-exp-widget-left col-xs-8 col-sm-4 col-md-4 col-lg-4">
+                  <div class="exp-header">
+                    <span class="transaction-widget-pricebreakdown">
+                      <h5>Total hire price:</h5>
+                      <h5 class="bold">$5,000</h5>
+                    </span>
+                    <span class="transaction-widget-pricebreakdown">
+                      <h5>Security Deposit:</h5>
+                      <h5 class="bold">$200</h5>
+                    </span>
+                    <span class="transaction-widget-pricebreakdown">
+                      <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="If a hire was not Dispute Free, that means that either your Host or you had submitted a dispute with us."></i>
+                      <h5>Dispute Free?</h5>
+                      <h5 class="bold yellow">No</h5>
+                    </span>
+                    <span class="transaction-widget-pricebreakdown">
+                      <h5>Security Deposit amount charged:</h5>
+                      <h5 class="bold">$200</h5>
+                    </span>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+                <div class="widget-element-container exp-descrip edit-exp-widget-right col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <div class="exp-header">
+                    <a href="#" target="_blank"><h5>View Receipt</h5></a>
+                  </div>
+                </div> <!--END widget-element-container exp-descrip -->
+
+              </li> <!-- END row -->
+
+            </ul>
+          </div> <!-- END widget-section manage-section-->
+
+        </div> <!-- END widget-content -->
+
+      </div> <!-- END widget-main -->
+
+    </div> <!-- END app-content-main -->
+  </div> <!-- END app-container container -->
+</div> <!-- END content-body -->
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Sticky Booking Widget -->
+<script src="/testwebsite/my-first-repo/garand-sticky-a98ce74/jquery.sticky.js"></script>
+
+<!-- Plugin for Responsive Slider (Similar Listings) -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/slick-master/slick/slick.js"></script>
+
+<!-- Plugin for jPanel -->
+<script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
+
+<script> 
+
+  $(document).ready(function(){
+
+    $('[data-toggle=tooltip]').tooltip();
+
+    //jPanel
+    var jPM = $.jPanelMenu({
+      menu: "#sidebar-menu",
+      trigger: '.sidenav-trigger',
+      excludedPanelContent: ['.top-navbar', '.modal'],
+      openPosition: '20rem'
+    });
+
+    jPM.on();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    // Yellow Transparent buttons
+    $('.transparent-btn-yellow').mouseenter(function() {
+      $(this).addClass('yellow-btn-fill');
+    });
+
+
+    $('.transparent-btn-yellow').mouseleave(function() {
+      $(this).removeClass('yellow-btn-fill');
+    }); 
+    
+  });
+</script>
+  });
+</script>
+
+</html>
