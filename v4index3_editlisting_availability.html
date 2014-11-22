@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-<title>Add Listing Features</title>
+<title>Edit Listing Availability</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
   <!-- Bootstrap's CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Hirehive CSS -->
   <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Full Cal css -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.css">
 
   <!-- Adobe Typekit -->
   <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
@@ -124,13 +127,13 @@
 </div> <!-- END top-navbar widget-row row -->
 
 <!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
-<div class="dashboard-nav-container visible-sm visible-md visible-lg">
+<div class="dashboard-nav-container visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="back-arrow-wrapper">
             <!-- Display only for Edit Listing -->
-            <!--<a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>-->
+            <a href="#"><i class="fa fa-arrow-circle-left fa-lg" data-toggle="tooltip" data-placement="bottom" title="View all your listings."></i></a>
           </li>
 
           <li class="add-listing-navbar-title">
@@ -143,7 +146,6 @@
               <h5>Preview Listing</h5>
             </a>
           </li>
-
         </ul>
     <!-- </div><END container-fluid profile-header-navbar-fluid-->
   </nav> <!-- END navbar profile-header-navbar -->
@@ -160,50 +162,39 @@
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-    <li class="dotdot jpanel-title">
-      <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
-    </li>
-
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5 class="green">Listing Includes</h5></a>
-    </li>
-
-    <!-- Once a section is completed, add a class of 'green' to <h5> -->
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-        <h5 class="green">Availability</h5>
-      </a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-        <h5 class="green">Pricing</h5>
-      </a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
-        <h5 class="green">Description</h5>
-      </a>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
     <li class="active">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
-        <h5>Features</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_availability.html">
+        <h5>Availability</h5>
       </a>
     </li>
 
-    <li></li><!-- Spacer -->
-
-    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
-    <li class="call-to-action inline-content">
-      <!--<span class="steps-left">
-        <h5 class="bold yellow">2</h5>
-        <h5 class="white"> steps to list</h5>
-      </span>-->
-      <button class="transparent-btn-yellow">List It</button>
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_pricing.html">
+        <h5>Pricing</h5>
+      </a>
     </li>
 
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_pricing.html">
+        <h5>Photos</h5>
+      </a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_description.html">
+        <h5>Description</h5>
+      </a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_features.html">
+        <h5>Features</h5>
+      </a>
+    </li>
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
 
@@ -229,14 +220,14 @@
 <!-- Main Content -->
 <div class="content-body">
   <div class="app-container container">
-    <div class="app-content-main dashboard-content-main add-features-content-main">
+    <div class="app-content-main dashboard-content-main add-listing-content-main">
 
-      <!-- Side Nav Menu -->
+            <!-- Side Nav Menu -->
       <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
-        <div class="widget-content verification-content manage-content add-listing-content add-features-content">
-          <ul class="list-unstyled add-listing-sidenav">
+        <div class="widget-content verification-content manage-content add-listing-content">
+          <ul class="list-unstyled">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
@@ -252,7 +243,7 @@
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-availability">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-                    <h4 class="widget-element grey">Availability</h4>
+                    <h4 class="widget-element active bold">Availability</h4>
                     <i class="fa fa-circle-o-notch fa-spin yellow"></i>
                   </a>
                 </div>
@@ -264,6 +255,17 @@
                 <div class="leftnav-link-wrapper inline-content" id="link-pricing">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
                     <h4 class="widget-element grey">Pricing</h4>
+                    <i class="fa fa-square-o grey"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div class="leftnav-link-wrapper inline-content" id="link-pricing">
+                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_photos.html">
+                    <h4 class="widget-element grey">Photos</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
@@ -285,22 +287,11 @@
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-features">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
-                    <h4 class="widget-element active bold">Features</h4>
+                    <h4 class="widget-element grey">Features</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
               </div>
-            </li>
-
-             <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
-            <li class="call-to-action inline-content">
-              <!--<span class="steps-left">
-                <h4 class="bold yellow">5</h4>
-                <h4 class="white"> steps to list</h4>
-              </span>-->
-              <button class="transparent-btn-yellow">
-                List It!
-              </button>
             </li>
 
           </ul>
@@ -310,92 +301,21 @@
       <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
 
         <div class="widget-header dashboard-widget-header">
-           <h4 class="bold all-cap">Features</h4>
+           <h4 class="bold all-cap">Availability</h4>
         </div>
 
         <!-- Activity Section -->
-        <div class="widget-content edit-profile-content add-listing-content">
+        <div class="widget-content edit-profile-content add-availability-content">
 
-          <div class="widget-section edit-profile-section add-listing-section">
+          <h5>Here's where you can manage the availability of your listing.</h5>
+          <h5>We've already set all your dates to available, so just click on the 'Unavailable' button, then click and drag on a date range to make it unavailable.</h5>
 
-            <div class="widget-subheader-first">
-              <h4>Feature time! No, not feature-movies, not yet...</h4>
-              <h5>Add up to 5 features for your listing. This will help with searchability for your listing.</h5>
-            </div>
-
-            <ul class="list-unstyled add-items-input-list">
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 1</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature1" class="form-control" placeholder="e.g. 240 fps" id="listingFeature1">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 2</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature2" class="form-control" placeholder="e.g. 6k" id="listingFeature2">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 3</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature3" class="form-control" placeholder="e.g. Image Stabilized" id="listingFeature3">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 4</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature4" class="form-control" placeholder="e.g. RAW" id="listingFeature4">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 5</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature5" class="form-control" placeholder="e.g. Declicked" id="listingFeature5">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-            </ul>
-          </div> <!-- END widget-section manage-section-->
+          <!-- Full Calendar -->
+          <div id='calendar'></div>
+          <div class="availability-button-row">
+            <button class='transparent-btn green' id='available' data-toggle="tooltip" data-placement="top" title="Click me, then click and drag over dates to make them available.">Available</button>
+            <button class='transparent-btn red' id='unavailable' data-toggle="tooltip" data-placement="top" title="Click me, then click and drag over dates to make them unavailable.">Unavailable</button>
+          </div>
 
         </div> <!-- END widget-content -->
 
@@ -414,6 +334,12 @@
 <!-- Plugin for jPanel -->
 <script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
 
+<!-- Plugin for Full Calendar -->
+<script src="/testwebsite/my-first-repo/assets/js/moment.min.js"></script>
+
+<!-- Plugin for Full Calendar -->
+<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.js"></script>
+
 <script> 
 
   $(document).ready(function(){
@@ -424,6 +350,23 @@
       window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
     });
 
+    // Full Calendar
+    var calendar  = $('#calendar').fullCalendar({
+      fixedWeekCount: false,
+      firstDay: 1,
+      buttonText: {
+        today: 'Today',
+      },
+      contentHeight: 400,
+      aspectRatio: 2,
+      dayClick: function(date, jsEvent, view) {
+        $(this).addClass('booked-day');
+        var data = date;
+        var new_date = moment(date).format('YYYY-MM-DD');
+        $('.fc-content-skeleton').find("[data-date='" + new_date + "']").css('color','#1c1d20');
+      }
+    });
+
     //jPanel
     var jPM = $.jPanelMenu({
       menu: "#sidebar-menu",
@@ -432,23 +375,40 @@
       openPosition: '20rem'
     });
 
+    // Init jPanel
     jPM.on();
 
-    // Transparent buttons
-    $('.transparent-btn').mouseenter(function() {
-      $(this).addClass('transparent-btn-fill');
+    // Availability Transparent buttons Hover & click events
+    $('#available').mouseenter(function() {
+      $(this).addClass('green-btn-border');
     });
 
+    $('#available').mouseleave(function() {
+      $(this).removeClass('green-btn-border');
+    }); 
 
-    $('.transparent-btn').mouseleave(function() {
-      $(this).removeClass('transparent-btn-fill');
+    $('#available').click(function() {
+      $('.availability-button-row').find('#unavailable').removeClass('red-btn-fill');
+      $(this).addClass('green-btn-fill');
+    }); 
+
+    $('#unavailable').mouseenter(function() {
+      $(this).addClass('red-btn-border');
+    });
+
+    $('#unavailable').mouseleave(function() {
+      $(this).removeClass('red-btn-border');
+    }); 
+
+    $('#unavailable').click(function() {
+      $('.availability-button-row').find('#available').removeClass('green-btn-fill');
+      $(this).addClass('red-btn-fill');
     }); 
 
     // Yellow Transparent buttons
     $('.transparent-btn-yellow').mouseenter(function() {
       $(this).addClass('yellow-btn-fill');
     });
-
 
     $('.transparent-btn-yellow').mouseleave(function() {
       $(this).removeClass('yellow-btn-fill');

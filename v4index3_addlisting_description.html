@@ -124,13 +124,13 @@
 </div> <!-- END top-navbar widget-row row -->
 
 <!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
-<div class="dashboard-nav-container visible-md visible-lg">
+<div class="dashboard-nav-container visible-sm visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="back-arrow-wrapper">
             <!-- Display only for Edit Listing -->
-            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
+            <!--<a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>-->
           </li>
 
           <li class="add-listing-navbar-title">
@@ -160,19 +160,24 @@
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
+    <li class="dotdot jpanel-title">
+      <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
     </li>
 
     <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5 class="green">Listing Includes</h5></a>
+    </li>
+
+    <!-- Once a section is completed, add a class of 'green' to <h5> -->
+    <li class="cl-effect-1">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-        <h5>Availability</h5>
+        <h5 class="green">Availability</h5>
       </a>
     </li>
 
     <li class="cl-effect-1">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-        <h5>Pricing</h5>
+        <h5 class="green">Pricing</h5>
       </a>
     </li>
 
@@ -187,6 +192,18 @@
         <h5>Features</h5>
       </a>
     </li>
+
+    <li></li><!-- Spacer -->
+
+    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
+    <li class="call-to-action inline-content">
+      <span class="steps-left">
+        <h5 class="bold yellow">2</h5>
+        <h5 class="white"> steps to list</h5>
+      </span>
+      <!--<button class="transparent-btn-yellow">List It</button>-->
+    </li>
+
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
 
@@ -219,7 +236,7 @@
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
         <div class="widget-content verification-content manage-content add-listing-content">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled add-listing-sidenav">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
@@ -275,6 +292,17 @@
               </div>
             </li>
 
+            <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
+            <li class="call-to-action inline-content">
+              <span class="steps-left">
+                <h4 class="bold yellow">2</h4>
+                <h4 class="white"> steps to list</h4>
+              </span>
+              <!--<button class="transparent-btn-yellow">
+                List It!
+              </button>-->
+            </li>
+
           </ul>
         </div> <!-- END widget-contents -->
       </aside> <!-- END widget widget-verificaton -->
@@ -291,6 +319,7 @@
           <div class="widget-section edit-profile-section add-listing-section">
 
             <div class="widget-subheader-first">
+              <h4>Synopsis time!</h4>
               <h5>Tell us more about your gear. This description will help grab the attention of other users as well as provide more information about your gear.</h5>
             </div>
 
@@ -357,6 +386,10 @@
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
+
+    $('#listGear').click(function(){
+      window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
+    });
 
     // Character Countdown
     function charCountdown () {

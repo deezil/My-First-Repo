@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Add Listing Features</title>
+<title>Edit Listing Pricing</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -124,13 +124,13 @@
 </div> <!-- END top-navbar widget-row row -->
 
 <!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
-<div class="dashboard-nav-container visible-sm visible-md visible-lg">
+<div class="dashboard-nav-container visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="back-arrow-wrapper">
             <!-- Display only for Edit Listing -->
-            <!--<a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>-->
+            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
           </li>
 
           <li class="add-listing-navbar-title">
@@ -160,50 +160,39 @@
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-    <li class="dotdot jpanel-title">
-      <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5 class="green">Listing Includes</h5></a>
-    </li>
-
-    <!-- Once a section is completed, add a class of 'green' to <h5> -->
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-        <h5 class="green">Availability</h5>
-      </a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-        <h5 class="green">Pricing</h5>
-      </a>
-    </li>
-
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
-        <h5 class="green">Description</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_availability.html">
+        <h5>Availability</h5>
       </a>
     </li>
 
     <li class="active">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
-        <h5>Features</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_pricing.html">
+        <h5>Pricing</h5>
       </a>
     </li>
 
-    <li></li><!-- Spacer -->
-
-    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
-    <li class="call-to-action inline-content">
-      <!--<span class="steps-left">
-        <h5 class="bold yellow">2</h5>
-        <h5 class="white"> steps to list</h5>
-      </span>-->
-      <button class="transparent-btn-yellow">List It</button>
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_photos.html">
+        <h5>Photos</h5>
+      </a>
     </li>
 
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_description.html">
+        <h5>Description</h5>
+      </a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_features.html">
+        <h5>Features</h5>
+      </a>
+    </li>
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
 
@@ -229,18 +218,18 @@
 <!-- Main Content -->
 <div class="content-body">
   <div class="app-container container">
-    <div class="app-content-main dashboard-content-main add-features-content-main">
+    <div class="app-content-main dashboard-content-main add-listing-content-main">
 
       <!-- Side Nav Menu -->
       <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
-        <div class="widget-content verification-content manage-content add-listing-content add-features-content">
-          <ul class="list-unstyled add-listing-sidenav">
+        <div class="widget-content verification-content manage-content add-listing-content">
+          <ul class="list-unstyled">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingIncludes.html">
                     <h4 class="widget-element grey">Listing Includes</h4>
                     <i class="fa fa-check-square-o green"></i>
                   </a>
@@ -251,7 +240,7 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-availability">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_availability.html">
                     <h4 class="widget-element grey">Availability</h4>
                     <i class="fa fa-circle-o-notch fa-spin yellow"></i>
                   </a>
@@ -262,8 +251,19 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-pricing">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-                    <h4 class="widget-element grey">Pricing</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_pricing.html">
+                    <h4 class="widget-element active bold">Pricing</h4>
+                    <i class="fa fa-square-o grey"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
+                <div class="leftnav-link-wrapper inline-content" id="link-pricing">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_photos.html">
+                    <h4 class="widget-element grey">Photos</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
@@ -273,7 +273,7 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-description">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_description.html">
                     <h4 class="widget-element grey">Description</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
@@ -284,23 +284,12 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-features">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
-                    <h4 class="widget-element active bold">Features</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_features.html">
+                    <h4 class="widget-element grey">Features</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
               </div>
-            </li>
-
-             <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
-            <li class="call-to-action inline-content">
-              <!--<span class="steps-left">
-                <h4 class="bold yellow">5</h4>
-                <h4 class="white"> steps to list</h4>
-              </span>-->
-              <button class="transparent-btn-yellow">
-                List It!
-              </button>
             </li>
 
           </ul>
@@ -310,87 +299,42 @@
       <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
 
         <div class="widget-header dashboard-widget-header">
-           <h4 class="bold all-cap">Features</h4>
+           <h4 class="bold all-cap">Price per Day</h4>
         </div>
 
         <!-- Activity Section -->
-        <div class="widget-content edit-profile-content add-listing-content">
+        <div class="widget-content edit-profile-content add-pricing-content">
 
-          <div class="widget-section edit-profile-section add-listing-section">
+          <div class="widget-section edit-profile-section add-pricing-section">
 
             <div class="widget-subheader-first">
-              <h4>Feature time! No, not feature-movies, not yet...</h4>
-              <h5>Add up to 5 features for your listing. This will help with searchability for your listing.</h5>
-            </div>
+              <h4>Change your price per day here.</h4>
+              <h5>For new Hive Hosts, we recommend that you price your listing slightly lower than market rate at the start, and once you've had a few hires and greater Hirehive reputation, you can bring your prices back up.</h5>
+              <h5><strong>Host Service Fee</strong> - We charge a 10% Host Service Fee for all successful transactions. This helps us maintain Hirehive and grow the platform to continuously provde you with more features. Find out more about Service Fees <a href"#" target="_blank">here</a>.</h5>
+
+              <div class="promo-banner">
+                <h4 class="all-cap bold">Earn up to 100% off your Host Service Fee</h4>
+                <h4>Invite friends and you could get your Host Service Fees completely waived for all your transactions in 2015!</h4>
+                <h4>Wanna learn how? Find out <a href="/testwebsite/my-first-repo/v4index3_invitefriends.html" targer="_blank">here</a></h4>
+              </div> <!-- END promo-banner -->
+            </div> <!-- END widget-subheader-first -->
 
             <ul class="list-unstyled add-items-input-list">
 
               <li class="widget-row project-row project-view-row row">
                 <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 1</h4>
+                  <h4>Price per day</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
                 <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
                   <div class="exp-header">
                     <form role="form">
-                      <input type="listingFeature1" class="form-control" placeholder="e.g. 240 fps" id="listingFeature1">
+                      <input type="listingPrice" class="form-control" id="listingPrice">
+                      <span class="input-addon">
+                        <h5 class="bold">AUD $</h5>
+                      </span>
                     </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 2</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature2" class="form-control" placeholder="e.g. 6k" id="listingFeature2">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 3</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature3" class="form-control" placeholder="e.g. Image Stabilized" id="listingFeature3">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 4</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature4" class="form-control" placeholder="e.g. RAW" id="listingFeature4">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 5</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature5" class="form-control" placeholder="e.g. Declicked" id="listingFeature5">
-                    </form>
+                    <h5>Make sure you enter a whole number, without commas or decimals. Who likes coins weighing them down anyway?</h5>
                   </div>
                 </div> <!--END widget-element-container exp-descrip -->
               </li> <!-- END row -->

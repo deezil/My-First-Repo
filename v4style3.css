@@ -83,14 +83,12 @@
 			border-top: 0.1rem solid #424242;
 		}
 
-	/*
-	.list-bar > li > button.active {
-		border: 0.1rem solid #fed136;
-	}
-	*/
-
 	.all-cap {
 		text-transform: uppercase;
+	}
+
+	.capitalize {
+		text-transform: capitalize;
 	}
 
 	.img-responsive {
@@ -105,6 +103,24 @@
 		height: 9rem;
 	}
 
+	/* Ellipsis for text-overflow */
+	.dotdot,
+	.dotdot h1,
+	.dotdot h2,
+	.dotdot h3,
+	.dotdot h4,
+	.dotdot h5,
+	.dotdot h6,
+	.dotdot p {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.promo-banner {
+		border: 1px solid #ffc917;
+		text-align: center;
+	}
 
 	.inline-content h1,
 	.inline-content h2,
@@ -137,23 +153,6 @@
 		top: 0.6rem;
 	}
 
-	.capitalize {
-		text-transform: capitalize;
-	}
-
-	.dotdot,
-	.dotdot h1,
-	.dotdot h2,
-	.dotdot h3,
-	.dotdot h4,
-	.dotdot h5,
-	.dotdot h6,
-	.dotdot p {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-
 /*===================================
 	END GENERAL 
 ===============================*/
@@ -171,7 +170,6 @@
 /*===================================
 	END POPUP ALERTS 
 ===============================*/
-
 
 
 /*===================================
@@ -198,7 +196,6 @@
 /*===================================
 	END BOOKING INQUIRY STATUS 
 ===============================*/
-
 
 
 /*===================================
@@ -245,10 +242,42 @@
 		-o-transition: all 0.3s;
 	}
 
+	.availability-button-row .green {
+		color: #3fb34f;
+	}
+
+	.availability-button-row .red {
+		color: #ff5a5f;
+	}
+
+	.green-btn-border {
+		background-color: #1c1d20;
+		border-color: #3fb34f;
+	}
+
+	.red-btn-border {
+		background-color: #1c1d20;
+		border-color: #ff5a5f;
+	}
+
 	.yellow-btn-fill {
 		color: #1c1d20; 
 		background-color: #ffc917;
 		border-color: #ffc917;
+		font-weight: 700;
+	}
+
+	.green-btn-fill {
+		color: #1c1d20 !important; 
+		background-color: #3fb34f;
+		border-color: #3fb34f;
+		font-weight: 700;
+	}
+
+	.red-btn-fill {
+		color: #1c1d20 !important; 
+		background-color: #ff5a5f;
+		border-color: #ff5a5f;
 		font-weight: 700;
 	}
 
@@ -699,6 +728,11 @@
 		background-color: #333;
 		margin-top: 5.5rem;
 		width: 20rem;
+	}
+
+	#jPanelMenu-menu .jpanel-title {
+		color: white;
+		padding: 0 1rem;
 	}
 
 	#jPanelMenu-menu > ul > li {
@@ -1273,7 +1307,7 @@
 
 	/* -- Add Listing Photos Input -- */
 
-	.add-listing-content .add-listing-photos-wrapper {
+	.add-listing-photos-wrapper {
 		width: 37rem;
 		min-height: 8.35rem;
 		border: 1px solid white;
@@ -1286,7 +1320,7 @@
 		-o-transition: all 0.3s;
 	}
 
-	.add-listing-content .add-listing-photos-wrapper .add-listing-photos-each {
+	.add-listing-photos-wrapper .add-listing-photos-each {
 		width: 12rem;
 		height: 8rem;
 		display: inline-block;
@@ -1294,13 +1328,13 @@
 		position: relative;
 	}
 
-	.add-listing-content .add-listing-photos-wrapper .add-listing-photos-each img {
+	.add-listing-photos-wrapper .add-listing-photos-each img {
 		width: 100%;
 		height: auto;
 		z-index: 100;
 	}
 
-	.add-listing-content .add-listing-photos-wrapper .add-listing-photos-each i {
+	.add-listing-photos-wrapper .add-listing-photos-each i {
 		color: white;
 		position: absolute;
 		z-index: 101;
@@ -1309,8 +1343,15 @@
 		display: none;
 	}
 
+	@media (max-width: 401px) {
+		.edit-photos-section .add-listing-photos-wrapper {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
 	@media (max-width: 476px) {
-		.add-listing-content .add-listing-photos-wrapper {
+		.add-listing-photos-wrapper {
 			width: 24.6rem;
 		}
 	}
@@ -1353,14 +1394,17 @@
 		}
 
 		.add-listing-navbar > .profile-navbar-nav > .add-listing-navbar-title {
-			width: 40rem;
+			width: 25rem;
+			text-align: left;
+		}
+
+		.add-listing-navbar > .profile-navbar-nav > .add-listing-status {
 			text-align: left;
 		}
 
 		.add-listing-navbar > .profile-navbar-nav > li > a {
 			padding: 0;
 		}
-
 
 		.add-listing-navbar > .profile-navbar-nav > li h5 {
 			margin: 0;
@@ -1373,9 +1417,7 @@
 			transition: font-size 0.3s;
 		}
 
-	/* -- END Add Listing Navbar -- */
-
-	
+	/* -- END Add Listing Navbar -- */	
 
 /*===================================
 	END ADD LISTING MAIN
@@ -1435,6 +1477,22 @@
 
 	.add-listing-sidenav .call-to-action {
 		margin-top: 3rem;
+	}
+
+	@media (max-width: 446px) {
+		.add-listing-content .added-items-list .add-sub-col {
+			visibility: hidden;
+		}
+		.add-listing-section .added-items-list #added-item-make,
+		.add-listing-content .added-items-list #added-make {
+			display: none;
+		}
+	}
+
+	@media (max-width: 991px) {
+		.add-listing-content .added-items-list .sub-qty-col {
+			padding: 0;
+		}
 	}
 
 	/* -- Availability -- */
@@ -1511,6 +1569,51 @@
 			text-align: center;
 		}
 
+		/* -- Full Calendar -- */
+
+		#calendar {
+			margin-top: 2rem;
+			font-family: 'proxima-nova',sans-serif;
+		}
+
+		#calendar button {
+			border-radius: 0;
+		}
+
+		#calendar .fc-prev-button,
+		#calendar .fc-next-button,
+		#calendar .fc-state-hover {
+			background-color: #1c1d20 !important;
+			background-image: none;
+			border: 1px solid white;
+			box-shadow: none;
+			color: white;
+			outline: none;
+		}
+
+		#calendar .fc-state-hover {
+			border-color: #ffc917;
+		}
+
+		#calendar .fc-today {
+			background-color: transparent;
+		}
+
+		#calendar .unavailable-day {
+			background-color: rgba(51,51,51,1);
+		}
+
+		#calendar .booked-day {
+			background-color: #ffc917;
+			color: #1c1d20;
+		}
+
+		.availability-button-row {
+			margin-top: 1rem;
+		}
+
+		/* -- END Full Calendar -- */
+
 		@media (max-width: 548px) {
 			.availability-select-wrapper {
 				display: block;
@@ -1554,6 +1657,10 @@
 			color: #1c1d20;
 			bottom: 5rem;
 			left: 1rem;
+		}
+
+		.add-pricing-section .promo-banner {
+			margin-top: 2.5rem;
 		}
 
 		@media (max-width: 396px) {

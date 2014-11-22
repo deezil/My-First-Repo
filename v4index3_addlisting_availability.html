@@ -127,13 +127,13 @@
 </div> <!-- END top-navbar widget-row row -->
 
 <!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
-<div class="dashboard-nav-container visible-md visible-lg">
+<div class="dashboard-nav-container visible-sm visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="back-arrow-wrapper">
             <!-- Display only for Edit Listing -->
-            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
+            <!--<a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>-->
           </li>
 
           <li class="add-listing-navbar-title">
@@ -163,10 +163,15 @@
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
+    <li class="dotdot jpanel-title">
+      <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
     </li>
 
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5 class="green">Listing Includes</h5></a>
+    </li>
+
+    <!-- Once a section is completed, add a class of 'green' to <h5> -->
     <li class="active">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
         <h5>Availability</h5>
@@ -190,6 +195,18 @@
         <h5>Features</h5>
       </a>
     </li>
+
+    <li></li><!-- Spacer -->
+
+    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
+    <li class="call-to-action inline-content">
+      <span class="steps-left">
+        <h5 class="bold yellow">4</h5>
+        <h5 class="white"> steps to list</h5>
+      </span>
+      <!--<button class="transparent-btn-yellow">List It</button>-->
+    </li>
+
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
 
@@ -222,7 +239,7 @@
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
         <div class="widget-content verification-content manage-content add-listing-content">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled add-listing-sidenav">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
@@ -238,7 +255,7 @@
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-availability">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-                    <h4 class="widget-element grey">Availability</h4>
+                    <h4 class="widget-element active bold">Availability</h4>
                     <i class="fa fa-circle-o-notch fa-spin yellow"></i>
                   </a>
                 </div>
@@ -249,7 +266,7 @@
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-pricing">
                   <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-                    <h4 class="widget-element active bold">Pricing</h4>
+                    <h4 class="widget-element grey">Pricing</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
@@ -278,6 +295,17 @@
               </div>
             </li>
 
+            <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
+            <li class="call-to-action inline-content">
+              <span class="steps-left">
+                <h4 class="bold yellow">4</h4>
+                <h4 class="white"> steps to list</h4>
+              </span>
+              <!--<button class="transparent-btn-yellow">
+                List It!
+              </button>-->
+            </li>
+
           </ul>
         </div> <!-- END widget-contents -->
       </aside> <!-- END widget widget-verificaton -->
@@ -300,8 +328,8 @@
           <div class="widget-section edit-profile-section add-availability-section">
 
             <div class="widget-subheader-first">
-              <h5>Here's where you manage your listing's availability.</h5>
-              <h5>Don't sweat the small stuff, you can always change your Availability settings later.</h5>
+              <h4>When's your gear available?</h4>
+              <h5>Pick an Availability option, and after listing your gear, come back here to update your availability.</h5>
             </div>
 
             <div class="widget-row row">
@@ -354,6 +382,10 @@
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
+
+    $('#listGear').click(function(){
+      window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
+    });
 
     $('#calendar').fullCalendar({
       fixedWeekCount: false

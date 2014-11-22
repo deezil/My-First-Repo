@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Add Listing Features</title>
+<title>Edit Listing Listing Includes</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -150,7 +150,7 @@
 </div> <!--END dashboard-nav -->
 
 <!-- jPanel sidenav trigger visible @max-width:991px -->
-<div class="sidenav-trigger-container visible-xs visible-sm">
+<div class="sidenav-trigger-container visible-xs">
   <a href="#sidebar-menu" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
 </div>
 
@@ -164,44 +164,39 @@
       <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
     </li>
 
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5 class="green">Listing Includes</h5></a>
+    <li class="active">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
     <!-- Once a section is completed, add a class of 'green' to <h5> -->
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-        <h5 class="green">Availability</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_availability.html">
+        <h5>Availability</h5>
       </a>
     </li>
 
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
-        <h5 class="green">Pricing</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_pricing.html">
+        <h5>Pricing</h5>
       </a>
     </li>
 
     <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
-        <h5 class="green">Description</h5>
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_photos.html">
+        <h5>Photos</h5>
       </a>
     </li>
 
-    <li class="active">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_description.html">
+        <h5>Description</h5>
+      </a>
+    </li>
+
+    <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_editlisting_features.html">
         <h5>Features</h5>
       </a>
-    </li>
-
-    <li></li><!-- Spacer -->
-
-    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
-    <li class="call-to-action inline-content">
-      <!--<span class="steps-left">
-        <h5 class="bold yellow">2</h5>
-        <h5 class="white"> steps to list</h5>
-      </span>-->
-      <button class="transparent-btn-yellow">List It</button>
     </li>
 
   </ul>
@@ -229,19 +224,19 @@
 <!-- Main Content -->
 <div class="content-body">
   <div class="app-container container">
-    <div class="app-content-main dashboard-content-main add-features-content-main">
+    <div class="app-content-main dashboard-content-main add-listing-content-main">
 
       <!-- Side Nav Menu -->
       <aside class="widget widget-verificaton widget-dashboard col-sm-4 col-md-3">
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
-        <div class="widget-content verification-content manage-content add-listing-content add-features-content">
+        <div class="widget-content verification-content manage-content add-listing-content">
           <ul class="list-unstyled add-listing-sidenav">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html">
-                    <h4 class="widget-element grey">Listing Includes</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingIncludes.html">
+                    <h4 class="widget-element active bold">Listing Includes</h4>
                     <i class="fa fa-check-square-o green"></i>
                   </a>
                 </div>
@@ -251,7 +246,7 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-availability">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_availability.html">
                     <h4 class="widget-element grey">Availability</h4>
                     <i class="fa fa-circle-o-notch fa-spin yellow"></i>
                   </a>
@@ -262,7 +257,7 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-pricing">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_pricing.html">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_pricing.html">
                     <h4 class="widget-element grey">Pricing</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
@@ -272,8 +267,19 @@
 
             <li class="widget-verify-row row">
               <div class="widget-element-container">
+                <div class="leftnav-link-wrapper inline-content" id="link-pricing">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_photos.html">
+                    <h4 class="widget-element grey">Photos</h4>
+                    <i class="fa fa-square-o grey"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="widget-verify-row row">
+              <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-description">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_description.html">
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_description.html">
                     <h4 class="widget-element grey">Description</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
@@ -284,23 +290,12 @@
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-features">
-                  <a href="/testwebsite/my-first-repo/v4index3_addlisting_features.html">
-                    <h4 class="widget-element active bold">Features</h4>
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_features.html">
+                    <h4 class="widget-element grey">Features</h4>
                     <i class="fa fa-square-o grey"></i>
                   </a>
                 </div>
               </div>
-            </li>
-
-             <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
-            <li class="call-to-action inline-content">
-              <!--<span class="steps-left">
-                <h4 class="bold yellow">5</h4>
-                <h4 class="white"> steps to list</h4>
-              </span>-->
-              <button class="transparent-btn-yellow">
-                List It!
-              </button>
             </li>
 
           </ul>
@@ -310,7 +305,8 @@
       <div class="widget col-xs-12 col-sm-9 col-md-9 col-lg-9">
 
         <div class="widget-header dashboard-widget-header">
-           <h4 class="bold all-cap">Features</h4>
+           <h4 class="bold all-cap">Listing Includes</h4>
+           <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Add all the items that this listing includes."></i>
         </div>
 
         <!-- Activity Section -->
@@ -319,83 +315,82 @@
           <div class="widget-section edit-profile-section add-listing-section">
 
             <div class="widget-subheader-first">
-              <h4>Feature time! No, not feature-movies, not yet...</h4>
-              <h5>Add up to 5 features for your listing. This will help with searchability for your listing.</h5>
+              <h5>Here's where you can edit the items that are included in your listing.</h5>
+              <h5>Listing these items will help keep track of your gear when you perform pre and post-shoot checks.</h5>
             </div>
 
             <ul class="list-unstyled add-items-input-list">
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 1</h4>
+                <div class="widget-element-container exp-title-container project-title-container col-sm-2 col-md-3 col-lg-3">
+                  <h4>Make</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                <div class="widget-element-container exp-descrip col-sm-7 col-md-7 col-lg-7">
                   <div class="exp-header">
                     <form role="form">
-                      <input type="listingFeature1" class="form-control" placeholder="e.g. 240 fps" id="listingFeature1">
+                      <input type="itemMake" class="form-control" placeholder="e.g. Red, Arri, Canon, etc" id="itemMake">
                     </form>
                   </div>
                 </div> <!--END widget-element-container exp-descrip -->
               </li> <!-- END row -->
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 2</h4>
+                <div class="widget-element-container exp-title-container project-title-container col-sm-2 col-md-3 col-lg-3">
+                  <h4>Model</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                <div class="widget-element-container exp-descrip col-sm-7 col-md-7 col-lg-7">
                   <div class="exp-header">
                     <form role="form">
-                      <input type="listingFeature2" class="form-control" placeholder="e.g. 6k" id="listingFeature2">
+                      <input type="itemModel" class="form-control" placeholder="e.g. CP.2 50mm T1.5 Super Speed Compact Prime Cine Lens" id="itemModel">
                     </form>
                   </div>
                 </div> <!--END widget-element-container exp-descrip -->
               </li> <!-- END row -->
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 3</h4>
+                <div class="widget-element-container exp-title-container project-title-container col-xs-1 col-sm-2 col-md-3 col-lg-3">
+                  <h4>Qty</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                <div class="widget-element-container exp-descrip col-xs-2 col-sm-1 col-md-1 col-lg-1">
                   <div class="exp-header">
                     <form role="form">
-                      <input type="listingFeature3" class="form-control" placeholder="e.g. Image Stabilized" id="listingFeature3">
+                      <input type="itemQty" class="form-control" id="itemQty">
                     </form>
                   </div>
                 </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
 
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 4</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature4" class="form-control" placeholder="e.g. RAW" id="listingFeature4">
-                    </form>
-                  </div>
-                </div> <!--END widget-element-container exp-descrip -->
-              </li> <!-- END row -->
-
-              <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
-                  <h4>Feature 5</h4>
-                </div> <!-- END widget-element-container exp-title-container -->
-
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
-                  <div class="exp-header">
-                    <form role="form">
-                      <input type="listingFeature5" class="form-control" placeholder="e.g. Declicked" id="listingFeature5">
-                    </form>
-                  </div>
+                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button class="transparent-btn-yellow inline-content pull-right" id="addItemToList">
+                    <i class="fa fa-plus"></i>
+                    <h5>Add</h5>
+                  </button>
                 </div> <!--END widget-element-container exp-descrip -->
               </li> <!-- END row -->
             </ul>
           </div> <!-- END widget-section manage-section-->
+
+          <div class="widget-section edit-profile-section add-listing-section">
+            <ul class="list-unstyled top-border-light added-items-list">
+
+              <li class="widget-row project-row project-view-row row">
+                <div class="added-item-col col-xs-2 col-sm-3 col-md-3" id="added-item-make">
+                  <h4 class="bold">Make</h4>
+                </div>
+
+                <div class="added-item-col col-xs-6 col-sm-6 col-md-6" id="added-item-model">
+                  <h4 class="bold">Model</h4>
+                </div>
+
+                <div class="added-item-col col-xs-1 col-sm-1 col-md-1" id="added-item-qty">
+                  <h4 class="bold">Qty</h4>
+                </div>
+              </li>
+
+            </ul>
+          </div> <!-- END widget-section edit-profile-section add-listing-section -->
 
         </div> <!-- END widget-content -->
 
@@ -420,7 +415,7 @@
 
     $('[data-toggle=tooltip]').tooltip();
 
-    $('#listGear').click(function(){
+        $('#listGear').click(function(){
       window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
     });
 
@@ -453,6 +448,96 @@
     $('.transparent-btn-yellow').mouseleave(function() {
       $(this).removeClass('yellow-btn-fill');
     }); 
+
+    // Add Item to Gear List - submitAdd
+    function submitAdd () {
+      $('#addItemToList').click(function(){
+        var make = $('#itemMake').val();
+        var model = $('#itemModel').val();
+        var qty = $('#itemQty').val();
+
+        // Conditional to insert Error alert 
+        if (make.length < 3) {
+          $('#itemMake').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid make.</h5>');
+        }
+
+        // Conditional to insert Error alert 
+        if (model.length < 4) {
+          $('#itemModel').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid model.</h5>');
+        }
+
+        // Conditional to insert Error alert 
+        if (qty == 0) {
+          $('#itemQty').closest('.exp-header').append('<h5 class="error-alert red">Wait what?</h5>');
+        }
+
+        if (make.length >= 3 && model.length >= 4 && qty > 0) {
+          // Add values to Gear List as <li>
+          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-xs-2 col-sm-3 col-md-3" id="added-make"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-xs-6 col-sm-6 col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col add-sub-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+          $('.added-items-list').append($newProduct);
+          
+          // Do some AJAX to record input values
+
+          //Re-init tooltip
+          $('[data-toggle=tooltip]').tooltip();
+
+          // Clear out the entered values
+          $('#itemMake').val('');
+          $('#itemModel').val('');
+          $('#itemQty').val('');
+
+          //Remove any error alerts
+          $('.add-items-input-list').find('.error-alert').fadeOut(500, function(){
+            $(this).remove();
+          });
+
+          // Delete a main item from the list
+          $newProduct.find('.fa-times').click(function(){
+            $(this).closest('li').fadeOut(500, function() {
+              $(this).remove();
+            });
+          });
+
+          //Add a Sub-Item - append a new <li> with inputs
+          $newProduct.find('.fa-plus-circle').click(function(){
+            var $thisProduct = $(this).closest('li');
+            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-xs-2 col-sm-3 col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-xs-6 col-sm-6 col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col sub-qty-col col-xs-1 col-sm-1 col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+            $thisProduct.append($thisSubProduct);
+
+              //Re-init tooltip ... again
+              $('[data-toggle=tooltip]').tooltip();
+
+              //Clicking on plus locks it in the DOM
+              $thisSubProduct.find('.fa-plus').click(function(){
+                var subModel = $(this).closest('li').find('#subItemModel').val();
+                var subQty = $(this).closest('li').find('#subItemQty').val();
+
+                $(this).closest('li').find('#subItemModel').replaceWith( '<h5 class="capitalize">' + subModel + '</h5>' );
+                $(this).closest('li').find('#subItemQty').replaceWith( '<h5 class="capitalize">' + subQty + '</h5>' );
+              });
+
+              // Re-init: Delete a main item from the list
+              $thisSubProduct.find('.added-item-col').find('.fa-times').click(function(){
+                $(this).closest('li').fadeOut(500, function() {
+                  $(this).remove();
+                });
+              });
+          });
+        }
+      });
+    };
+
+    // Init submitAdd
+    submitAdd();
+
+    // Emulate submitAdd on hitting 'enter' in any input fields
+    $('.add-items-input-list').find('.form-control').keypress(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        $('#addItemToList').click();
+      }
+    }); 
+
 
   });
 

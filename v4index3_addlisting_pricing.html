@@ -124,13 +124,13 @@
 </div> <!-- END top-navbar widget-row row -->
 
 <!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
-<div class="dashboard-nav-container visible-md visible-lg">
+<div class="dashboard-nav-container visible-sm visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="back-arrow-wrapper">
             <!-- Display only for Edit Listing -->
-            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
+            <!--<a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>-->
           </li>
 
           <li class="add-listing-navbar-title">
@@ -160,13 +160,18 @@
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
-    <li class="cl-effect-1">
-      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
+    <li class="dotdot jpanel-title">
+      <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
     </li>
 
     <li class="cl-effect-1">
+      <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5 class="green">Listing Includes</h5></a>
+    </li>
+
+    <!-- Once a section is completed, add a class of 'green' to <h5> -->
+    <li class="cl-effect-1">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-        <h5>Availability</h5>
+        <h5 class="green">Availability</h5>
       </a>
     </li>
 
@@ -187,6 +192,18 @@
         <h5>Features</h5>
       </a>
     </li>
+
+    <li></li><!-- Spacer -->
+
+    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
+    <li class="call-to-action inline-content">
+      <span class="steps-left">
+        <h5 class="bold yellow">3</h5>
+        <h5 class="white"> steps to list</h5>
+      </span>
+      <!--<button class="transparent-btn-yellow">List It</button>-->
+    </li>
+
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
 
@@ -219,7 +236,7 @@
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
         <div class="widget-content verification-content manage-content add-listing-content">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled add-listing-sidenav">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
@@ -275,6 +292,17 @@
               </div>
             </li>
 
+            <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
+            <li class="call-to-action inline-content">
+              <span class="steps-left">
+                <h4 class="bold yellow">3</h4>
+                <h4 class="white"> steps to list</h4>
+              </span>
+              <!--<button class="transparent-btn-yellow">
+                List It!
+              </button>-->
+            </li>
+
           </ul>
         </div> <!-- END widget-contents -->
       </aside> <!-- END widget widget-verificaton -->
@@ -291,6 +319,7 @@
           <div class="widget-section edit-profile-section add-pricing-section">
 
             <div class="widget-subheader-first">
+              <h4>Call your price!</h4>
               <h5>Choose how much you'd like to charge for your gear on a per day basis. You can always change your prices later.</h5>
               <h5>For new Hive Hosts, we recommend that you price your listing slightly lower than market rate at the start, and once you've had a few hires and greater Hirehive reputation, you can bring your prices back up.</h5>
             </div>
@@ -340,6 +369,10 @@
 
     $('[data-toggle=tooltip]').tooltip();
 
+    $('#listGear').click(function(){
+      window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
+    });
+
     //jPanel
     var jPM = $.jPanelMenu({
       menu: "#sidebar-menu",
@@ -369,96 +402,6 @@
     $('.transparent-btn-yellow').mouseleave(function() {
       $(this).removeClass('yellow-btn-fill');
     }); 
-
-    // Add Item to Gear List - submitAdd
-    function submitAdd () {
-      $('#addItemToList').click(function(){
-        var make = $('#itemMake').val();
-        var model = $('#itemModel').val();
-        var qty = $('#itemQty').val();
-
-        // Conditional to insert Error alert 
-        if (make.length < 3) {
-          $('#itemMake').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid make.</h5>');
-        }
-
-        // Conditional to insert Error alert 
-        if (model.length < 4) {
-          $('#itemModel').closest('.exp-header').append('<h5 class="error-alert red">Make sure you enter a valid model.</h5>');
-        }
-
-        // Conditional to insert Error alert 
-        if (qty == 0) {
-          $('#itemQty').closest('.exp-header').append('<h5 class="error-alert red">Wait what?</h5>');
-        }
-
-        if (make.length >= 3 && model.length >= 4 && qty > 0) {
-          // Add values to Gear List as <li>
-          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-md-3"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
-          $('.added-items-list').append($newProduct);
-          
-          // Do some AJAX to record input values
-
-          //Re-init tooltip
-          $('[data-toggle=tooltip]').tooltip();
-
-          // Clear out the entered values
-          $('#itemMake').val('');
-          $('#itemModel').val('');
-          $('#itemQty').val('');
-
-          //Remove any error alerts
-          $('.add-items-input-list').find('.error-alert').fadeOut(500, function(){
-            $(this).remove();
-          });
-
-          // Delete a main item from the list
-          $newProduct.find('.fa-times').click(function(){
-            $(this).closest('li').fadeOut(500, function() {
-              $(this).remove();
-            });
-          });
-
-          //Add a Sub-Item - append a new <li> with inputs
-          $newProduct.find('.fa-plus-circle').click(function(){
-            var $thisProduct = $(this).closest('li');
-            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
-            $thisProduct.append($thisSubProduct);
-
-              //Re-init tooltip ... again
-              $('[data-toggle=tooltip]').tooltip();
-
-              //Clicking on plus locks it in the DOM
-              $thisSubProduct.find('.fa-plus').click(function(){
-                var subModel = $(this).closest('li').find('#subItemModel').val();
-                var subQty = $(this).closest('li').find('#subItemQty').val();
-
-                $(this).closest('li').find('#subItemModel').replaceWith( '<h5 class="capitalize">' + subModel + '</h5>' );
-                $(this).closest('li').find('#subItemQty').replaceWith( '<h5 class="capitalize">' + subQty + '</h5>' );
-              });
-
-              // Re-init: Delete a main item from the list
-              $thisSubProduct.find('.added-item-col').find('.fa-times').click(function(){
-                $(this).closest('li').fadeOut(500, function() {
-                  $(this).remove();
-                });
-              });
-          });
-        }
-      });
-    };
-
-    // Init submitAdd
-    submitAdd();
-
-    // Emulate submitAdd on hitting 'enter' in any input fields
-    $('.add-items-input-list').find('.form-control').keypress(function(event){
-      if(event.keyCode == 13) {
-        event.preventDefault();
-        $('#addItemToList').click();
-      }
-    }); 
-
 
   });
 

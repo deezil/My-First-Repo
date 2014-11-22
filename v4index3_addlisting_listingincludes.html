@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>Add Listing 2 Listing Includes</title>
+<title>Add Listing Listing Includes</title>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -124,13 +124,13 @@
 </div> <!-- END top-navbar widget-row row -->
 
 <!-- Listing Name replaces Dashboard Navbar visible @min-width: 992px -->
-<div class="dashboard-nav-container visible-md visible-lg">
+<div class="dashboard-nav-container visible-sm visible-md visible-lg">
   <nav class="navbar profile-header-navbar dashboard-header-navbar add-listing-navbar" role="navigation">
     <!-- <div class="container-fluid profile-header-navbar-fluid"> -->
         <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
           <li class="back-arrow-wrapper">
             <!-- Display only for Edit Listing -->
-            <a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
+            <!--<a href="#"><i class="fa fa-arrow-circle-left fa-lg"></i></a>-->
           </li>
 
           <li class="add-listing-navbar-title">
@@ -150,7 +150,7 @@
 </div> <!--END dashboard-nav -->
 
 <!-- jPanel sidenav trigger visible @max-width:991px -->
-<div class="sidenav-trigger-container visible-xs visible-sm">
+<div class="sidenav-trigger-container visible-xs">
   <a href="#sidebar-menu" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
 </div>
 
@@ -160,13 +160,18 @@
 <!-- jPanel sidenav -->
 <nav id="sidebar-menu" style="width: 250px; display: none; z-index: 1;">
   <ul class="nav navbar-nav profile-navbar-nav dashboard-navbar-nav">
+    <li class="dotdot jpanel-title">
+      <h5 class="bold capitalize">ultimate red Dragon 6k Kit ultimate red Dragon 6k Kit</h5>
+    </li>
+
     <li class="active">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_listingIncludes.html"><h5>Listing Includes</h5></a>
     </li>
 
+    <!-- Once a section is completed, add a class of 'green' to <h5> -->
     <li class="cl-effect-1">
       <a href="/testwebsite/my-first-repo/v4index3_addlisting_availability.html">
-        <h5>Availability</h5>
+        <h5 class="green">Availability</h5>
       </a>
     </li>
 
@@ -187,6 +192,18 @@
         <h5>Features</h5>
       </a>
     </li>
+
+    <li></li><!-- Spacer -->
+
+    <!-- displays how many steps left to list the gear. If all steps complete, this <span> changes to a 'List It' <button> -->
+    <li class="call-to-action inline-content">
+      <span class="steps-left">
+        <h5 class="bold yellow">5</h5>
+        <h5 class="white"> steps to list</h5>
+      </span>
+      <!--<button class="transparent-btn-yellow">List It</button>-->
+    </li>
+
   </ul>
 </nav> <!-- END <!-- jPanel sidenav -->
 
@@ -219,7 +236,7 @@
 
         <!-- Side Verifications Only Visible @ min-width: 992px -->
         <div class="widget-content verification-content manage-content add-listing-content">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled add-listing-sidenav">
             <li class="widget-verify-row row">
               <div class="widget-element-container">
                 <div class="leftnav-link-wrapper inline-content" id="link-listing-includes">
@@ -275,6 +292,17 @@
               </div>
             </li>
 
+            <!-- displays how many steps left to list the gear. If all steps complete, replace <span> with <button> -->
+            <li class="call-to-action inline-content">
+              <span class="steps-left">
+                <h4 class="bold yellow">5</h4>
+                <h4 class="white"> steps to list</h4>
+              </span>
+              <!--<button class="transparent-btn-yellow">
+                List It!
+              </button>-->
+            </li>
+
           </ul>
         </div> <!-- END widget-contents -->
       </aside> <!-- END widget widget-verificaton -->
@@ -292,18 +320,19 @@
           <div class="widget-section edit-profile-section add-listing-section">
 
             <div class="widget-subheader-first">
-              <h5>Here's where you list all the Main Items that your listing includes.</h5>
-              <h5>Listing these items will help keep track of your gear when you perform pre and post-shoot checks.</h5>
+              <h4>What does your listing include?</h4>
+              <h5>List out the Main items, and even create Sub-Items afterwards. E.g. a lens would be a Main Item, while it's front and rear caps would be Sub-Items</h5>
+              <h5>This will help keep track of your gear when you perform pre and post-shoot checks.</h5>
             </div>
 
             <ul class="list-unstyled add-items-input-list">
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                <div class="widget-element-container exp-title-container project-title-container col-sm-2 col-md-3 col-lg-3">
                   <h4>Make</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                <div class="widget-element-container exp-descrip col-sm-7 col-md-7 col-lg-7">
                   <div class="exp-header">
                     <form role="form">
                       <input type="itemMake" class="form-control" placeholder="e.g. Red, Arri, Canon, etc" id="itemMake">
@@ -313,11 +342,11 @@
               </li> <!-- END row -->
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-md-3 col-lg-3">
+                <div class="widget-element-container exp-title-container project-title-container col-sm-2 col-md-3 col-lg-3">
                   <h4>Model</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
-                <div class="widget-element-container exp-descrip col-md-7 col-lg-7">
+                <div class="widget-element-container exp-descrip col-sm-7 col-md-7 col-lg-7">
                   <div class="exp-header">
                     <form role="form">
                       <input type="itemModel" class="form-control" placeholder="e.g. CP.2 50mm T1.5 Super Speed Compact Prime Cine Lens" id="itemModel">
@@ -327,11 +356,11 @@
               </li> <!-- END row -->
 
               <li class="widget-row project-row project-view-row row">
-                <div class="widget-element-container exp-title-container project-title-container col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="widget-element-container exp-title-container project-title-container col-xs-1 col-sm-2 col-md-3 col-lg-3">
                   <h4>Qty</h4>
                 </div> <!-- END widget-element-container exp-title-container -->
 
-                <div class="widget-element-container exp-descrip col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="widget-element-container exp-descrip col-xs-2 col-sm-1 col-md-1 col-lg-1">
                   <div class="exp-header">
                     <form role="form">
                       <input type="itemQty" class="form-control" id="itemQty">
@@ -353,15 +382,15 @@
             <ul class="list-unstyled top-border-light added-items-list">
 
               <li class="widget-row project-row project-view-row row">
-                <div class="added-item-col col-md-3" id="added-item-make">
+                <div class="added-item-col col-xs-2 col-sm-3 col-md-3" id="added-item-make">
                   <h4 class="bold">Make</h4>
                 </div>
 
-                <div class="added-item-col col-md-6" id="added-item-model">
+                <div class="added-item-col col-xs-6 col-sm-6 col-md-6" id="added-item-model">
                   <h4 class="bold">Model</h4>
                 </div>
 
-                <div class="added-item-col col-md-1" id="added-item-qty">
+                <div class="added-item-col col-xs-1 col-sm-1 col-md-1" id="added-item-qty">
                   <h4 class="bold">Qty</h4>
                 </div>
               </li>
@@ -391,6 +420,10 @@
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
+
+    $('#listGear').click(function(){
+      window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
+    });
 
     //jPanel
     var jPM = $.jPanelMenu({
@@ -446,7 +479,7 @@
 
         if (make.length >= 3 && model.length >= 4 && qty > 0) {
           // Add values to Gear List as <li>
-          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-md-3"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+          $newProduct= $('<li class="widget-row project-row project-view-row row"><div class="added-item-col dotdot col-xs-2 col-sm-3 col-md-3" id="added-make"><h5 class="bold all-cap">' + make + '</h5></div><div class="added-item-col dotdot col-xs-6 col-sm-6 col-md-6"><h5 class="bold all-cap">' + model + '</h5></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><h5 class="bold all-cap">' + qty + '</h5></div><div class="added-item-col add-sub-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-plus-circle fa-lg" data-toggle="tooltip" data-placement="top" title="Add a Sub-item to this Main Item."></i></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
           $('.added-items-list').append($newProduct);
           
           // Do some AJAX to record input values
@@ -474,7 +507,7 @@
           //Add a Sub-Item - append a new <li> with inputs
           $newProduct.find('.fa-plus-circle').click(function(){
             var $thisProduct = $(this).closest('li');
-            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
+            var $thisSubProduct= $('<li class="widget-row project-row project-view-row sub-item-row row"><div class="added-item-col dotdot added-sub-item col-xs-2 col-sm-3 col-md-3"><h5 class="capitalize">' + make + '</h5></div><div class="added-item-col col-xs-6 col-sm-6 col-md-6"><form role="form"><input type="subItemModel" class="form-control" placeholder="e.g. Front lens cap" id="subItemModel"></form></div><div class="added-item-col sub-qty-col col-xs-1 col-sm-1 col-md-1"><form role="form"><input type="subItemQty" class="form-control" id="subItemQty"></form></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-plus fa-lg" data-toggle="tooltip" data-placement="top" title="Save me. Please."></i></div><div class="added-item-col col-xs-1 col-sm-1 col-md-1"><i class="fa fa-times fa-lg" data-toggle="tooltip" data-placement="top" title="Remove item. You sure?"></i></div></li>')
             $thisProduct.append($thisSubProduct);
 
               //Re-init tooltip ... again
