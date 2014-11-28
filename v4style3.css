@@ -36,6 +36,10 @@
 		text-decoration: none;
 	}
 
+	input {
+		font-family: 'proxima-nova', sans-serif;
+	}
+
 	.bold {
 		font-weight: 700;
 	}
@@ -128,8 +132,13 @@
 	.inline-content h4,
 	.inline-content h5,
 	.inline-content h6,
-	.inline-content p {
+	.inline-content p,
+	.inline-content form {
 		display: inline-block;
+	}
+
+	.inset-yellow {
+		color: #C68D00;
 	}
 
 	@media (max-width: 767px) {
@@ -202,6 +211,11 @@
 	** BUTTONS ** 
 ===============================*/
 
+	.obnox-btn {
+		height: 4rem;
+		width: 16.5rem;
+	}
+
 	.transparent-btn {
 		min-width: 10rem;
 		padding: 0.3rem 1rem; 
@@ -234,6 +248,21 @@
 		font-family: "proxima-nova", sans-serif;
 		color: white;
 		background-color: transparent;
+		outline: 0;
+		border: 0.1rem solid #ffc917;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+
+	.filled-btn-yellow {
+		min-width: 10rem;
+		padding: 0.3rem 1rem; 
+		font-family: "proxima-nova", sans-serif;
+		font-weight: 700;
+		color: #1c1d20;
+		background-color: #ffc917;
 		outline: 0;
 		border: 0.1rem solid #ffc917;
 		transition: all 0.3s;
@@ -357,6 +386,361 @@
 
 
 /*===================================
+	** LANDING PAGES ** 
+===============================*/
+
+	.landing-content-body {
+		color: white;
+	}
+
+	.landing-header-content-row {
+		position: relative;
+		width: 100%;
+		margin: 0;
+		color: white;
+	}
+
+	.landing-head {
+		display: block;
+		background: url(/testwebsite/my-first-repo/assets/landing/film-crew-big1.png) no-repeat;
+		background-size: cover;
+	}
+
+	.landing-content-body .call-to-action,
+	.header-text {
+		text-align: center;
+	}
+
+	.head-one {
+		padding: 3rem 0 0 3rem;
+	}
+
+	.header-video {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7.5rem;
+		margin-bottom: 3.5rem;
+		width: 90%;
+	}
+
+	.header-video > img {
+		width: 50%;
+	}
+
+	.landing-content-body .call-to-action {
+		margin: 4rem 0;
+
+	}
+
+	.landing-content-body .call-to-action button {
+		margin: 0 4rem;
+	}
+
+	.explainer-one {
+		background-color: #333;
+		background: url(/testwebsite/my-first-repo/assets/landing/landing_section_1.jpg) no-repeat;
+		background-size: cover;
+	}
+
+	.explainer-two {
+		background-image: radial-gradient(#4c4c4c, #1c1d20);
+	}
+
+	.section-demo {
+		overflow: hidden;
+	}
+
+	@media (max-width: 454px) {
+		.head-two > h3 {
+			font-size: 2rem;
+		}
+	}
+
+	@media (max-width: 524px) {
+		.landing-content-body .call-to-action button {
+			margin-bottom: 2rem;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.head-one > img {
+			width: 90%;
+		}
+		.header-video {
+			margin-top: 2.5rem;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		.head-one > img {
+			width: 35rem;
+		}
+		.head-two > h3 {
+			font-size: 2rem;
+		}
+	}	
+
+	@media (min-width:992px) and (max-width: 1100px) {
+		.head-one > img {
+			width: 45rem;
+		}
+	}
+
+	/* -------- SECTION TABS -------- */
+
+	.explainer .explainer-head {
+		text-align: center;
+		padding: 2.5rem 0; 
+	}
+
+	.explainer-two .explainer-head {
+		padding-top: 5rem;
+		padding-bottom: 1rem;
+	}
+
+	.explainer .explainer-head h2 {
+		margin: 0;
+	}
+
+	.landing-section-tabs {
+		border-bottom: none;
+		background-color: #ffc917;
+		padding-left: 5rem;
+		text-align: center;
+	}
+
+	/*Overriding Bootstrap*/
+	.explainer-main-tabs > .nav-tabs > li.active > a,
+	.explainer-main-tabs > .nav-tabs > li.active > a:hover,
+	.explainer-main-tabs > .nav-tabs > li.active > a:focus,
+	.explainer-main-tabs > .nav-tabs > li > a {
+		background-color: transparent;
+		border: none;
+	}
+
+	.explainer-main-tabs > .nav-tabs > li.active > a:hover,
+	.explainer-main-tabs > .nav-tabs > li.active > a:focus {
+		text-shadow: none;
+	}
+
+	.explainer-main-tabs > .nav-tabs > li > a:hover h2 {
+		color: #9e7000;
+	}
+
+	.explainer-main-tabs > .nav-tabs > li.active > a > h2,
+	.explainer-main-tabs > .nav-tabs > li.active > a:hover > h2,
+	.explainer-main-tabs > .nav-tabs > li.active > a:focus > h2 {
+		color: #333;
+	}
+
+	.landing-section-subtabs > li,
+	.landing-section-tabs > li {
+		margin-right: 2rem;
+		float: none;
+		display: inline-block;
+		border: none;
+	}
+
+	.landing-section-tabs > li > a {
+		border-radius: 0;
+		text-decoration: none;
+		color: #1c1d20;
+		margin-bottom: 1rem;
+	}
+
+	.landing-section-tabs > li.active > a {
+		background-color: transparent;
+		color: #1c1d20;
+	}
+
+	.landing-section-tabs > li.active {
+		background-color: transparent;
+	}
+
+	/* -------- SUBTABS -------- */
+
+	.explainer-two .landing-section-subtabs {
+		margin-bottom: 3rem;
+	}
+
+	/*Overriding Bootstrap*/
+	.explainer-subtabs .nav-tabs > li.active > a,
+	.explainer-subtabs .nav-tabs > li.active > a:hover,
+	.explainer-subtabs .nav-tabs > li.active > a:focus {
+		background-color: transparent;
+		border: none;
+		color: white;
+	}
+
+	/*Overriding Bootstrap*/
+	.explainer-subtabs .nav-tabs > li > a:hover,
+	.explainer-subtabs .nav-tabs > li > a:focus {
+		background-color: transparent;
+		color: white;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-o-transition: all 0.5s;
+	}
+
+	.landing-section-subtabs {
+		border-bottom: none;
+		text-align: center;
+		margin: 1.5rem 0;
+	}
+
+	.landing-section-subtabs > li.active > a > h4 {
+		font-weight: 700;
+	}
+
+	.landing-section-subtabs > li > a {
+		border-radius: 0;
+		text-decoration: none;
+		border: none;
+		padding: 0 1rem;
+		color: #828282;
+	}
+
+	/* -------- SECTION TAB CONTENT -------- */
+
+	.landing-section-tab-content {
+	}
+
+	.landing-section-tab-content .row,
+	.landing-section-subtab-content .row {
+		margin: 0;
+	}
+
+	.landing-section-tab-content .row .demo-col {
+		padding-right: 0;
+	}
+
+	.landing-section-tab-content .value-prop {
+		text-align: center;
+		padding: 1rem;
+		margin: 2rem 0;
+		min-height: 17rem;
+	}
+
+	.landing-section-subtab-content .value-copy {
+		padding: 1rem 2rem; 
+	}
+
+	.landing-section-tabs li a h2,
+	.landing-section-tab-content .value-prop h3,
+	.landing-section-tab-content .value-prop h4 {
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+
+	.landing-section-subtab-content .demo-col {
+		overflow-x: hidden;
+	}
+
+	.landing-section-tab-content .section-demo {
+		width: 145%;
+	}
+
+	@media (max-width: 424px) {
+		.landing-section-tabs {
+			padding-left: 0;
+		}
+		.landing-section-tabs > li {
+			margin-right: 0;
+		}
+	}
+
+	@media (max-width: 601px) {
+		.landing-section-tabs > li > a > h2 {
+			font-size: 1.8rem;
+		}
+		.landing-section-tab-content .value-prop h3 {
+			font-size: 1.8rem;
+		}
+		.landing-section-tab-content .value-prop h4 {
+			font-size: 1.4rem;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.landing-section-tab-content {
+			padding-top: 0; 
+		}
+		.landing-section-tab-content .value-prop {
+			min-height: 0.1rem;
+		}
+		.landing-section-tab-content .section-demo {
+			width: 110%;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 992px) {
+		.landing-section-tab-content .value-prop {
+			min-height: 15rem;
+		}
+		.landing-section-tab-content .value-prop h3 {
+			font-size: 1.8rem;
+		}
+		.landing-section-subtab-content .value-copy h2 {
+			font-size: 2rem;
+		}
+		.landing-section-subtab-content .value-copy h4,
+		.landing-section-tab-content .value-prop h4 {
+			font-size: 1.4rem;
+		}
+		.landing-section-tab-content .section-demo {
+			width: 160%;
+		}
+	}
+
+
+	/* ------------------------ COUNTDOWN CLOCK ----------------------*/
+	.landing-content-body .countdown-lg {
+		padding: 0;
+	}
+
+	.landing-content-body .countdown-timer #clock .clocknumbers {
+		font: bold 4rem 'proxima-nova', sans-serif;
+		transition: all 0.3s;
+	}
+
+	.landing-content-body .countdown-timer #clock {
+		font: bold 2rem 'proxima-nova', sans-serif;
+		transition: all 0.3s;
+	}
+
+	@media (max-width: 454px) {
+		.landing-content-body .countdown-timer #clock .clocknumbers {
+			font: bold 3rem 'proxima-nova', sans-serif;
+			margin-left: 1rem;
+		}
+
+		.landing-content-body .countdown-timer #clock {
+			font: bold 1.4rem 'proxima-nova', sans-serif;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		.landing-content-body .countdown-timer #clock .clocknumbers {
+			font: bold 3rem 'proxima-nova', sans-serif;
+			margin-left: 1rem;
+		}
+
+		.landing-content-body .countdown-timer #clock {
+			font: bold 1.4rem 'proxima-nova', sans-serif;
+		}
+	}
+
+
+/*===================================
+	** LANDING PAGES ** 
+===============================*/
+
+
+
+/*===================================
 	** DROPDOWN ** 
 ===============================*/
 
@@ -405,6 +789,101 @@
 
 /*===================================
 	END DROPDOWN 
+===============================*/
+
+
+
+/*===================================
+	** BROWSE **
+===============================*/
+
+	.browse-container {
+		margin: 0 0 0 2%;
+		width: 98%;
+		color: white;
+		position: relative;
+	}
+
+	.browsegear-input-row {
+		margin-bottom: 2rem;
+	}
+
+	.browsegear-input-row > h5 {
+		vertical-align: middle;
+	}
+
+	.browse-content-main .isotope .element-item {
+		width: 47%;
+	}
+
+	.browse-content-main .category-each .dropdown-menu {
+		background-color: #1c1d20;
+		color: white;
+		border-radius: 0;
+	}
+
+	.browse-content-main .category-each .dropdown-menu li {
+		text-align: center;
+	}
+
+	.browse-content-main .category-each .dropdown-menu li a {
+		color: white;
+	}
+
+	.browse-content-main .category-each .dropdown-menu li a:hover {
+		color: #1c1d20;
+	}
+
+	.browsegear-map {
+		position: fixed;
+		left: auto;
+		right: 0;
+		top: 9rem;
+		bottom: auto;
+		height: 100%;
+		width: 43%;
+		background-image: url(mapplaceholder.jpg);
+		background-size: cover no-repeat;
+	}
+
+	@media (max-width: 576px) {
+		.browsegear-content-main .isotope .element-item {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 991px) {
+		.browsegear-map {
+			display: none;
+		}
+	}
+
+	/* -------- BROWSE PEOPLE -------- */
+
+	.people-actions {
+		display: block;
+		margin-top: 1rem;
+	}
+
+	.browsepeople-content .people-actions button {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.browsepeople-content .widget-project-hero-small {
+		margin-top: 1rem;
+	}
+
+	@media (max-width: 400px) {
+		.browsepeople-content .widget-project-hero-small img {
+			width: 14rem;
+			height: 7.87rem;
+		}
+
+	}
+
+/*===================================
+	END BROWSE  
 ===============================*/
 
 
@@ -512,7 +991,7 @@
 		color: #ffc917;
 	}
 
-	.top-navbar .dropdown .dropdown-menu li a {
+	.dropdown .dropdown-menu li a {
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -1015,12 +1494,21 @@
 		text-align: right;
 	}
 
-	.status-span > h5 {
+	.status-div > h5 {
 		display: inline-block;
 	}
 
-	.status-span > i {
+	.status-div .fa-question-circle {
 		color: white;
+	}
+
+	.status-div > .status-unlisted {
+		display: none;
+	}
+
+	.status-div .fa-toggle-on,
+	.status-div .fa-toggle-off {
+		cursor: pointer;
 	}
 
 	.inbox-content .inbox-row .exp-descrip > .booking-convo-link {
@@ -1029,31 +1517,31 @@
 	}
 
 	@media (max-width: 476px) {
-		.inbox-content .inbox-row .profile-avatar-mini,
-		.inbox-content .inbox-row .profile-avatar-mini img {
+		.dashboard-content-main .inbox-content .inbox-row .profile-avatar-mini,
+		.dashboard-content-main .inbox-content .inbox-row .profile-avatar-mini img {
 			height: 3.8rem;
 			width: 3.8rem;
 		}
-		.inbox-content .inbox-row .exp-descrip {
+		.dashboard-content-main .inbox-content .inbox-row .exp-descrip {
 			margin: 0;
 		}
-		.inbox-content .status-container {
+		.dashboard-content-main .inbox-content .status-container {
 			width: 100%;
 			text-align: left;
 		}
-		.inbox-content .status-container h5 {
+		.dashboard-content-main .inbox-content .status-container h5 {
 			display: inline-block;
 		}
-		.inbox-content .booking-convo-link p {
+		.dashboard-content-main .inbox-content .booking-convo-link p {
 			font-size: 1.2rem;
 		}
-		.inbox-content .exp-title-container {
+		.dashboard-content-main .inbox-content .exp-title-container {
 			width: 28.666667%;
 		}
 	}
 
 	@media (max-width: 767px) {
-		.inbox-content .status-container > .status-span > i {
+		.dashboard-content-main .inbox-content .status-container > .status-span > i {
 			display: none;
 		}
 	}
@@ -5098,8 +5586,6 @@
 		margin-top: 3rem;
 	}
 
-	
-
 	@media (min-width: 300px) and (max-width: 447px) {
 		.project-type > h3 {
 			font-size: 1.8rem;
@@ -5929,10 +6415,11 @@
 		height: 3rem;
 	}
 
-	.payment-hero-container .stripe {
+	.stripe {
 		background: url(/testwebsite/my-first-repo/assets/stripe.png);
 		width: 11.9rem;
 		height: 3rem;
+		display: inline-block;
 	}
 
 	.payment-listing-hero-container {

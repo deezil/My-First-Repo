@@ -8,7 +8,7 @@
 
   <!-- Bootstrap's CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Hirehive CSS -->
   <link rel="stylesheet" href="v4style3.css">
@@ -378,7 +378,7 @@
         <div class="widget-header dashboard-widget-header">
            <h4 class="bold all-cap">Your Gear List</h4>
            <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This is where you manage all your gear and add new listings."></i>
-           <button class="transparent-btn-yellow pull-right">
+           <button class="transparent-btn-yellow pull-right" id="listBtn">
            <i class="fa fa-plus"></i> Add a Listing</button>
         </div>
 
@@ -427,11 +427,20 @@
                       <h5 class="all-cap pull-right">$900 per day</h5>
                     </span>
                   </div>
-                  <span class="status-span">
-                    <h5 class="bold green">Listed</h5>
-                    <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing is now listed and publicly viewable."></i>
-                  </span>
-                  <a href="#"><h4>Manage listing</h4></a>
+                  <div class="status-div">
+                    <div class="status-state status-listed inline-content">
+                      <i class="fa fa-toggle-on fa-lg green"></i>
+                      <h5 class="bold green">Listed</h5>
+                      <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing is now listed and publicly viewable."></i>
+                    </div>
+                    <div class="status-state status-unlisted inline-content">
+                      <i class="fa fa-toggle-off fa-lg red"></i>
+                      <h5 class="bold red">Unlisted</h5>
+                      <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing has been unlisted and cannot be publicly viewed."></i>
+                    </div>
+                    
+                  </div>
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingincludes.html"><h4>Manage listing</h4></a>
                   <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><h4>View listing</h4></a>
                 </div> <!--END widget-element-container exp-descrip -->
 
@@ -462,11 +471,20 @@
                       <h5 class="all-cap pull-right">$900 per day</h5>
                     </span>
                   </div>
-                  <span class="status-span">
-                    <h5 class="bold red">Unlisted</h5>
-                    <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing has been unlisted and cannot be publicly viewed."></i>
-                  </span>
-                  <a href="#"><h4>Manage listing</h4></a>
+                  <div class="status-div">
+                    <div class="status-state status-listed inline-content">
+                      <i class="fa fa-toggle-on fa-lg green"></i>
+                      <h5 class="bold green">Listed</h5>
+                      <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing is now listed and publicly viewable."></i>
+                    </div>
+                    <div class="status-state status-unlisted inline-content">
+                      <i class="fa fa-toggle-off fa-lg red"></i>
+                      <h5 class="bold red">Unlisted</h5>
+                      <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="This listing has been unlisted and cannot be publicly viewed."></i>
+                    </div>
+                 
+                  </div>
+                  <a href="/testwebsite/my-first-repo/v4index3_editlisting_listingincludes.html"><h4>Manage listing</h4></a>
                   <a href="/testwebsite/my-first-repo/v4index3viewlisting.html" target="_blank"><h4>View listing</h4></a>
                 </div> <!--END widget-element-container exp-descrip -->
 
@@ -509,6 +527,26 @@
   $(document).ready(function(){
 
     $('[data-toggle=tooltip]').tooltip();
+
+    $('#listGear').click(function(){
+      window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
+    });
+
+    $('#listBtn').click(function(){
+      window.location.href='/testwebsite/my-first-repo/v4index3_addlisting_1.html';
+    });
+
+    $('.fa-toggle-on').click(function(){
+      $(this).closest('.status-state').fadeOut(500, function(){
+        $(this).closest('.status-div').find('.status-unlisted').fadeIn(50);
+      });
+    });
+
+    $('.fa-toggle-off').click(function(){
+      $(this).closest('.status-state').fadeOut(500, function(){
+        $(this).closest('.status-div').find('.status-listed').fadeIn(50);
+      });
+    });
 
     //jPanel
     var jPM = $.jPanelMenu({

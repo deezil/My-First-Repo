@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<title>Browse People</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: User Avatar Dropdown Nav onwards** -->
+<div class="top-navbar loggedin widget-row row">
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Top navbar User Avatar Dropdown Nav -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-2 col-lg-1 dropdown pull-right">
+   <a href="#" data-target="#" class="dropdown-toggle" id="profileDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <figure class="profile-avatar-mini">
+      <img src="http://37.media.tumblr.com/02526e5cd1e38bba1cb46893e9b07897/tumblr_na0k67nBsz1st5lhmo1_1280.jpg"/>
+    </figure>
+   <h5>Steven</h5>
+    <span class="caret" id="profileCaret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="profileDrop">
+      <li>
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_main.html"><h5>Dashboard</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managegear.html"><h5>Your Gear List</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_managebookings.html"><h5>Your Gear Bookings</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageshoots.html"><h5>Your Shoots</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_manageprojects.html"><h5>Your Projects</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_wishlist.html"><h5>Wishlist</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_invitefriends.html">
+          <h5>Invite Friends</h5><i class="fa fa-exclamation-circle"></i>
+        </a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_editprofile_main.html"><h5>Edit Profile</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="/testwebsite/my-first-repo/v4index3dashboard_account_main.html"><h5>Account</h5></a>
+      </li>
+      <li class="top-border">
+        <a href="#"><h5>Log Out</h5></a>
+      </li>
+    </ul>
+  </div> <!-- END navbar-option col-md-1 col-lg-1 dropdown pull-right -->
+
+  <!-- Top navbar Inbox Icon -->
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 visible-xs visible-sm visible-md visible-lg pull-right">
+    <h5>
+      <a href="/testwebsite/my-first-repo/v4index3dashboard_inbox.html">
+        <i class="fa fa-envelope-o fa-lg"></i>
+      </a>
+    </h5>
+    <span class="new-msg-counter">
+      <h5>26</h5>
+    </span>
+  </div>
+
+  <!-- Top navbar Browse Dropdown -->
+  <div class="navbar-option col-xs-3 col-sm-2 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div> <!-- END navbar-option -->
+
+  <!-- Top navbar list gear button -->
+  <div class="navbar-option col-xs-3 col-sm-3 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear"><h5 class="all-cap">List Your Gear</h5></button>
+  </div> <!-- END navbar-option -->
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Spacer to clear fixed navbars -->
+<div class="ninety-header-spacer"></div>
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<!-- Main Content -->
+<div class="content-body">
+  <div class="app-container container">
+    <div class="app-content-main browse-content-main">
+        <div class="browsepeople-main col-xs-12 col-md-12">
+
+          <div class="browsegear-filter-wrapper">
+            <div class="browsegear-input-row row" id="browseSearch">
+              <div class="col-xs-2 col-sm-1 col-md-2">
+                <h5>Role</h5>
+              </div>
+
+              <div class="col-xs-6 col-sm-4 col-md-4">
+                <form role="form">
+                  <input type="searchRole" class="form-control" id="searchRole" placeholder="e.g. Producer, Director, Photographer"/>
+                </form>
+              </div>
+            </div> <!-- END browsegear-input-row -->
+
+            <div class="browsegear-input-row row" id="browseLocation">
+              <div class="col-xs-2 col-sm-1 col-md-2">
+                <h5>Location</h5>
+              </div>
+
+              <div class="col-xs-6 col-sm-4 col-md-4">
+                <form role="form">
+                  <input type="searchLocation" class="form-control" id="searchLocation" placeholder="City, State"/>
+                </form>
+              </div>
+            </div> <!-- END browsegear-input-row -->
+
+            <div class="browsegear-input-row row" id="browseDept">
+              <div class="col-xs-2 col-sm-1 col-md-2">
+                <h5>Within</h5>
+              </div>
+
+              <div class="category-each dropdown col-xs-8 col-sm-5 col-md-4">
+                <button class="transparent-btn dropdown-toggle inline-content" id="distanceDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <h5>Distance</h5>
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+
+                <ul class="dropdown-menu" role="menu" aria-labelledby="distanceDrop">
+                  <li>
+                    <a href="#"><h5>20km</h5></a>
+                  </li>
+                  <li>
+                    <a href="#"><h5>50km</h5></a>
+                  </li>
+                  <li>
+                    <a href="#"><h5>150km</h5></a>
+                  </li>
+                  <li>
+                    <a href="#"><h5>250km</h5></a>
+                  </li>
+                  <li>
+                    <a href="#"><h5>500km</h5></a>
+                  </li>
+                </ul>
+              </div> <!-- END category-each -->
+            </div> <!-- END browsegear-input-row -->
+          </div> <!-- END browsegear-filter-wrapper -->
+
+          <div class="widget-content inbox-content browsepeople-content">
+
+          <div class="widget-section">
+            <ul class="list-unstyled">
+
+              <li class="widget-row inbox-row top-border">
+                <div class="widget-element-container exp-title-container col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                  <div class="reviewer-avatar-container">
+                    <figure class="profile-avatar-mini">
+                      <a href="/testwebsite/my-first-repo/v4index3.html" target="_blank"><img src="http://www.interviewmagazine.com/files/2008/11/21/img-martin-scorsese_14532014334.jpg"/></a>
+                    </figure>
+                    <div class="people-actions">
+                      <button class="transparent-btn followButton all-cap">
+                        <i class="fa fa-plus"></i>
+                        Connect
+                      </button>
+
+                      <button class="transparent-btn followButton all-cap">
+                        <i class="fa fa-envelope-o"></i>
+                        Hive Mail
+                      </button>
+                    </div> <!-- END people-actions -->
+                  </div> <!-- END reviewer-avatar-container -->
+                </div> <!-- END widget-element-container exp-title-container -->
+
+                <div class="widget-element-container exp-descrip col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <div class="review-header-info-container row">
+                    <a href="/testwebsite/my-first-repo/v4index3.html">
+                      <h4 class="all-cap bold">Martin S.</h4>
+                    </a>
+                    <h5 class="review-listing-title all-cap bold">Director, Writer</h5>
+                    <h5 class="all-cap">Manhattan, NY</h5>
+                    <h6>Member since: 24 Aug 2014</h6>
+                  </div>
+                  <p>I have a great passion for Cinema Verite and have been making films for over 4 decades now.</p>
+                </div> <!-- END widget-element-container exp-descrip -->
+
+                <div class="widget-element-container exp-descrip status-container col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                  <div class="people-showreel-wrapper">
+                    <figure class="widget-project-hero-small">
+                      <img src="http://i.kinja-img.com/gawker-media/image/upload/s--oOScfPOq--/woy6vnwz3lsofc1qjkl4.jpg" alt="Project Thumbnail"/>
+                    </figure> 
+                    </div> <!-- END people-showreel-wrapper -->
+
+                    <div class="people-stats">
+                      <h5><strong>500</strong> collaborators</h5>
+                      <h5><strong>25</strong> reviews</h5>
+                      <h5><strong>5</strong> references</h5>
+                    </div>
+                </div> <!-- END widget-element-container exp-descrip -->
+              </li> <!-- END widget-row inbox-row -->
+              
+
+
+            </ul>
+          </div> <!-- END widget-section -->
+        
+        </div> <!-- END widget-content -->
+
+        </div> <!-- END browsepeople-main col-md-12 -->
+    </div> <!-- END app-content-main browse-content-main -->
+  </div> <!-- END browse-container container -->
+</div> <!-- END content-body -->
+
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Isotope -->
+<script src="/testwebsite/my-first-repo/assets/js/isotope.pkgd.js"></script>
+<script src="/testwebsite/my-first-repo/iso.js"></script>
+
+<!-- Plugin for jPanel -->
+<script src="/testwebsite/my-first-repo/jPanelMenu-master/jquery.jpanelmenu.js"></script>
+
+<script> 
+  // CAROUSEL
+    $('#myCarousel').carousel({
+      interval: false
+    });
+
+    // handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+      var id_selector = $(this).attr("id");
+      var id = id_selector.substr(id_selector.length -1);
+      id = parseInt(id);
+      $('#myCarousel').carousel(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
+    // when the carousel slides, auto update
+    $('#myCarousel').on('slid', function (e) {
+      var id = $('.item.active').data('slide-number');
+      id = parseInt(id);
+      $('[id^=carousel-selector-]').removeClass('selected');
+      $('[id=carousel-selector-'+id+']').addClass('selected');
+    })
+  // END CAROUSEL
+
+  $(document).ready(function(){
+
+    $('[data-toggle=tooltip]').tooltip();
+
+    /*jPanel
+    var jPM = $.jPanelMenu({
+      menu: "#sidebar-menu",
+      trigger: '.sidenav-trigger',
+      excludedPanelContent: ['.top-navbar', '.booking-modal'],
+      openPosition: '20rem'
+    });*/
+
+    //jPM.on();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    // Yellow Transparent buttons
+    $('.transparent-btn-yellow').mouseenter(function() {
+      $(this).addClass('yellow-btn-fill');
+    });
+
+    $('.transparent-btn-yellow').mouseleave(function() {
+      $(this).removeClass('yellow-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
+    });
+
+    // Wishlist / Like
+    $('.wishlist-content-main').find('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      $alert = $('#append-alert-wishlist-hero'); 
+      if($button.find('.fa-heart').hasClass('liked')){
+          //$.ajax(); Do Remove from Wishlist
+          $button.find('.fa-heart').removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none');
+          $button.append("<h5 id='append-alert-wishlist-removed-hero'>Removed from Wishlist</h5>");
+          $button.find('#append-alert-wishlist-removed-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      } else {
+          // $.ajax(); Do Add to Wishlist
+          $button.find('.fa-heart').addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline');
+          $button.append("<h5 id='append-alert-wishlist-hero'>Added to Wishlist</h5>");
+          $button.find('#append-alert-wishlist-hero').fadeOut(1500, function(){
+            $(this).remove();
+          });
+      }
+    });
+
+    // Department Dropdown shows the selected value
+    $(".dropdown-menu").on('click', 'li a', function(){
+      $(".transparent-btn:first-child").text($(this).text());
+      $(".transparent-btn:first-child").val($(this).text());
+      $(".transparent-btn:first-child").css({'width': '11.3rem', 'height': '4.3rem'});
+    });
+
+  });
+
+</script>
+
+</html>

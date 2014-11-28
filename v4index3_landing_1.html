@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+<title>Landing Page 1</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<div class="fivefive-header-spacer"></div>
+
+<div class="landing-content-body">
+  <section class="landing-head">
+
+    <div class="landing-header-content-row row">
+      <div class="head-one col-sm-6 col-md-6">
+        <img src="/testwebsite/my-first-repo/assets/landing/hh_header_left.png"/>
+      </div>
+
+      <div class="col-sm-6 col-md-6">
+        <div class="header-video">
+          <img src="/testwebsite/my-first-repo/assets/vimeo_placeholder.jpg" class="img-responsive">
+        </div>
+
+        <div class="header-text head-two">
+          <h3>Kickstarter campaign for Hirehive v1.1</h3>
+          <h3>launching in...</h3>
+          <div class="countdown-timer">
+            <span id="clock"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="call-to-action col-md-12">
+        <button class="filled-btn-yellow obnox-btn all-cap">Sign Up for Free</button>
+        <button class="transparent-btn obnox-btn all-cap">Learn more</button>
+      </div>
+    </div> <!-- END landing-header-content row -->
+
+  </section> <!-- END landing-head -->
+
+  <section class="explainer explainer-one">
+    <div role="tabpanel" class="explainer-main-tabs">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs landing-section-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#owners" aria-controls="owners" role="tab" data-toggle="tab"><h2 class="inset-yellow bold">Gear Owners</h2></a></li>
+        <li role="presentation" class=""><a href="#creators" aria-controls="creators" role="tab" data-toggle="tab"><h2 class="inset-yellow bold">Content Creators</h2></a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content landing-section-tab-content">
+
+        <!-- Hosts -->
+        <div role="tabpanel" class="tab-pane fade in active" id="owners">
+
+          <!-- Hosts Panel -->
+          <div role="tabpanel" class="explainer-subtabs">
+
+            <!-- Host Nav subtabs -->
+            <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
+              <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><h4 class="all-cap">Overview</h4></a></li>
+
+              <li role="presentation" class=""><a href="#trust" aria-controls="trust" role="tab" data-toggle="tab"><h4 class="all-cap">Trust</h4></a></li>
+
+              <li role="presentation" class=""><a href="#list" aria-controls="list" role="tab" data-toggle="tab"><h4 class="all-cap">List it</h4></a></li>
+
+              <li role="presentation" class=""><a href="#calendar" aria-controls="calendar" role="tab" data-toggle="tab"><h4 class="all-cap">Calendar</h4></a></li>
+
+              <li role="presentation" class=""><a href="#payments" aria-controls="payments" role="tab" data-toggle="tab"><h4 class="all-cap">Get Paid</h4></a></li>
+
+              <li role="presentation" class=""><a href="#hostpro" aria-controls="hostpro" role="tab" data-toggle="tab"><h4 class="all-cap">Host Pro</h4></a></li>
+            </ul>
+
+            <!-- Host Tab panes -->
+            <div role="tabpanel" class="tab-content landing-section-subtab-content">
+
+              <!-- #overview -->
+              <div role="tabpanel" class="tab-pane fade in active" id="overview">
+                <div class="row">
+                  <div class="col-sm-3 col-md-3">
+                    <div class="value-prop">
+                      <h3 class="bold">Put your gear to work</h3>
+                      <h4>Hirehive lets you earn money while you're not using your gear.</h4>
+                    </div>
+                    <div class="value-prop">
+                      <h3 class="bold">Earn up to $10,000 a year</h3>
+                      <h4>The average hire rate for a Red Epic is around $1,000 per day. You do the math.</h4>
+                    </div>
+                  </div> <!-- END col-md-3 -->
+
+                  <div class="col-sm-3 col-md-3">
+                    <div class="value-prop">
+                      <h3 class="bold">Return on Investment</h3>
+                      <h4>Get a greater ROI for your gear before it loses value.</h4>
+                    </div>
+                    <div class="value-prop">
+                      <h3 class="bold">Buy your dream kit</h3>
+                      <h4>With the money that you earn on Hirehive, justifying that next purchase is real easy.</h4>
+                    </div>
+                  </div> <!-- END col-md-3 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #overview -->
+
+              <!-- #trust -->
+              <div role="tabpanel" class="tab-pane fade" id="trust">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h3 class="bold">Unique profiles</h3>
+                      <h4>As a Hirehive Host, Get to know your Hivers before they have a hire with you. You get to see their showreel and what they've worked on.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h3 class="bold">Verifications</h3>
+                      <h4>We verify all our members through several points of reference. We only want bona fide creatives within our swarm.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h3 class="bold">Ratings & Reviews</h3>
+                      <h4>Both you and your Hiver rate and review each other after every transaction. Positive reviews help build your Hirehive Reputation.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #trust -->
+
+              <!-- #list -->
+              <div role="tabpanel" class="tab-pane fade" id="list">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Free to list</h2>
+                      <h4>It's free to list your gear on Hirehive. You only pay a Host Service Fee of 10% of your earnings for every successful transaction.</h4>
+                      <h4 class="bold">You keep 90% of everything you earn!</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h2 class="bold">You're in control</h2>
+                      <h4>You have total control over your hire prices and who you want to hire to.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #list -->
+
+              <!-- #calendar -->
+              <div role="tabpanel" class="tab-pane fade" id="calendar">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Manage your availability</h2>
+                      <h4>With our scheduling system, you can determine when your listings are available for hire on-the-fly.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h2 class="bold">Sync: Coming soon ...</h2>
+                      <h4>Soon you'll be able to sync your Hirehive calendar with external iCal, Google or Outlook calendars.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #calendar -->
+
+              <!-- #payments -->
+              <div role="tabpanel" class="tab-pane fade" id="payments">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Secure & Pain-free payment</h2>
+                      <span class="stripe"></span>
+
+                      <h4>Hirehive handles payments for you. Ensuring that you get paid, and on time. Because you don't deserve to hear "How about I pay you in beers?"</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h2 class="bold">Payment options</h2>
+                      <h4>Get paid via direct deposit. And soon, you'll be able to get paid via Paypal, and receive international payments.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #payments -->
+
+              <!-- #hostpro -->
+              <div role="tabpanel" class="tab-pane fade" id="hostpro">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Hirehive Pro: Coming soon ... </h2>
+                      <h4 class="bold yellow">With your support, we'll be able to build out Hirehive Host Pro</h4>
+                      <h4>&nbsp;</h4> <!-- Spacer -->
+                      <h4>Hirehive Host Pro features will include:</h4>
+                      <ul>
+                        <li><h4>Lowered Host Service Fees</h4></li>
+                        <li><h4>Master Gearlist Inventory</h4></li>
+                        <li><h4>Data & Analytics Reporting</h4></li>
+                        <li><h4>Annual Invoice Reports</h4></li>
+                        <li><h4>Gear Request Notifications</h4></li>
+                      </ul>
+                      <h4>&nbsp;</h4> <!-- Spacer -->
+                      <h4>Learn more about Host Pro <a href="#"><strong>here</strong></a>.</h4>
+                    </div> <!-- END value-copy -->
+
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #hostpro -->
+
+            </div>  <!-- END landing-section-subtab-content -->
+
+          </div> <!-- END explainer-subtabs -->
+
+        </div> <!-- END #owners -->
+
+        <!-- Creators -->
+        <div role="tabpanel" class="tab-pane fade" id="creators">
+
+          <!-- Creators Panel -->
+          <div role="tabpanel" class="explainer-subtabs">
+
+            <!-- Creators Nav subtabs -->
+            <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
+              <li role="presentation" class="active"><a href="#hiverOverview" aria-controls="hiverOverview" role="tab" data-toggle="tab"><h4 class="all-cap">Overview</h4></a></li>
+
+              <li role="presentation" class=""><a href="#profiles" aria-controls="profiles" role="tab" data-toggle="tab"><h4 class="all-cap">Profiles</h4></a></li>
+
+              <li role="presentation" class=""><a href="#search" aria-controls="search" role="tab" data-toggle="tab"><h4 class="all-cap">Search</h4></a></li>
+
+              <li role="presentation" class=""><a href="#bookings" aria-controls="bookings" role="tab" data-toggle="tab"><h4 class="all-cap">Bookings</h4></a></li>
+
+              <li role="presentation" class=""><a href="#hiverpro" aria-controls="hiverpro" role="tab" data-toggle="tab"><h4 class="all-cap">Hiver Pro</h4></a></li>
+            </ul>
+
+            <!-- Creators Tab panes -->
+            <div role="tabpanel" class="tab-content landing-section-subtab-content">
+
+              <!-- #hiverOverview -->
+              <div role="tabpanel" class="tab-pane fade in active" id="hiverOverview">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="value-prop">
+                      <h3 class="bold">Access to gear</h3>
+                      <h4>Reach out to owners directly and hire their gear.</h4>
+                    </div>
+                    <div class="value-prop">
+                      <h3 class="bold">Power of choice</h3>
+                      <h4>See all the available gear in your area and take your pick.</h4>
+                    </div>
+                  </div> <!-- END col-md-3 -->
+
+                  <div class="col-md-3">
+                    <div class="value-prop">
+                      <h3 class="bold">Hassle-free booking</h3>
+                      <h4>You make the booking. We handle invoicing for you.</h4>
+                    </div>
+                    <div class="value-prop">
+                      <h3 class="bold">Affordable gear</h3>
+                      <h4>Gear owners determine their own prices. So you only stand to gain.</h4>
+                    </div>
+                  </div> <!-- END col-md-3 -->
+
+                  <div class="col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #hiverOverview -->
+
+              <!-- #profiles -->
+              <div role="tabpanel" class="tab-pane fade" id="profiles">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h3 class="bold">Unique profiles</h3>
+                      <h4>Create your unique Hirehive profiles. Exhibit your showreel and what you've worked on.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h3 class="bold">Verifications</h3>
+                      <h4>We verify all our members through several points of reference. We only want bona fide creatives within our swarm.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h3 class="bold">Ratings & Reviews</h3>
+                      <h4>As a Hirehiver, both you and your Host rate and review each other after every transaction. Positive reviews help build your Hirehive Reputation.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #profiles -->
+
+              <!-- #search -->
+              <div role="tabpanel" class="tab-pane fade" id="search">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Search in your area</h2>
+                      <h4 class="bold">Spending hours on the phone looking for gear is now a thing of the past.</h4>
+                      <h4>Quickly find the gear you're looking for, within the area that you need.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h2 class="bold">Power of choice</h2>
+                      <h4>Have pricing for the gear you need laid out before you. We take the guesswork out of your budget. Straight off the bat.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #search -->
+
+              <!-- #bookings -->
+              <div role="tabpanel" class="tab-pane fade" id="bookings">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Secure & Hassle-free bookings</h2>
+                      <span class="stripe"></span>
+                      <h4>We handle all payments for you, so that you can focus on the important stuff. Review the breakdown of your booking and know exactly what you're paying for.</h4>
+                      <h4>We charge a 6% Hiver Service Fee for each booking (based on the total booking price), which helps us maintain and grow Hirehive.</h4>
+                    </div> <!-- END value-copy -->
+
+                    <div class="value-copy">
+                      <h2 class="bold">Hirehive Callsheets</h2>
+                      <h4>Both you and your Host will receive a gear list breakdown when your booking is confirmed. We even provide Checksheets so that you can record the quality of gear pre and post-shoot.</h4>
+                    </div> <!-- END value-copy -->
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #bookings -->
+
+              <!-- #hiverpro -->
+              <div role="tabpanel" class="tab-pane fade" id="hiverpro">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6">
+                    <div class="value-copy">
+                      <h2 class="bold">Hirehive Pro: Coming soon ... </h2>
+                      <h4 class="bold yellow">With your support, we'll be able to build out Hirehive Hiver Pro</h4>
+                      <h4>&nbsp;</h4> <!-- Spacer -->
+                      <h4>Hirehive Hiver Pro features will include:</h4>
+                      <ul>
+                        <li><h4>Lowered Hiver Service Fees</h4></li>
+                        <li><h4>One-click MultiGear Requests</h4></li>
+                        <li><h4>Job Postings</h4></li>
+                      </ul>
+                      <h4>&nbsp;</h4> <!-- Spacer -->
+                      <h4>Learn more about Hiver Pro <a href="#"><strong>here</strong></a>.</h4>
+                    </div> <!-- END value-copy -->
+
+                  </div> <!-- END col-md-6 -->
+
+                  <div class="col-sm-6 col-md-6 demo-col">
+                    <div class="section-demo">
+                      <img src="/testwebsite/my-first-repo/assets/demo_1.jpg" class="img-responsive"/>
+                    </div>
+                  </div> <!-- END col-md-6 -->
+                </div> <!-- END row -->
+              </div> <!-- END #hiverpro -->
+
+            </div>  <!-- END landing-section-subtab-content -->
+
+          </div> <!-- END explainer-subtabs -->
+          
+        </div> <!-- END #creators -->
+
+      </div> <!-- END landing-section-tab-content -->
+
+    </div> <!-- END tabpanel explainer-main-tabs -->
+  </section> <!-- END explainer-one -->
+
+  <section class="explainer explainer-two">
+    <div class="explainer-head">
+      <h1 class="bold">Hirehive v1.1 Features</h1>
+      <h4>With your support, we'll be implementing these features for our community.</h4>
+    </div>
+
+    <div role="tabpanel" class="explainer-subtabs">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
+        <li role="presentation" class="cl-effect-4 active"><a href="#look" aria-controls="look" role="tab" data-toggle="tab"><h4 class="all-cap">UX 1.1</h4></a></li>
+        <li role="presentation" class="cl-effect-4"><a href="#projects" aria-controls="owners" role="tab" data-toggle="tab"><h4 class="all-cap">Projects</h4></a></li>
+        <li role="presentation"><a href="#connect" aria-controls="connect" role="tab" data-toggle="tab"><h4 class="all-cap">Hirehive Connect</h4></a></li>
+        <li role="presentation"><a href="#pro" aria-controls="pro" role="tab" data-toggle="tab"><h4 class="all-cap">Hirehive Pro</h4></a></li>
+        <li role="presentation"><a href="#payments" aria-controls="creators" role="tab" data-toggle="tab"><h4 class="all-cap">Analytics</h4></a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content landing-section-subtab-content">
+
+        <!-- Projects -->
+        <div role="tabpanel" class="tab-pane fade in active" id="projects">
+          <div class="row">
+             <div class="col-sm-6 col-md-6 demo-col">
+              <div class="section-demo-ipad">
+                <img src="/testwebsite/my-first-repo/assets/landing/ipad_demo.png" class="img-responsive"/>
+              </div>
+            </div> <!-- END col-md-6 -->
+
+            <div class="col-sm-6 col-md-6">
+              <div class="value-copy">
+                <h2 class="bold">Your projects on display</h2>
+                <h4 class="bold">Upload a project for our community to see your work.</h4>
+                <h4>&nbsp;</h4> <!-- Spacer -->
+                <h4>Project features will include:</h4>
+                <ul>
+                  <li><h4>Add cast and crew as Hive Collaborators</h4></li>
+                  <li><h4>Upload project activity updates</h4></li>
+                  <li><h4>Upload your EPK</h4></li>
+                  <li><h4>Social media integration</h4></li>
+                </ul>
+              </div> <!-- END value-copy -->
+
+            </div> <!-- END col-md-6 -->
+          </div> <!-- END row -->
+        </div>  <!-- END #projects -->
+
+        <!-- Connect -->
+        <div role="tabpanel" class="tab-pane fade" id="connect">
+          <div class="row">
+             <div class="col-sm-6 col-md-6 demo-col">
+              <div class="section-demo-ipad">
+                <img src="/testwebsite/my-first-repo/assets/landing/ipad_demo.png" class="img-responsive"/>
+              </div>
+            </div> <!-- END col-md-6 -->
+
+            <div class="col-sm-6 col-md-6">
+              <div class="value-copy">
+                <h2 class="bold">Connect with Cast and Crew</h2>
+                <h4 class="bold">We're going beyond gear. Let's talk people.</h4>
+                <h4>With Hirehive Connect, you can put yourself up as a freelancer-for-hire. Meanwhile, agencies, production companies and producers can reach out to you directly.</h4>
+                <h4>&nbsp;</h4> <!-- Spacer -->
+                <h4>Project features will include:</h4>
+                <ul>
+                  <li><h4>Add cast and crew as Hive Collaborators</h4></li>
+                  <li><h4>Upload project activity updates</h4></li>
+                  <li><h4>Upload your EPK</h4></li>
+                  <li><h4>Social media integration</h4></li>
+                </ul>
+              </div> <!-- END value-copy -->
+
+            </div> <!-- END col-md-6 -->
+          </div> <!-- END row -->
+        </div>  <!-- END #connect -->
+
+
+      </div> <!-- END tab-content landing-section-subtab-content -->
+
+    </div> <!-- END tabpanel -->
+  </section> <!-- END explainer-two -->
+
+</div> <!-- END landing-content-body -->
+
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Countdown Timer -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    $('.dropdown-toggle').dropdown();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
+    });
+
+    //Yellow Btn Hover Effect
+    $('.transparent-btn-yellow').mouseenter(
+      function() {
+        $(this).addClass('yellow-btn-fill');
+      }
+    );
+    $('.transparent-btn-yellow').mouseleave(
+      function() {
+        $(this).removeClass('yellow-btn-fill');
+      }
+    ); 
+
+    // Project Social Hover Effects
+    $('.fa-facebook-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
+      }
+    );
+    $('.fa-facebook-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
+      }
+    );
+
+    $('.fa-twitter-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
+      }
+    );
+    $('.fa-twitter-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
+      }
+    );
+
+    $('.fa-linkedin-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
+      }
+    );
+    $('.fa-linkedin-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
+      }
+    );
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('liked')){
+          //$.ajax(); Do Unlike
+          $button.removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none'); 
+      } else {
+          // $.ajax(); Do Liked
+          $button.addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline'); 
+      }
+    });
+
+    //Countdown Timer
+    $('#clock').countdown('2015/01/01', function(event) {
+      var $this = $(this).html(event.strftime(''
+        + '<span class="clocknumbers">%-w</span> weeks '
+        + '<span class="clocknumbers">%-d</span> days '
+        + '<span class="clocknumbers">%-H</span> hrs '
+        + '<span class="clocknumbers">%M</span> min '
+        + '<span class="clocknumbers">%S</span> sec'));
+    });
+
+  });
+
+</script>
+
+</html>
