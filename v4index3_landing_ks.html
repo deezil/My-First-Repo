@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<title>Kickstarter Landing Page</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="ks-landing-body">
+
+<div class="landing-content-body ks-landing">
+
+  <section class="explainer ks-hero">
+    <div class="logo-hero">
+      <figure class="ks-logo">
+        <img src="/testwebsite/my-first-repo/assets/landing/hirehiveonblackRGB_196ht.png">
+      </figure> 
+    </div>
+    <div class="explainer-head">
+      <h1>Support Hirehive with 3 clicks</h1>
+    </div>
+
+    <div class="call-out">
+      <h4 class="bold">Hello Creative One,</h4>
+      <h4>We hope you're having an awesome day. You're here because we know that you've got great influence, and when you share something, people pay attention. We would love for you to please take a few seconds to spread the Hirehive love!</h4>
+      <h4>&nbsp;</h4> <!-- spacer -->
+      <h4>Thank you so much,</h4>
+      <h4>Brent, Dee and the Hirehive team</h4>
+    </div> <!-- END call-out -->
+
+    <div class="ks-call-to-action row">
+      <div class="col-sm-4 col-md-4">
+        <div class="ks-step-count">
+          <img src="/testwebsite/my-first-repo/assets/landing/ks_number_count1.png"/>
+        </div>
+        <div class="share-brief">
+          <h3 class="bold all-cap">Share on Facebook</h3>
+          <h5>Share Hirehive with your friends</h5>
+        </div> <!-- END share-brief -->
+        <button class="fatty-share-btn" id="fatty-fb">
+          <i class="fa fa-facebook-square"></i>
+          Share
+        </button>
+      </div>
+
+      <div class="col-sm-4 col-md-4">
+        <div class="ks-step-count">
+          <img src="/testwebsite/my-first-repo/assets/landing/ks_number_count2.png"/>
+        </div>
+        <div class="share-brief">
+          <h3 class="bold all-cap">Send a Tweet</h3>
+          <h5>Hook up your following</h5>
+        </div> <!-- END share-brief -->
+        <button class="fatty-share-btn" id="fatty-twitter">
+          <i class="fa fa-twitter-square"></i>
+          Tweet
+        </button>
+      </div>
+
+      <div class="col-sm-4 col-md-4">
+        <div class="ks-step-count">
+          <img src="/testwebsite/my-first-repo/assets/landing/ks_number_count3.png"/>
+        </div>
+        <div class="share-brief">
+          <h3 class="bold all-cap">Watch Our Video</h3>
+          <h5>Thanks in advance for backing Hirehive</h5>
+        </div> <!-- END share-brief -->
+        <button class="fatty-share-btn" id="fatty-video">
+          <i class="fa fa-play"></i>
+          Play
+        </button>
+      </div>
+    </div> <!-- END ks-call-to-action row -->
+
+  </section> <!-- END explainer-two -->
+
+</div> <!-- END landing-content-body -->
+
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Countdown Timer -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // KS Share Hover Effects
+    $('#fatty-fb').mouseenter(
+      function() {
+        $(this).addClass('fatty-fb-fill');
+      }
+    );
+    $('#fatty-fb').mouseleave(
+      function() {
+        $(this).removeClass('fatty-fb-fill');
+      }
+    );
+
+    $('#fatty-twitter').mouseenter(
+      function() {
+        $(this).addClass('fatty-twitter-fill');
+      }
+    );
+    $('#fatty-twitter').mouseleave(
+      function() {
+        $(this).removeClass('fatty-twitter-fill');
+      }
+    );
+
+    $('#fatty-video').mouseenter(
+      function() {
+        $(this).addClass('fatty-video-fill');
+      }
+    );
+    $('#fatty-video').mouseleave(
+      function() {
+        $(this).removeClass('fatty-video-fill');
+      }
+    );
+
+    //Countdown Timer
+    $('#clock').countdown('2015/01/01', function(event) {
+      var $this = $(this).html(event.strftime(''
+        + '<span class="clocknumbers">%-w</span> weeks '
+        + '<span class="clocknumbers">%-d</span> days '
+        + '<span class="clocknumbers">%-H</span> hrs '
+        + '<span class="clocknumbers">%M</span> min '
+        + '<span class="clocknumbers">%S</span> sec'));
+    });
+
+  });
+
+</script>
+
+</html>

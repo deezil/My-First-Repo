@@ -8,7 +8,7 @@
 
   <!-- Bootstrap's CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Hirehive CSS -->
   <link rel="stylesheet" href="v4style3.css">
@@ -20,7 +20,78 @@
 
 <body>
 
-<div class="top-navbar visible-md visible-lg">NAVBAR PLACEHOLDER</div>
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="1" placeholder="e.g. Red Epic, C300, etc"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
 
 <div class="stick-contain">
   <!-- Sticky Booking Widget will live in this .sticky-wrapper -->
@@ -69,8 +140,8 @@
                         <td>10</td>
                       </tr>
                       <tr>
-                        <td>$9,000 x 10 days&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="Average Per Day price is rounded. "></i></td>
-                        <td>$90,000</td>
+                        <td>$900 x 10 days&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="Average Per Day price is rounded. "></i></td>
+                        <td>$9,000</td>
                       </tr>
                       <tr>
                         <td class="table-cell-left">Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We charge a 6-12% Hiver service fee every time gear is booked. This helps us cover the cost of running Hirehive. Find out more in our FAQ."></i></td>
@@ -85,11 +156,11 @@
                       </tr>
                       <tr>
                         <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
-                        <td>$900</td>
+                        <td>$400</td>
                       </tr>
                       <tr>
                         <td class="table-cell-total bold"><h3 class="bold">Total</h3></td>
-                        <td><h3 class="bold">$99,000</h3></td>
+                        <td><h3 class="bold">$9,000</h3></td>
                       </tr>
                     </tbody>
                   </table> <!-- END table-bordered table-breakdown -->
@@ -227,11 +298,11 @@
                 <div class="booking-widget-datepicker">
                   <div class="gear-pickup">
                     <h4>Gear Pick-Up</h4>
-                    <h4 class="all-cap">20 nov 2014</h4>
+                    <h4 class="all-cap">20 jan 2015</h4>
                   </div> <!-- END gear-pickup -->
                   <div class="gear-dropoff">
                     <h4>Gear Drop-Off</h4>
-                    <h4 class="all-cap">30 nov 2014</h4>
+                    <h4 class="all-cap">30 jan 2015</h4>
                   </div> <!-- END gear-dropoff -->  
                 </div> <!-- END booking-widget-datepicker -->
 
@@ -243,8 +314,8 @@
                         <td class="table-cell-right">10</td>
                       </tr>
                       <tr>
-                        <td>$9,000 x 10 days&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="Average Per Day price is rounded. "></i></td>
-                        <td class="table-cell-right">$90,000</td>
+                        <td>$900 x 10 days&nbsp;&nbsp;<i class="fa fa-question-circle" id="total-price-tooltip" data-toggle="tooltip" data-placement="right" title="Average Per Day price is rounded. "></i></td>
+                        <td class="table-cell-right">$9,000</td>
                       </tr>
                       <tr>
                         <td class="table-cell-left">Service fee&nbsp;&nbsp;<i class="fa fa-question-circle" id="service-fee-tooltip" data-toggle="tooltip" data-placement="right" title="We charge a 6-12% Hiver service fee every time gear is booked. This helps us cover the cost of running Hirehive. Find out more in our FAQ."></i></td>
@@ -259,11 +330,11 @@
                       </tr>
                       <tr>
                         <td>Security Deposit&nbsp;&nbsp;<i class="fa fa-question-circle" id="security-deposit-tooltip" data-toggle="tooltip" data-placement="right" title="A Security Deposit is a payment authorization and not a true charge. You can find out more in our FAQ."></i></td>
-                        <td class="table-cell-right">$900</td>
+                        <td class="table-cell-right">$400</td>
                       </tr>
                       <tr>
                         <td class="table-cell-total bold"><h3 class="bold">Total</h3></td>
-                        <td class="table-cell-right"><h3 class="bold">$99,000</h3></td>
+                        <td class="table-cell-right"><h3 class="bold">$9,000</h3></td>
                       </tr>
                     </tbody>
                   </table> <!-- END table-bordered table-breakdown -->
