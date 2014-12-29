@@ -13,6 +13,9 @@
   <!-- Hirehive CSS -->
   <link rel="stylesheet" href="v4style3.css">
 
+  <!-- Rotator text css -->
+  <link rel="stylesheet" href="/testwebsite/my-first-repo/jquery-super-simple-text-rotator/css/simpletextrotator.css">
+
   <!-- Adobe Typekit -->
   <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -100,7 +103,15 @@
 
     <div class="landing-header-content-row row">
       <div class="head-one col-sm-6 col-md-6">
-        <img src="/testwebsite/my-first-repo/assets/landing/hh_header_left.png"/>
+        <h1 class="all-cap">Peer</h1>
+        <h1 class="all-cap">&nbsp;&nbsp;to</h1>
+        <h1 class="all-cap">Peer</h1>
+        <h1 class="all-cap">Rentals</h1>
+        <h1 class="all-cap">For</h1>
+        <span class="rotate">
+          <h1 class="all-cap">Filmmakers,Photographers,Creatives</h1>
+        </span>
+        <!--<img src="/testwebsite/my-first-repo/assets/landing/hh_header_left.png"/>-->
       </div>
 
       <div class="col-sm-6 col-md-6">
@@ -143,7 +154,7 @@
         <div role="tabpanel" class="tab-pane fade in active" id="owners">
 
           <!-- Hosts Panel -->
-          <div role="tabpanel" class="explainer-subtabs">
+          <div role="tabpanel" class="explainer-subtabs-container">
 
             <!-- Host Nav subtabs -->
             <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
@@ -329,7 +340,7 @@
 
             </div>  <!-- END landing-section-subtab-content -->
 
-          </div> <!-- END explainer-subtabs -->
+          </div> <!-- END explainer-subtabs-container -->
 
         </div> <!-- END #owners -->
 
@@ -337,7 +348,7 @@
         <div role="tabpanel" class="tab-pane fade" id="creators">
 
           <!-- Creators Panel -->
-          <div role="tabpanel" class="explainer-subtabs">
+          <div role="tabpanel" class="explainer-subtabs-container">
 
             <!-- Creators Nav subtabs -->
             <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
@@ -497,7 +508,7 @@
 
             </div>  <!-- END landing-section-subtab-content -->
 
-          </div> <!-- END explainer-subtabs -->
+          </div> <!-- END explainer-subtabs-container -->
           
         </div> <!-- END #creators -->
 
@@ -512,7 +523,7 @@
       <h4>With your support, we'll be implementing these features for our community.</h4>
     </div>
 
-    <div role="tabpanel" class="explainer-subtabs">
+    <div role="tabpanel" class="explainer-subtabs-container">
 
       <!-- Nav tabs -->
       <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
@@ -640,8 +651,17 @@
 <!-- Plugin for Countdown Timer -->
 <script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
 
+<!-- Plugin for Rotating Text -->
+<script src="/testwebsite/my-first-repo/jquery-super-simple-text-rotator/js/jquery.simple-text-rotator.js"></script>
+
 <script>
   $(document).ready(function() {
+
+    $(".rotate").textrotator({
+        animation: "flipUp",
+        separator: ",",
+        speed: 2000
+    });
 
     $('.dropdown-toggle').dropdown();
 

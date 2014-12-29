@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<title>About Us</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right" id="nav-howItWorks">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right" id="nav-browse">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" type="gear-search" placeholder="e.g. Red Epic, C300, etc">
+        <h3 id="location-search-label">Where do you need it?</h3>
+        <input class="form-control" type="location-search" placeholder="e.g. Sydney, New York, etc">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<div class="fivefive-header-spacer"></div>
+
+<div class="landing-content-body">
+
+  <section class="aboutus-header">
+
+    <div class="fullscreen-head-one col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <h1 class="bold">About Us</h1>
+      <h3>Here's to the storytellers of our generation.</h3>
+      <h3>You're the reason for our being.</h3>
+      <button class="transparent-btn obnox-btn" id="learnScroll">Learn more&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></button>
+    </div> <!-- END fullscreen-head-one -->
+
+    <!--<div class="header-video">
+      <img src="/testwebsite/my-first-repo/assets/landing/vid_placeholder.png" class="img-responsive">
+    </div>-->
+  </section> <!-- END howitworks-header -->
+
+  <section class="aboutus-content" id="contentScroll">
+    <div class="col-sm-12 col-md-12 bg-black">
+      <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+        <div class="style-quote-container">
+          <h4>Dedicated to storytellers everywhere.</h4>
+          <h4>You're the reason for our being.</h4>
+          <h4>You inspire us to make things better.</h4>
+          <h4>&nbsp;</h4>
+          <h4>We believe that by bringing the Share Economy to filmmakers, we can help filmmakers tell the stories they're compelled to tell. Without compromise.</h4>
+          <h4>&nbsp;</h4>
+          <h4>Through Hirehive, gear owners can become micro entrepreneurs in their own right. Earn money to finance your next project, justify buying that next piece of your kit or go for that well deserved vacation while your gear makes money for you.</h4>
+          <h4>&nbsp;</h4>
+          <h4>Meanwhile, filmmakers can now get greater access to awesome gear at affordable prices. Connect with owners to hire their gear while making new connections with fellow filmmakers.</h4>
+          <h4>&nbsp;</h4>
+          <h4>We are very excited about the possibilities that Hirehive may bring, and we can't wait to share Hivehive with you.</h4>
+          <h4>&nbsp;</h4>
+          <h4>Venture forth, oh Creative One! This is your call to adventure!</h4>
+          <h4>&nbsp;</h4>
+          <h4>The Hirehive Founders, Brent & Dee</h4>
+        </div> <!-- END style-quote-container -->
+      </div> <!-- END col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 -->
+    </div>
+  </section> <!-- END .howitworks-content -->
+
+  <section class="aboutus-content">
+    <div class="team-container col-sm-12 col-md-12">
+      <h3>Meet our founders</h3>
+
+      <div class="founder-col col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-2">
+        <div class="profile-avatar-container">
+          <figure class="profile-avatar">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/landing/lauren_bw.jpg"/></a>
+          </figure>
+        </div> <!-- END profile-avatar-container -->
+        <h4>Eugene 'Dee' Deng</h4>
+        <h4>Founder & CEO</h4>
+        <h5>&nbsp;</h5>
+        <h5>Filmmaker. Misfit.</h5>
+        <h5>Sharing Economy advocate.</h5>
+        <h5>I make stuff. I break stuff.</h5>
+      </div> <!-- END founder-col -->
+
+      <div class="founder-col col-sm-4 col-md-4">
+        <div class="profile-avatar-container">
+          <figure class="profile-avatar">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/landing/lauren_bw.jpg"/></a>
+          </figure>
+        </div> <!-- END profile-avatar-container -->
+        <h4>Brent Wallace</h4>
+        <h4>Co-founder & CTO</h4>
+        <h5>&nbsp;</h5>
+        <h5>Marketer.</h5>
+        <h5>Disrupter.</h5>
+        <h5>Nerd.</h5>
+      </div> <!-- END founder-col -->
+    </div> <!-- END team-container -->
+  </section> <!-- END .howitworks-content -->
+
+  <section class="aboutus-content">
+    <div class="team-container bg-black col-sm-12 col-md-12">
+      <h3>Our Ever-Wise Advisors</h3>
+
+      <div class="founder-col col-sm-4 col-md-4 ">
+        <div class="profile-avatar-container">
+          <figure class="profile-avatar">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/landing/lauren_bw.jpg"/></a>
+          </figure>
+        </div> <!-- END profile-avatar-container -->
+        <h4>Emily Best</h4>
+        <h4>Founder & CEO</h4>
+        <h4><a href="http://www.seedandspark.com" target="_blank">Seed & Spark</a></h4>
+      </div> <!-- END founder-col -->
+
+      <div class="founder-col col-sm-4 col-md-4">
+        <div class="profile-avatar-container">
+          <figure class="profile-avatar">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/landing/lauren_bw.jpg"/></a>
+          </figure>
+        </div> <!-- END profile-avatar-container -->
+        <h4>Simon Moss</h4>
+        <h4>Co-founder & CEO</h4>
+        <h4><a href="http://www.imagebrief.com" target="_blank">ImageBrief</a></h4>
+      </div> <!-- END founder-col -->
+
+      <div class="founder-col col-sm-4 col-md-4">
+        <div class="profile-avatar-container">
+          <figure class="profile-avatar">
+            <a href="#"><img src="/testwebsite/my-first-repo/assets/landing/lauren_bw.jpg"/></a>
+          </figure>
+        </div> <!-- END profile-avatar-container -->
+        <h4>Darren Rogan</h4>
+        <h4>CTO</h4>
+        <h4><a href="http://www.thelocker.com" target="_blank">The Locker</a></h4>
+      </div> <!-- END founder-col -->
+    </div> <!-- END team-container -->
+  </section> <!-- END .howitworks-content -->
+
+</div> <!-- END landing-content-body -->
+
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Countdown Timer -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Scroll to section on 'Learn More' button click 
+    $('#learnScroll').on('click', function() {
+      $('html, body').animate({
+        scrollTop: $("#contentScroll").offset().top + (-65)
+      }, 500);
+    });
+
+    $('.dropdown-toggle').dropdown();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
+    });
+
+    //Yellow Btn Hover Effect
+    $('.transparent-btn-yellow').mouseenter(
+      function() {
+        $(this).addClass('yellow-btn-fill');
+      }
+    );
+    $('.transparent-btn-yellow').mouseleave(
+      function() {
+        $(this).removeClass('yellow-btn-fill');
+      }
+    ); 
+
+    // Project Social Hover Effects
+    $('.fa-facebook-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
+      }
+    );
+    $('.fa-facebook-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
+      }
+    );
+
+    $('.fa-twitter-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
+      }
+    );
+    $('.fa-twitter-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
+      }
+    );
+
+    $('.fa-linkedin-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
+      }
+    );
+    $('.fa-linkedin-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
+      }
+    );
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('liked')){
+          //$.ajax(); Do Unlike
+          $button.removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none'); 
+      } else {
+          // $.ajax(); Do Liked
+          $button.addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline'); 
+      }
+    });
+
+    //Countdown Timer
+    $('#clock').countdown('2015/01/01', function(event) {
+      var $this = $(this).html(event.strftime(''
+        + '<span class="clocknumbers">%-w</span> weeks '
+        + '<span class="clocknumbers">%-d</span> days '
+        + '<span class="clocknumbers">%-H</span> hrs '
+        + '<span class="clocknumbers">%M</span> min '
+        + '<span class="clocknumbers">%S</span> sec'));
+    });
+
+  });
+
+</script>
+
+</html>

@@ -48,6 +48,10 @@
 		color: white;
 	}
 
+	.bg-black {
+		background-color: #000000;
+	}
+
 	.form-control {
 		border-radius: 0 !important;
 	}
@@ -223,7 +227,7 @@
 		color: white;
 		background-color: transparent;
 		outline: 0;
-		border: 0.1rem solid white;
+		border: 1px solid white;
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -249,7 +253,7 @@
 		color: white;
 		background-color: transparent;
 		outline: 0;
-		border: 0.1rem solid #ffc917;
+		border: 1px solid #ffc917;
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -264,7 +268,7 @@
 		color: #1c1d20;
 		background-color: #ffc917;
 		outline: 0;
-		border: 0.1rem solid #ffc917;
+		border: 1px solid #ffc917;
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -415,7 +419,18 @@
 		padding: 3rem 0 0 3rem;
 	}
 
-	.header-video {
+	.head-one h1 {
+		font-weight: 900;
+		margin: -1.5rem 0;
+		font-size: 4rem;
+	}
+
+	.head-one .rotate {
+		font: 900 4rem 'proxima-nova', sans-serif;
+		text-transform: uppercase;
+	}
+
+	.landing-head .header-video {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 7.5rem;
@@ -423,7 +438,7 @@
 		width: 90%;
 	}
 
-	.header-video > img {
+	.landing-head .header-video > img {
 		width: 50%;
 	}
 
@@ -564,17 +579,17 @@
 	}
 
 	/*Overriding Bootstrap*/
-	.explainer-subtabs .nav-tabs > li.active > a,
-	.explainer-subtabs .nav-tabs > li.active > a:hover,
-	.explainer-subtabs .nav-tabs > li.active > a:focus {
+	.explainer-subtabs-container .nav-tabs > li.active > a,
+	.explainer-subtabs-container .nav-tabs > li.active > a:hover,
+	.explainer-subtabs-container .nav-tabs > li.active > a:focus {
 		background-color: transparent;
 		border: none;
 		color: white;
 	}
 
 	/*Overriding Bootstrap*/
-	.explainer-subtabs .nav-tabs > li > a:hover,
-	.explainer-subtabs .nav-tabs > li > a:focus {
+	.explainer-subtabs-container .nav-tabs > li > a:hover,
+	.explainer-subtabs-container .nav-tabs > li > a:focus {
 		background-color: transparent;
 		color: white;
 		transition: all 0.5s;
@@ -603,43 +618,40 @@
 
 	/* -------- SECTION TAB CONTENT -------- */
 
-	.landing-section-tab-content {
-	}
-
 	.landing-section-tab-content .row,
 	.landing-section-subtab-content .row {
 		margin: 0;
 	}
 
-	.landing-section-tab-content .row .demo-col {
+	.demo-col {
 		padding-right: 0;
 	}
 
-	.landing-section-tab-content .value-prop {
+	.value-prop {
 		text-align: center;
 		padding: 1rem;
 		margin: 2rem 0;
 		min-height: 17rem;
 	}
 
-	.landing-section-subtab-content .value-copy {
+	.value-copy {
 		padding: 1rem 2rem; 
 	}
 
 	.landing-section-tabs li a h2,
-	.landing-section-tab-content .value-prop h3,
-	.landing-section-tab-content .value-prop h4 {
+	.value-prop h3,
+	.value-prop h4 {
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
 		-o-transition: all 0.3s;
 	}
 
-	.landing-section-subtab-content .demo-col {
+	.demo-col {
 		overflow-x: hidden;
 	}
 
-	.landing-section-tab-content .section-demo {
+	.section-demo {
 		width: 145%;
 	}
 
@@ -656,10 +668,10 @@
 		.landing-section-tabs > li > a > h2 {
 			font-size: 1.8rem;
 		}
-		.landing-section-tab-content .value-prop h3 {
+		.value-prop h3 {
 			font-size: 1.8rem;
 		}
-		.landing-section-tab-content .value-prop h4 {
+		.value-prop h4 {
 			font-size: 1.4rem;
 		}
 	}
@@ -668,29 +680,29 @@
 		.landing-section-tab-content {
 			padding-top: 0; 
 		}
-		.landing-section-tab-content .value-prop {
+		.value-prop {
 			min-height: 0.1rem;
 		}
-		.landing-section-tab-content .section-demo {
+		.section-demo {
 			width: 110%;
 		}
 	}
 
 	@media (min-width: 768px) and (max-width: 992px) {
-		.landing-section-tab-content .value-prop {
+		.value-prop {
 			min-height: 15rem;
 		}
-		.landing-section-tab-content .value-prop h3 {
+		.value-prop h3 {
 			font-size: 1.8rem;
 		}
-		.landing-section-subtab-content .value-copy h2 {
+		.value-copy h2 {
 			font-size: 2rem;
 		}
-		.landing-section-subtab-content .value-copy h4,
-		.landing-section-tab-content .value-prop h4 {
+		.value-copy h4,
+		.value-prop h4 {
 			font-size: 1.4rem;
 		}
-		.landing-section-tab-content .section-demo {
+		.section-demo {
 			width: 160%;
 		}
 	}
@@ -856,7 +868,7 @@
 
 	.unlock-header {
 		height: 50rem;
-		background-image: url('/testwebsite/my-first-repo/assets/landing/hh_map.png');
+		background: url('/testwebsite/my-first-repo/assets/landing/bg_map.png');
 		background-position: center center;
 		background-size: cover;
 		padding-top: 5rem;
@@ -909,6 +921,442 @@
 /*===================================
 	END UNLOCK YOUR CITY 
 ===============================*/
+
+
+
+/*===================================
+	** HOW IT WORKS ** 
+===============================*/
+
+	.howitworks-content-body {
+		color: white;
+	}
+
+	.howitworks-header {
+		background: url(/testwebsite/my-first-repo/assets/fell/fell_press4_overlay.png) no-repeat center center;
+		background-size: cover;
+		padding: 8rem 0;
+		text-align: center;
+		height: 100vh;
+	}
+
+	.howitworks-header .header-video {
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+
+	.howitworks-content .section-heading {
+		text-align: center;
+		padding: 3rem 0 1.5rem 0;
+	}
+
+	.howitworks-header .section-heading h1 {
+		font-size: 4.8rem;
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	.howitworks-content .landing-section-subtabs {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 3rem;
+	}
+
+	.howitworks-content .landing-section-subtabs > li {
+		margin: 0 13rem;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+
+	.howitworks-content .landing-section-subtabs > li > a > h3 {
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+	}
+
+	.howitworks-content .landing-section-subtabs > li.active > a > h3 {
+		font-weight: 700;
+	}
+
+	.howitworks-content .landing-section-subtab-content {
+		border-top: 1px solid #9e9e9e;
+	}
+
+	.explainer-row {
+		padding: 4rem 0;
+	}
+
+	.explainer-icon-col {
+		text-align: right;
+	}
+
+	.explainer-row .explainer-header {
+		margin-bottom: 2rem;
+	}
+
+	.explainer-icon-col .explainer-icon-container {
+		margin-left: auto;
+		margin-right: auto;
+		width: 12rem;
+		height: 12rem;
+	}
+
+	#hireGear .explainer-icon-col .explainer-icon-container {
+		background: url(/testwebsite/my-first-repo/assets/explainer/explainer_host_sprite.png);
+	}
+
+	#hireGear .explainer-icon-col #list-it {
+		background-position: 0 0;
+	}
+
+	#hireGear .explainer-icon-col #communicate {
+		background-position: -12rem 0;
+	}
+
+	#hireGear .explainer-icon-col #control {
+		background-position: -24rem 0;
+	}
+
+	#hireGear .explainer-icon-col #exchange {
+		background-position: -36rem 0;
+	}
+
+	#hireGear .explainer-icon-col #earn {
+		background-position: -48rem 0;
+	}
+
+	#hireGear .explainer-icon-col #rate {
+		background-position: -60rem 0;
+	}
+
+	#list-gear .explainer-icon-col .explainer-icon-container {
+		background: url(/testwebsite/my-first-repo/assets/explainer/explainer_hiver_sprite.png);
+	}
+
+	#list-gear .explainer-icon-col #find-gear {
+		background-position: 0 0;
+	}
+
+	#list-gear .explainer-icon-col #communicate {
+		background-position: -12rem 0;
+	}
+
+	#list-gear .explainer-icon-col #book {
+		background-position: -24rem 0;
+	}
+
+	#list-gear .explainer-icon-col #exchange {
+		background-position: -36rem 0;
+	}
+
+	#list-gear .explainer-icon-col #shoot {
+		background-position: -48rem 0;
+	}
+
+	#list-gear .explainer-icon-col #rate {
+		background-position: -60rem 0;
+	}
+
+	.explainer-header {
+		margin: 1rem 0;
+	}
+
+	.explainer-icon > img {
+		width: 12rem;
+		height: 12rem;
+	}
+
+	@media (max-width: 400px) {
+		.howitworks-header .header-video {
+			width: 80%;
+		}
+		.howitworks-content .landing-section-subtabs > li {
+			margin: 0 1rem;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.howitworks-content .landing-section-subtabs > li > a > h3 {
+			font-size: 1.8rem;
+		}
+		.howitworks-content .landing-section-subtab-content .explainer-row {
+			text-align: center;
+		}
+	}
+
+	@media (min-width: 401px) and (max-width: 900px) {
+		.howitworks-content .landing-section-subtabs > li {
+			margin: 0 3rem;
+		}
+	}
+
+
+
+/*===================================
+	END HOW IT WORKS 
+===============================*/
+
+
+
+/*===================================
+	** WHY HOST **
+===============================*/
+
+	.whyhost-head {
+		background-color: #333;
+		background: url(/testwebsite/my-first-repo/assets/landing/landing_section_1.jpg) center center no-repeat;
+		background-size: cover;
+		padding: 8rem 0;
+	}
+
+	.whyhost-head .whyhost-header-row {
+		margin: 0;
+	}
+
+	.whyhost-head .host-head-one {
+		padding: 6rem;
+	}
+
+	.whyhost-head .host-head-one h1 {
+		margin-bottom: 2rem;
+	}
+
+	.whyhost-head .host-head-two {
+		padding: 6rem;
+	}
+
+	.whyhost-head .obnox-btn {
+		font-size: 2rem;
+		margin-top: 3rem;
+	}
+
+	.whyhost-head .obnox-btn:hover {
+		background-color: #DBAD14;
+	}
+
+	.explainer-subtabs {
+		min-height: 6.7rem;
+		margin: 0;
+		padding: 1.45rem 0;
+	}
+
+	.explainer-subtabs-content {
+		padding: 4rem 0;
+	}
+
+	.explainer-subtabs-content .obnox-btn {
+		font-size: 2rem;
+		margin: 3rem 2rem;
+	}
+
+	.whyhost-content-section {
+		padding: 4rem 0 0 0;
+	}
+
+	.whyhost-content .row {
+		margin: 0;
+	} 
+
+	@media (max-width: 400px) {
+		.whyhost-head .host-head-one {
+			padding: 2rem 3rem;
+		}
+
+		.whyhost-head .host-head-two {
+			padding: 0 3rem;
+		}
+	}
+
+	@media (min-width: 401px) and (max-width: 767px) {
+		.whyhost-head .host-head-one {
+			padding: 2rem 6rem;
+		}
+
+		.whyhost-head .host-head-two {
+			padding: 0 6rem;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.explainer-divider {
+			margin-bottom: 0;
+		}
+		.whyhost-head .host-head-two {
+			margin-bottom: 2rem;
+		}
+	}
+
+	@media (min-width:768px) and (max-width: 991px) {
+		.whyhost-head .host-head-two {
+			padding: 8rem 4rem;
+		}
+	}
+
+
+/*===================================
+	END WHY HOST 
+===============================*/
+
+
+
+/*===================================
+	** TRUST & SAFETY **
+===============================*/
+
+	.trust-head {
+		background-color: #333;
+		background: url(/testwebsite/my-first-repo/assets/fell/fell_press2_overlay.jpg) center center no-repeat;
+		background-size: cover;
+		padding: 8rem 0;
+		text-align: center;
+		/* vh = viewport height */
+		height: 100vh;
+	}
+
+	.fullscreen-head-one {
+		padding: 12rem;
+		float: none;
+	}
+
+	.fullscreen-head-one h1 {
+		font-size: 4.8rem;
+	}
+
+	.fullscreen-head-one .obnox-btn {
+		margin-top: 2.5rem;
+		border: 1px solid white;
+	}
+
+	.trust-content-section {
+		padding: 5rem 0;
+	}
+
+	.trust-content-section .row {
+		margin: 0;
+	}
+
+	.trust-content-section .section-demo {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.trust-content-section .explainer-big {
+		padding: 6rem;
+	}
+
+	.explainer-divider {
+		height: 9rem;
+		border-top: 1px solid #ffc917;
+		border-bottom: 1px solid #ffc917;
+		text-align: center;
+		background-color: black;
+		color: white;
+		padding: 2.85rem 0;
+	}
+
+	.explainer-divider h2 {
+		margin: 0;
+	}
+
+	.explainer-centered {
+		text-align: center;
+		padding: 4rem 0;
+	}
+
+	.trust-content-section .value-prop {
+		text-align: left;
+	}
+
+	.trust-content-section .explainer-icon-col .explainer-icon-container {
+		margin-top: 3.5rem;
+		margin-bottom: 3.5rem;
+		background: url(/testwebsite/my-first-repo/assets/explainer/explainer_trust_sprite_one.png);
+	}
+
+	.trust-content-section .explainer-icon-col #verifications {
+		background-position: 0 0;
+	}
+
+	.trust-content-section .explainer-icon-col #verified-id {
+		background-position: -12rem 0;
+	}
+
+	.trust-content-section .explainer-icon-col #rate {
+		background-position: -24rem 0;
+	}
+
+	.trust-content-section .explainer-icon-col #communicate {
+		background-position: -36rem 0;
+	}
+
+/*===================================
+	END TRUST & SAFETY
+===============================*/
+
+
+
+/*===================================
+	** ABOUT US ** 
+===============================*/
+
+	.aboutus-header {
+		background: url(/testwebsite/my-first-repo/assets/background/filmset3_overlay.png) no-repeat center center;
+		background-size: cover;
+		padding: 8rem 0;
+		text-align: center;
+		height: 100vh;
+	}
+
+	.style-quote-container {
+		padding: 4rem 6rem;
+		text-align: center;
+	}
+
+	.style-quote-container h1,
+	.style-quote-container h2,
+	.style-quote-container h3,
+	.style-quote-container h4,
+	.style-quote-container h5,
+	.style-quote-container h6,
+	.style-quote-container p {
+		font-family: "ff-meta-serif-web-pro",serif;
+	}
+
+	.team-container {
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.founder-col {
+		text-align: center;
+		margin-top: 4rem;
+		margin-bottom: 4rem;  
+	}
+
+	.founder-col .profile-avatar-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Overrides default profile-avatar settings */
+	@media (min-width: 200px) {
+		.founder-col .profile-avatar-container {
+			left: 0;
+		}
+	}
+
+/*===================================
+	END ABOUT US 
+===============================*/
+
 
 
 
@@ -1105,6 +1553,10 @@
 		padding-left: 3.5rem;
 	}
 
+	#search-modal-sm #location-search-label {
+		margin: 2rem 0;
+	}
+
 	.top-navbar .navbar-option {
 		padding: 0.9rem 0;
 		text-align: center;
@@ -1124,7 +1576,7 @@
 	}
 
 	.top-navbar .navbar-option h5 {
-		margin: 0.8rem 0 0 0;
+		margin: 0.5rem 0;
 		display: inline-block;
 	}
 
@@ -1203,6 +1655,22 @@
 		.top-navbar .navbar-option #profileDrop h5,
 		.top-navbar .navbar-option .new-msg-counter {
 			display: none;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.top-navbar #nav-howItWorks {
+			width: 11.333333%;
+			margin-left: 1rem;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		.top-navbar .col-sm-1 {
+			width: 10.333333%;
+		}
+		.top-navbar #nav-browse {
+			margin-left: 1rem;
 		}
 	}
 

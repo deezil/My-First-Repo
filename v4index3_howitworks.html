@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<title>How Hirehive Works</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right" id="nav-howItWorks">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right" id="nav-browse">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" type="gear-search" placeholder="e.g. Red Epic, C300, etc">
+        <h3 id="location-search-label">Where do you need it?</h3>
+        <input class="form-control" type="location-search" placeholder="e.g. Sydney, New York, etc">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<div class="fivefive-header-spacer"></div>
+
+<div class="howitworks-content-body">
+
+  <section class="howitworks-header">
+
+    <div class="fullscreen-head-one col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <h1 class="bold">How Hirehive Works</h1>
+      <h3>We're empowering storytellers everywhere with the Sharing Economy. This is Hirehive. The world's first Peer-to-Peer rentals platform for filmmakers.</h3>
+      <button class="transparent-btn obnox-btn" id="learnScroll">Learn more&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></button>
+    </div>
+
+    <!--<div class="header-video">
+      <img src="/testwebsite/my-first-repo/assets/landing/vid_placeholder.png" class="img-responsive">
+    </div>-->
+  </section> <!-- END howitworks-header -->
+
+  <section class="howitworks-content" id="contentScroll">
+    
+    <div role="tabpanel" class="explainer-subtabs-container">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs landing-section-subtabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#hireGear" aria-controls="hireGear" role="tab" data-toggle="tab">
+            <h3 class="all-cap">Hiring Gear</h3>
+          </a>
+        </li>
+
+        <li role="presentation" class="">
+          <a href="#list-gear" aria-controls="list-gear" role="tab" data-toggle="tab">
+            <h3 class="all-cap">Listing Gear</h3>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content landing-section-subtab-content">
+
+        <!-- #hireGear -->
+        <div role="tabpanel" class="tab-pane fade in active" id="hireGear">
+
+          <!-- Create Listing -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="list-it">
+              </div> <!-- END .explainer-icon-container -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">List Your Gear</h3>
+                <h4>It's totally free to list your gear on Hirehive. Our Listing Tool guides you through the simple listing process.<br>And once you're ready to put your gear to work, you can publish your listing for our community to see.<br>(You can always edit your listing details anytime you like.)</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Communicate -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="communicate">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Communicate</h3>
+                <h4>Filmmakers within our community (Hivers) will want to book your gear! Use our messaging tool to communicate with them, answer any questions they may have and sort out the hire details.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Control -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="control">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">You've Got Control</h3>
+                <h4>As a Hive Host, you have total control over pricing, availability and who hires your gear.<br>When you receive a Booking Request, choose whether to accept or decline the request within 24 hours, or it will expire.<br>It's best if you respond to every request, even if it's just to decline it. Leaving someone hanging just ain't a good look.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Exchange -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="exchange">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Gear Pick-up & Drop-off</h3>
+                <h4>After you accept a Booking Request and your Hiver makes payment, it's time to make the gear exchange and check the gear with your Hiver.<br>We provide our members with printable Gear Checksheets for you to use during Pick-up and Drop-off.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Earn -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="earn">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Get Paid</h3>
+                <h4>We release payment to your nominated account 24 hours after the end of your hire. Money should hit your bank in 3 to 5 days. All our payments are secure and powered by our friends at Stripe.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Rate -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="rate">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Rate & Review</h3>
+                <h4>Both you and your Hiver will rate and review each other after each transaction. This lets our community know about the awesome experiences you're having with other members. Positive reviews help build your Hirehive Reputation.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+        
+        </div>  <!-- END tab-pane #hireGear -->
+
+        <!-- #listGear -->
+        <div role="tabpanel" class="tab-pane fade" id="list-gear">
+          
+          <!-- Find gear -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="find-gear">
+              </div> <!-- END .explainer-icon-container -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Find Gear</h3>
+                <h4>Quickly find the gear you need by searching our listings. Search by brand, type and location.<br>No more spending hours on the phone or guessing about pricing.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Communicate -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="communicate">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Make Contact</h3>
+                <h4>Message Gear Owners (Hive Hosts) by clicking on 'Request a Booking' on their listing page.<br>This creates a Booking Request where you can ask any question you may have, and confirm availability.<br>Your Hive Host will have 24 hours to respond before a request expires.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Book -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="book">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Book</h3>
+                <h4>Once you've worked out all the details with your Hive Host, all that's left to do is to make payment and book the gear!<br>Rest easy. All payments on Hirehive are done securely through our friends at Stripe.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Exchange -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="exchange">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Gear Pick-up & Drop-off</h3>
+                <h4>Now it's time to make the gear exchange and check the gear together with your Hive Host. We all know how much care needs to go into handling gear.<br>We provide our members with printable Gear Checksheets for you to use during Pick-up and Drop-off.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Shoot -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="shoot">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Time to call 'Action'!</h3>
+                <h4>You've picked up the gear and it all checks out. It's now time to get shooting! We can't wait to see the stuff you've produced!</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+          <!-- Rate -->
+          <div class="row explainer-row">
+           <div class="col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 explainer-icon-col">
+              <div class="explainer-icon-container" id="rate">
+              </div> <!-- BG image with sprite -->
+            </div>
+
+            <div class="col-sm-5 col-md-5">
+              <div class="explainer-copy-container">
+                <h3 class="explainer-header">Rate & Review</h3>
+                <h4>Both you and your Hive Host will rate and review each other after each transaction. This lets our community know about the awesome experiences you're having with other members. Positive reviews help build your Hirehive Reputation.</h4> 
+              </div>
+            </div> <!-- END col-md-8 .explainer-col-->
+          </div> <!-- END row explainer-row -->
+
+        </div>  <!-- END #hireGear -->
+
+
+      </div> <!-- END tab-content landing-section-subtab-content -->
+
+    </div> <!-- END tabpanel -->
+  </section> <!-- END .howitworks-content -->
+
+</div> <!-- END landing-content-body -->
+
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Countdown Timer -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Scroll to section on 'Learn More' button click 
+    $('#learnScroll').on('click', function() {
+      $('html, body').animate({
+        scrollTop: $("#contentScroll").offset().top + (-65)
+      }, 500);
+    });
+
+    $('.dropdown-toggle').dropdown();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
+    });
+
+    //Yellow Btn Hover Effect
+    $('.transparent-btn-yellow').mouseenter(
+      function() {
+        $(this).addClass('yellow-btn-fill');
+      }
+    );
+    $('.transparent-btn-yellow').mouseleave(
+      function() {
+        $(this).removeClass('yellow-btn-fill');
+      }
+    ); 
+
+    // Project Social Hover Effects
+    $('.fa-facebook-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
+      }
+    );
+    $('.fa-facebook-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
+      }
+    );
+
+    $('.fa-twitter-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
+      }
+    );
+    $('.fa-twitter-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
+      }
+    );
+
+    $('.fa-linkedin-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
+      }
+    );
+    $('.fa-linkedin-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
+      }
+    );
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('liked')){
+          //$.ajax(); Do Unlike
+          $button.removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none'); 
+      } else {
+          // $.ajax(); Do Liked
+          $button.addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline'); 
+      }
+    });
+
+    //Countdown Timer
+    $('#clock').countdown('2015/01/01', function(event) {
+      var $this = $(this).html(event.strftime(''
+        + '<span class="clocknumbers">%-w</span> weeks '
+        + '<span class="clocknumbers">%-d</span> days '
+        + '<span class="clocknumbers">%-H</span> hrs '
+        + '<span class="clocknumbers">%M</span> min '
+        + '<span class="clocknumbers">%S</span> sec'));
+    });
+
+  });
+
+</script>
+
+</html>

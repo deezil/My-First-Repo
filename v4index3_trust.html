@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<title>Trust & Safety</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <!-- Bootstrap's CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Hirehive CSS -->
+  <link rel="stylesheet" href="v4style3.css">
+
+  <!-- Adobe Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/vjl4dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<!-- Top Navbar **right items are .pull-right, hence reverse order. See: Log In onwards** -->
+<div class="top-navbar not-loggedin widget-row row">
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-sm visible-md visible-lg pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo.png">
+    </a>
+  </div>
+
+  <!-- Logo for @min-width 768px -->
+  <div class="logo-container visible-xs pull-left">
+    <a href="#">
+      <img src="/testwebsite/my-first-repo/assets/hh_navbar_logo_beeonly.png">
+    </a>
+  </div>
+
+  <!-- Searchbar Visible only @min-width 992px -->
+  <div class="searchbar-container visible-md visible-lg col-md-3 col-lg-3">
+    <i class="fa fa-search fa-lg"></i>
+    <form role="form">
+      <input type="searchTerm" class="form-control" id="searchTerm" placeholder="What gear are you looking for?"/>
+    </form>
+  </div> <!-- END searchbar-container -->
+
+  <!-- Searchbar Icon for Modal @ Sm screens -->
+  <div class="searchbar-container-sm visible-xs visible-sm col-xs-1 col-sm-1">
+    <a href="#" class="white" data-toggle="modal" data-target="#search-modal-sm"><i class="fa fa-search fa-lg"></i></a>
+  </div> <!-- END searchbar-container -->
+
+  <div class="navbar-option col-xs-2 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Log In</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 pull-right">
+    <h5 class="cl-effect-4"><a href="#">Sign Up</a></h5>
+  </div>
+  
+  <div class="navbar-option col-sm-2 col-md-1 col-lg-1 visible-sm visible-md visible-lg pull-right" id="nav-howItWorks">
+    <h5 class="cl-effect-4"><a href="#">How It Works</a></h5>
+  </div>
+  <div class="navbar-option col-xs-3 col-sm-1 col-md-1 col-lg-1 dropdown cl-effect-4 pull-right" id="nav-browse">
+    <a href="#" data-target="#" class="dropdown-toggle" id="browseDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><h5>Browse</h5></a>
+    <span class="caret"></span>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="browseDrop">
+      <li><a href="#"><h5>Gear</h5></a></li>
+      <li class="top-border"><a href="#"><h5>People</h5></a></li>
+      <li class="top-border"><a href="#"><h5>Projects</h5></a></li>
+    </ul>
+  </div>
+  <div class="navbar-option col-sm-2 col-md-2 col-lg-2 visible-sm visible-md visible-lg pull-right">
+    <button class="transparent-btn-yellow" id="listGear">List Your Gear</button>
+  </div>
+
+</div> <!-- END top-navbar widget-row row -->
+
+<!-- Search Modal Sm -->
+<div class="booking-modal modal fade" id="search-modal-sm" tab-index="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="bookingModalLargeLabel">What gear are you looking for?</h3>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" type="gear-search" placeholder="e.g. Red Epic, C300, etc">
+        <h3 id="location-search-label">Where do you need it?</h3>
+        <input class="form-control" type="location-search" placeholder="e.g. Sydney, New York, etc">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="transparent-btn modal-cancel-btn" data-dismiss="modal">Cancel</button>
+        <button type="button" class="transparent-btn modal-send-btn bold"><a href="#">Search</a></button>
+      </div> <!-- END modal-footer -->
+    </div> <!-- END modal-content -->
+  </div> <!-- END modal-dialog -->
+</div> <!-- END search modal -->
+
+<div class="fivefive-header-spacer"></div>
+
+<div class="landing-content-body">
+
+  <!-- Background image is only a placeholder, we'll need more photos as content -->
+  <section class="trust-head">
+    <div class="fullscreen-head-one col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <h1 class="bold">Trust & Safety on Hirehive</h1>
+      <h3>Hirehive is a community built on trust and transparency.<br>We work to protect you and your gear, so that you don't have to worry about a thing.</h3>
+      <button class="transparent-btn obnox-btn" id="learnScroll">Learn more&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></button>
+    </div>
+  </section> <!-- END trust-head -->
+
+  <div class="explainer-divider" id="dividerOne">
+    <h2 class="bold">Built on trust and relationships.</h2>
+  </div> <!-- END explainer-divider -->
+
+  <!-- Trust and Relationships -->
+  <section class="trust-content-section">
+    <div class="row">
+      <div class="col-sm-5 col-md-5 visible-sm visible-md visible-lg demo-col">
+        <div class="section-demo">
+          <!-- Placeholder for now, need to optimize image -->
+          <img src="/testwebsite/my-first-repo/assets/explainer/ipad_demo_unique_profile.png" class="img-responsive"/>
+        </div>
+      </div> <!-- END col-md-6 -->
+
+      <!-- Nested columns in here -->
+      <div class="col-sm-6 col-md-6">
+        <!-- Verifications -->
+        <div class="col-sm-6 col-md-6 explainer-icon-col">
+          <div class="explainer-icon-container" id="verifications">
+          </div> <!-- END .explainer-icon-container -->
+        </div> <!-- END .explainer-icon-col -->
+
+        <div class="col-sm-6 col-md-6" >
+          <div class="value-prop">
+            <h3 class="bold">Member Verifications</h3>
+            <h4>We verify all our members through several points of reference. And unique profiles let you see their work and experience levels.</h4>
+          </div>
+        </div> <!-- END col-md-3 -->
+
+        <!-- Verified ID -->
+        <div class="col-sm-6 col-md-6 explainer-icon-col">
+          <div class="explainer-icon-container" id="verified-id">
+          </div> <!-- END .explainer-icon-container -->
+        </div> <!-- END .explainer-icon-col -->
+
+        <div class="col-sm-6 col-md-6" >
+          <div class="value-prop">
+            <h3 class="bold">Verified ID</h3>
+            <h4>Soon we'll be implementing Verified ID, where our members can scan their official ID for the ultimate trust building reference point - all securely powered by our friends at NetVerify.</h4>
+          </div>
+        </div> <!-- END col-md-3 -->
+
+        <!-- Ratings -->
+        <div class="col-sm-6 col-md-6 explainer-icon-col">
+          <div class="explainer-icon-container" id="rate">
+          </div> <!-- END .explainer-icon-container -->
+        </div> <!-- END .explainer-icon-col -->
+
+        <div class="col-sm-6 col-md-6" >
+          <div class="value-prop">
+            <h3 class="bold">Ratings & Reviews</h3>
+            <h4>Hive Hosts and Hivers rate and review each other after every transaction. Positive reviews help build your Hirehive Reputation and all reviews are publicly displayed.</h4>
+          </div>
+        </div> <!-- END col-md-3 -->
+
+        <!-- Messaging -->
+        <div class="col-sm-6 col-md-6 explainer-icon-col">
+          <div class="explainer-icon-container" id="communicate">
+          </div> <!-- END .explainer-icon-container -->
+        </div> <!-- END .explainer-icon-col -->
+
+        <div class="col-sm-6 col-md-6" >
+          <div class="value-prop">
+            <h3 class="bold">Communication</h3>
+            <h4>We encourage active communication between Hive Hosts and Hivers. Use our messaging system to learn more about a Host's gear, or ask a Hiver about their shoot.</h4>
+          </div>
+        </div> <!-- END col-md-3 -->
+      </div> <!-- END col-sm-6 col-md-6 -->
+
+    </div> <!-- END row -->
+  </section> <!-- END .trust-content-section -->
+
+  <!-- Gear Checks -->
+  <section class="trust-content-section">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 explainer-big">
+        <h2 class="bold">Handle all your gear with peace of mind.</h2>
+        <h3>We provide all our members with checksheets to make sure that everyone's on the same page.</h3>
+        <h3>You can find all our checksheets <a href="" target="_blank">here</a>.</h3>
+      </div> <!-- END col-sm-6 col-md-6 -->
+
+      <div class="col-sm-6 col-md-6 visible-sm visible-md visible-lg demo-col">
+        <div class="section-demo">
+          <!-- Placeholder for now, need to optimize image -->
+          <img src="/testwebsite/my-first-repo/assets/explainer/hirehive_gear_checksheet.png" class="img-responsive"/>
+        </div>
+      </div> <!-- END col-md-6 -->
+    </div> <!-- END row -->
+  </section> <!-- END .trust-content-section -->
+
+  <!-- Secure Payments -->
+  <section class="trust-content-section">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 visible-sm visible-md visible-lg demo-col">
+        <div class="section-demo">
+          <!-- Placeholder for now, need to optimize image -->
+          <img src="/testwebsite/my-first-repo/assets/explainer/mbp_demo_payment.png" class="img-responsive"/>
+        </div>
+      </div> <!-- END col-md-6 -->
+
+      <div class="col-sm-6 col-md-6 explainer-big">
+        <h2 class="bold">Secure and Hassle-free Payments.</h2>
+        <h3>Hivers pay through Hirehive when they book gear and Hive Hosts receive payment through Hirehive 24 hours after Gear Pick-up.</h3>
+        <h3>With your transactions taken care of, all that's left to do is call 'Action!'</h3>
+      </div> <!-- END col-sm-6 col-md-6 -->
+    </div> <!-- END row -->
+  </section> <!-- END .trust-content-section -->
+
+  <div class="col-sm-12 col-md-12 bg-black">
+    <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 explainer-centered">
+      <h2 class="bold">We're always here to help.</h2>
+      <h3>We know that with film sets, sometimes things just don't work out like we want them to. Connect with Hirehive customer service if you encounter any issues with your gear, scheduling, or just need some good ol' human help.</h3>
+      <h3>Contact Us at <a href="mailto:team@hire-hive.com?Subject=Hirehive%20Help">team@hire-hive.com</a></h3> 
+    </div> <!-- END explainer-centered -->
+  </div> <!-- END col-sm-12 col-md-12 bg-black -->
+
+</div> <!-- END landing-content-body -->
+
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Plugins / Scripts -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin for Countdown Timer -->
+<script type="text/javascript" src="/testwebsite/my-first-repo/jquery.countdown-2.0.4/jquery.countdown.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Scroll to section on 'Learn More' button click 
+    $('#learnScroll').on('click', function() {
+      $('html, body').animate({
+        scrollTop: $("#dividerOne").offset().top + (-52)
+      }, 500);
+    });
+
+    $('.dropdown-toggle').dropdown();
+
+    // Transparent buttons
+    $('.transparent-btn').mouseenter(function() {
+      $(this).addClass('transparent-btn-fill');
+    });
+
+
+    $('.transparent-btn').mouseleave(function() {
+      $(this).removeClass('transparent-btn-fill');
+    }); 
+
+    //.transparent-button .followButton
+    $('button.followButton').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('following')){
+          //$.ajax(); Do Unfollow
+          $button.removeClass('following');
+          $button.removeClass('unfollow');
+          $button.text('Follow');
+          $button.prepend('<i class="fa fa-plus"></i>&nbsp;');
+      } else {
+          // $.ajax(); Do Follow
+          $button.addClass('following');
+          $button.text('Following');
+          $button.css('font-weight', '700');
+      }
+    });
+
+    $('button.followButton').hover(function(){
+         $button = $(this);
+        if($button.hasClass('following')){
+            $button.addClass('unfollow');
+            $button.text('Unfollow');
+        }
+    }, function(){
+        if($button.hasClass('following')){
+            $button.removeClass('unfollow');
+            $button.text('Following');
+        }
+    });
+
+    //Yellow Btn Hover Effect
+    $('.transparent-btn-yellow').mouseenter(
+      function() {
+        $(this).addClass('yellow-btn-fill');
+      }
+    );
+    $('.transparent-btn-yellow').mouseleave(
+      function() {
+        $(this).removeClass('yellow-btn-fill');
+      }
+    ); 
+
+    // Project Social Hover Effects
+    $('.fa-facebook-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-fb-hover');
+      }
+    );
+    $('.fa-facebook-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-fb-hover');
+      }
+    );
+
+    $('.fa-twitter-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-twitter-hover');
+      }
+    );
+    $('.fa-twitter-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-twitter-hover');
+      }
+    );
+
+    $('.fa-linkedin-square').mouseenter(
+      function() {
+        $(this).addClass('project-social-linkedin-hover');
+      }
+    );
+    $('.fa-linkedin-square').mouseleave(
+      function() {
+        $(this).removeClass('project-social-linkedin-hover');
+      }
+    );
+
+    // Wishlist / Like
+    $('.hearts').on('click', function(e){
+      e.preventDefault();
+      $button = $(this);
+      if($button.hasClass('liked')){
+          //$.ajax(); Do Unlike
+          $button.removeClass('liked');
+          $button.find('.fa-heart-o').css('display', 'inline');
+          $button.find('.fa-heart').css('display', 'none'); 
+      } else {
+          // $.ajax(); Do Liked
+          $button.addClass('liked');
+          $button.find('.fa-heart-o').css('display', 'none');
+          $button.find('.fa-heart').css('display', 'inline'); 
+      }
+    });
+
+    //Countdown Timer
+    $('#clock').countdown('2015/01/01', function(event) {
+      var $this = $(this).html(event.strftime(''
+        + '<span class="clocknumbers">%-w</span> weeks '
+        + '<span class="clocknumbers">%-d</span> days '
+        + '<span class="clocknumbers">%-H</span> hrs '
+        + '<span class="clocknumbers">%M</span> min '
+        + '<span class="clocknumbers">%S</span> sec'));
+    });
+
+  });
+
+</script>
+
+</html>
